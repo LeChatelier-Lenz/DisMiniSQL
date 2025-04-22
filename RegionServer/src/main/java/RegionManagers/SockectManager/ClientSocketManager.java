@@ -22,12 +22,12 @@ public class ClientSocketManager implements Runnable {
         try {
             while (true) {
                 Thread.sleep(1000);
-                // 等待与之连接的客户端
+                // 等待客户端连接
                 Socket socket = serverSocket.accept();
-                // 建立子线程并启动
                 Client client = new Client(socket, masterSocketManager);
+                // 启动客户端连接
                 Thread thread = new Thread(client);
-                // 把子线程放入hashmap中
+                // 把socket和子线程放入hashmap中
                 clientHashMap.put(socket, thread);
                 thread.start();
             }
