@@ -11,7 +11,7 @@ public class ClientSocketManager implements Runnable {
     private HashMap<Socket, Thread> clientHashMap;
 
     public ClientSocketManager(int port, MasterSocketManager masterSocketManager)
-            throws IOException, InterruptedException {
+            throws IOException {
         this.serverSocket = new ServerSocket(port);
         this.masterSocketManager = masterSocketManager;
         this.clientHashMap = new HashMap<Socket, Thread>();
@@ -30,6 +30,7 @@ public class ClientSocketManager implements Runnable {
                 // 把socket和子线程放入hashmap中
                 clientHashMap.put(socket, thread);
                 thread.start();
+                System.out.println("REGION> 从节点线程已启动!");
             }
         } catch (Exception e) {
             e.printStackTrace();
