@@ -63,6 +63,7 @@ public class Client  implements Runnable{
         // 执行结果
         String response = Interpreter.interpret(command);
         API.store();
+        sendTCToFTP();
         String[] responseParts = response.trim().split("\s+");
         // 发送响应给客户端
         output.println(response);
