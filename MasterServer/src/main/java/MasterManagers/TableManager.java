@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import MasterManagers.Socket.SocketThread;
+import MasterManagers.SocketManager.SocketThread;
 
 public class TableManager {
 
