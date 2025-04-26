@@ -9,13 +9,14 @@ import java.net.Socket;
 public class Client  implements Runnable{
     private Socket socket;
     // 客户端输入
-    private BufferedReader input = null;
-    private BufferedWriter bufferedWriter = null;
+    private BufferedReader input;
+    private BufferedWriter bufferedWriter;
     // 处理后输出
-    private PrintWriter output = null;
-    private PrintStream printStream = null;  //暂时未用到
-    private Boolean isRunning = false;
+    private PrintWriter output;
+    private PrintStream printStream;  //暂时未用到
+    private Boolean isRunning;
     private MasterSocketManager masterSocketManager = null;
+    private FtpUtils ftpUtils;
 
     public Client(Socket socket, MasterSocketManager masterSocketManager) throws IOException {
         this.socket = socket;
@@ -25,6 +26,7 @@ public class Client  implements Runnable{
         this.printStream = new PrintStream(this.socket.getOutputStream());
         this.masterSocketManager = masterSocketManager;
         this.isRunning = true;
+        this.ftpUtils = new FtpUtils();
     }
 
     @Override
@@ -73,6 +75,7 @@ public class Client  implements Runnable{
                 if (responseParts.length < 3) {
                     return "error";
                 }
+                sendToFTP(responseParts[2]);
                 // 更新数据并生成同步信息
                 return "<region>[]2 " + responseParts[2] + " create";
 
@@ -80,12 +83,15 @@ public class Client  implements Runnable{
                 if (responseParts.length < 3) {
                     return "error";
                 }
+                deleteFromFTP(responseParts[2]);
                 return "<region>[]2 " + responseParts[2] + " drop";
 
             case "INSERT":
                 if (sqlParts.length < 3) {
                     return "error";
                 }
+                deleteFromFTP(sqlParts[2]);
+                sendToFTP(sqlParts[2]);
                 return "No Table Modified";
 
             case "UPDATE":
@@ -98,11 +104,28 @@ public class Client  implements Runnable{
                 if (sqlParts.length < 3) {
                     return "error";
                 }
+                deleteFromFTP(sqlParts[2]);
+                sendToFTP(sqlParts[2]);
                 return "No Table Modified";
 
             default:
                 return "***ERROR*** : Unknown operation";
         }
 
+    }
+
+    public void sendToFTP(String fileName) {
+        ftpUtils.uploadFile(fileName, "table");
+        ftpUtils.uploadFile(fileName + "_index.index", "index");
+    }
+
+    public void deleteFromFTP(String fileName) {
+        ftpUtils.deleteFile(fileName, "table");
+        ftpUtils.deleteFile(fileName + "_index.index", "index");
+    }
+
+    public void sendTCToFTP() {
+        ftpUtils.uploadFile("table_catalog", SocketUtils.getHostAddress(), "catalog");
+        ftpUtils.uploadFile("index_catalog", SocketUtils.getHostAddress(), "catalog");
     }
 }
