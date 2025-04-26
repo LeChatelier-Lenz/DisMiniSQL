@@ -11,9 +11,9 @@ import MasterManagers.SocketManager.SocketThread;
 public class TableManager {
 
     // 1. 表名到ip的映射关系
-    private final Map<String, String> tableToIP;
-    // 记录每个表存储在哪个Region服务器上
-    // 例: {"table-1" -> "127.0.0.1"}
+    private final Map<String, List<String>> tableToIP;
+    // 记录每个表存储在哪个Region服务器上，支持同一个表存储在不同Region服务器
+    // 例: {"table-1" -> ["127.0.0.1", "127.0.0.2"]}
 
     // 2. 所有已知Region服务器的List
     private final List<String> IPList;
@@ -39,59 +39,73 @@ public class TableManager {
     }
 
     /**
-     * 添加新表到指定Region服务器，如果表已存在则覆盖
+     * 添加新表到指定Region服务器，如果表已存在则添加新的Region服务器
      *
      * @param tableName 表名
      * @param regionIP Region服务器IP
      * @return true 表示成功添加; false 表示添加失败，指定Region服务器故障或其他原因，无法添加表
      */
     public boolean addTable(String tableName, String regionIP) {
-
         // 如果Region服务器不在已知列表中，先添加
         if (!isExistServer(regionIP)) {
             addServer(regionIP);
         }
 
         // 如果Region服务器不在活跃列表中，说明其发生故障
-        if (isAliveServer(regionIP)) {
+        if (!isAliveServer(regionIP)) {
             return false;
         }
 
         // 更新表名到ip的映射关系
-        tableToIP.put(tableName, regionIP);
+        if (!tableToIP.containsKey(tableName)) {
+            tableToIP.put(tableName, new ArrayList<>());
+        }
+        if (!tableToIP.get(tableName).contains(regionIP)) {
+            tableToIP.get(tableName).add(regionIP);
+        }
 
         // 更新当前活跃服务器以及其存储的表名
-        aliveIPToTable.get(regionIP).add(tableName);
+        if (!aliveIPToTable.get(regionIP).contains(tableName)) {
+            aliveIPToTable.get(regionIP).add(tableName);
+        }
 
         return true;
     }
 
     /**
-     * 添加多个新表到指定Region服务器，如果表已存在则覆盖
+     * 添加多个新表到指定Region服务器，如果表已存在则添加新的Region服务器
      *
-     * @param tableName 表名
+     * @param tableNames 表名列表
      * @param regionIP Region服务器IP
      * @return true 表示成功添加; false 表示添加失败，指定Region服务器故障或其他原因，无法添加表
      */
     public boolean addTables(List<String> tableNames, String regionIP) {
-
         // 如果Region服务器不在已知列表中，先添加
         if (!isExistServer(regionIP)) {
             addServer(regionIP);
         }
 
         // 如果Region服务器不在活跃列表中，说明其发生故障
-        if (isAliveServer(regionIP)) {
+        if (!isAliveServer(regionIP)) {
             return false;
         }
 
         for (String tableName : tableNames) {
             // 更新表名到ip的映射关系
-            tableToIP.put(tableName, regionIP);
+            if (!tableToIP.containsKey(tableName)) {
+                tableToIP.put(tableName, new ArrayList<>());
+            }
+            if (!tableToIP.get(tableName).contains(regionIP)) {
+                tableToIP.get(tableName).add(regionIP);
+            }
         }
 
         // 更新当前活跃服务器以及其存储的表名
-        aliveIPToTable.get(regionIP).addAll(tableNames);
+        for (String tableName : tableNames) {
+            if (!aliveIPToTable.get(regionIP).contains(tableName)) {
+                aliveIPToTable.get(regionIP).add(tableName);
+            }
+        }
 
         return true;
     }
@@ -109,13 +123,16 @@ public class TableManager {
             return false;
         }
 
-        // 检查表是否属于指定的Region服务器
-        if (!regionIP.equals(tableToIP.get(tableName))) {
+        // 检查表是否存在于指定的Region服务器
+        if (!tableToIP.get(tableName).contains(regionIP)) {
             return false;
         }
 
         // 更新表名到ip的映射关系
-        tableToIP.remove(tableName);
+        tableToIP.get(tableName).remove(regionIP);
+        if (tableToIP.get(tableName).isEmpty()) {
+            tableToIP.remove(tableName);
+        }
 
         // 更新当前活跃服务器以及其存储的表名
         aliveIPToTable.get(regionIP).removeIf(tableName::equals);
@@ -124,13 +141,53 @@ public class TableManager {
     }
 
     /**
-     * 查找表所在Region服务器。
+     * 从所有服务器上删除指定表
+     *
+     * @param tableName 要删除的表名
+     * @return true 表示删除成功；false 表示表不存在或删除失败
+     */
+    public boolean deleteTableFromAllServers(String tableName) {
+        // 检查表是否存在
+        if (!tableToIP.containsKey(tableName)) {
+            return false;
+        }
+
+        // 获取存储该表的所有Region服务器
+        List<String> regionIPs = new ArrayList<>(tableToIP.get(tableName));
+
+        // 从每个服务器上删除该表
+        for (String regionIP : regionIPs) {
+            // 更新当前活跃服务器以及其存储的表名
+            if (aliveIPToTable.containsKey(regionIP)) {
+                aliveIPToTable.get(regionIP).removeIf(tableName::equals);
+            }
+        }
+
+        // 完全移除表名到ip的映射关系
+        tableToIP.remove(tableName);
+
+        return true;
+    }
+
+    /**
+     * 查找表所在的所有Region服务器。
      *
      * @param tableName 表名
-     * @return Region服务器IP
+     * @return Region服务器IP列表，如果表不存在则返回null
      */
-    public String getRegionIP(String tableName) {
+    public List<String> getRegionIPs(String tableName) {
         return tableToIP.get(tableName);
+    }
+
+    /**
+     * 查找表所在的任意一个Region服务器。
+     *
+     * @param tableName 表名
+     * @return 任意一个Region服务器IP，如果表不存在则返回null
+     */
+    public String getOneRegionIP(String tableName) {
+        List<String> ips = tableToIP.get(tableName);
+        return (ips != null && !ips.isEmpty()) ? ips.get(0) : null;
     }
 
     /**
@@ -260,6 +317,16 @@ public class TableManager {
 
         // 在活跃服务器中删除故障服务器
         aliveIPToTable.remove(sourceIP);
+
+        // 更新tableToIP映射，将源服务器上的表从映射中移除
+        for (String tableName : tableList) {
+            if (tableToIP.containsKey(tableName)) {
+                tableToIP.get(tableName).remove(sourceIP);
+                if (tableToIP.get(tableName).isEmpty()) {
+                    tableToIP.remove(tableName);
+                }
+            }
+        }
 
         return true;
     }
