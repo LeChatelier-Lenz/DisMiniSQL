@@ -213,6 +213,40 @@ public class TableManager {
     }
 
     /**
+     * 恢复故障服务器IP，将其重新加入活跃服务器列表
+     *
+     * @param regionIP 要恢复的Region服务器IP
+     * @param tableNames 该服务器上存储的表名列表
+     * @return true表示恢复成功，false表示服务器不存在或已经是活跃状态
+     */
+    public boolean recoverServer(String regionIP, List<String> tableNames) {
+        // 检查服务器是否存在
+        if (!isExistServer(regionIP)) {
+            return false;
+        }
+
+        // 检查服务器是否已经是活跃状态
+        if (isAliveServer(regionIP)) {
+            return false;
+        }
+
+        // 将服务器重新加入活跃列表
+        aliveIPToTable.put(regionIP, new ArrayList<>(tableNames));
+
+        // 更新表名到IP的映射关系
+        for (String tableName : tableNames) {
+            if (!tableToIP.containsKey(tableName)) {
+                tableToIP.put(tableName, new ArrayList<>());
+            }
+            if (!tableToIP.get(tableName).contains(regionIP)) {
+                tableToIP.get(tableName).add(regionIP);
+            }
+        }
+
+        return true;
+    }
+
+    /**
      * 检查该Region服务器是否已经注册
      *
      * @param regionIP Region服务器IP

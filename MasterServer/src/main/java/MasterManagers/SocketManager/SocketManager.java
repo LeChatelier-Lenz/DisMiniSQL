@@ -5,11 +5,12 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 import MasterManagers.TableManager;
+import MasterManagers.Utils.SocketUtils;
 
 public class SocketManager {
 
-    private ServerSocket serverSocket;
-    private TableManager tableManager;
+    private final ServerSocket serverSocket;
+    private final TableManager tableManager;
 
     public SocketManager(int port, TableManager tableManager) throws IOException, InterruptedException {
         this.tableManager = tableManager;
@@ -25,6 +26,13 @@ public class SocketManager {
 
             // 建立子线程并启动
             SocketThread socketThread = new SocketThread(socket, this.tableManager);
+            String IP = socket.getInetAddress().getHostAddress();
+            if (IP.equals("127.0.0.1")) {
+                IP = SocketUtils.getHostAddress();
+            }
+            this.tableManager.addSocketThread(IP, socketThread);
+            Thread thread = new Thread(socketThread);
+            thread.start();
         }
     }
 }

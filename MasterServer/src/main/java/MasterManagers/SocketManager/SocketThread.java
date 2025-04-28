@@ -53,9 +53,16 @@ public class SocketThread implements Runnable {
         String result = "";
         // 命令分支，去掉前缀
         if (cmd.startsWith("<client>")) {
-
+            result = this.clientProcessor.processClientCommand(cmd.substring(8));
         } else if (cmd.startsWith("<region>")) {
-
+            result = this.regionProcessor.processRegionCommand(cmd.substring(8));
         }
+        if (!result.equals("")) {
+            sendCommand(cmd);
+        }
+    }
+
+    public void sendCommand(String cmd) {
+        output.println("<master>" + cmd);
     }
 }
