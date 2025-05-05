@@ -1,4 +1,4 @@
-package RegionManagers.SocketManager;
+package RegionManagers.SockectManager;
 
 import java.io.*;
 import java.net.Socket;
@@ -98,8 +98,8 @@ public class MasterSocketManager implements Runnable {
 
                     ftpUtils.uploadFile("table", tableName, targetIp);
                     ftpUtils.uploadFile("index", tableName + "_index.index", targetIp);
-                    ftpUtils.additionalUploadFile("catalog", "table_catalog", targetIp + "#table_catalog");
-                    ftpUtils.additionalUploadFile("catalog", "index_catalog", targetIp + "#index_catalog");
+                    ftpUtils.uploadFile("catalog", "table_catalog", targetIp + "#table_catalog");
+                    ftpUtils.uploadFile("catalog", "index_catalog", targetIp + "#index_catalog");
 
                     System.out.println("迁移完成：" + tableName + " 到 " + targetIp);
                 }
