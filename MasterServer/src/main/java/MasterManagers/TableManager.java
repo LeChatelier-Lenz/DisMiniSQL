@@ -39,6 +39,14 @@ public class TableManager {
     }
 
     /**
+     * 返回IPList中已经注册的Region服务器的数量
+     *
+     */
+    public int getIPListSize() {
+        return IPList.size();
+    }
+
+    /**
      * 添加新表到指定Region服务器，如果表已存在则添加新的Region服务器
      *
      * @param tableName 表名
@@ -363,5 +371,27 @@ public class TableManager {
         }
 
         return true;
+    }
+
+    /**
+     * 测试时调用方法，用于初始化类
+     */
+    public void clearAll() {
+        // 1. 清空表到IP的映射关系
+        tableToIP.clear();
+
+        // 2. 清空所有已知Region服务器列表
+        IPList.clear();
+
+        // 3. 清空活跃服务器及其存储的表
+        aliveIPToTable.clear();
+
+        // 4. 关闭并清空所有Socket连接
+        for (SocketThread socketThread : IPToSocketThread.values()) {
+            if (socketThread != null && !socketThread.isClosed()) {
+                socketThread.close();
+            }
+        }
+        IPToSocketThread.clear();
     }
 }
