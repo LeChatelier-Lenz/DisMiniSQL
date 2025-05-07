@@ -8,7 +8,7 @@ import java.io.*;
 
 public class FtpUtils {
     // 此处设置为FTP的IP地址
-    public String hostname = "10.181.241.133";
+    public String hostname = "192.168.116.1";
     public int port = 21;
     public String username = "user1";
     public String password = "1234";
@@ -28,6 +28,7 @@ public class FtpUtils {
                 closeConnect();
                 System.out.println("FTP服务器连接失败");
             }
+            System.out.println("FTP连接成功");
         } catch (Exception e) {
             System.out.println("FTP登录失败" + e.getMessage());
         }
@@ -144,6 +145,7 @@ public class FtpUtils {
                 ftpClient.changeWorkingDirectory(savePath);
                 ftpClient.storeFile(fileName, inputStream);
                 inputStream.close();
+                System.out.println("创建FTP文件： " + fileName);
                 flag = true;
             } catch (Exception e) {
                 e.printStackTrace();

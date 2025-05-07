@@ -1,10 +1,12 @@
 package RegionManagers.SockectManager;
 
+import MasterManagers.Utils.SocketUtils;
 import miniSQL.API;
 import miniSQL.Interpreter;
 
 import java.io.*;
 import java.net.Socket;
+import java.net.SocketException;
 
 public class Client  implements Runnable{
     private Socket socket;
@@ -40,17 +42,27 @@ public class Client  implements Runnable{
                     break;
                 }
                 Thread.sleep(1000);
+                socket.setSoTimeout(5000); // 设置5秒超时
                 // 读取客户端输入命令
                 command = input.readLine();
                 if (command != null) {
                     System.out.println("REGION> 客户端：" + socket.getInetAddress() + socket.getPort() + "\n   指令：" + command);
                     // 处理传入命令
                     String res = commandExcutor(command, socket.getInetAddress().toString());
+                    if (res.equals("error")) {
+                        System.out.println(res);
+                        continue;
+                    }
                     // 从节点有表更改，发送给主节点
                     if(!res.equals("No Table Modified")) {
                         masterSocketManager.sendToMaster(res);
                     }
                 }
+            }
+        } catch (SocketException e) {
+            // 捕获连接中断异常（客户端已关闭连接）
+            if (!socket.isClosed()) {
+                System.err.println("客户端连接已中断: " + e.getMessage());
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -63,9 +75,10 @@ public class Client  implements Runnable{
         // 执行结果
         String response = Interpreter.interpret(command);
         API.store();
-        sendTCToFTP();
+        //sendTCToFTP();
         String[] responseParts = response.trim().split("\s+");
         // 发送响应给客户端
+        if (response.equals("")) response = "error";
         output.println(response);
 
         switch (operation) {
@@ -112,7 +125,6 @@ public class Client  implements Runnable{
             default:
                 return "***ERROR*** : Unknown operation";
         }
-
     }
 
     public void sendToFTP(String fileName) {
@@ -121,8 +133,8 @@ public class Client  implements Runnable{
     }
 
     public void deleteFromFTP(String fileName) {
-        ftpUtils.deleteFile(fileName, "table");
-        ftpUtils.deleteFile(fileName + "_index.index", "index");
+        //ftpUtils.deleteFile(fileName, "table");
+        //ftpUtils.deleteFile(fileName + "_index.index", "index");
     }
 
     public void sendTCToFTP() {

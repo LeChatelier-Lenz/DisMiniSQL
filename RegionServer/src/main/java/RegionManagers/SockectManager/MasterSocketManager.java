@@ -19,11 +19,11 @@ public class MasterSocketManager implements Runnable {
     public final String MASTER = "localhost";
 
     public MasterSocketManager() throws IOException {
-        this.socket = new Socket(MASTER, SERVER_PORT);
+        //this.socket = new Socket(MASTER, SERVER_PORT);
         this.ftpUtils = new FtpUtils();
         this.dataBaseManager = new DataBaseManager();
-        input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        output = new PrintWriter(socket.getOutputStream(), true);
+        //input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        //output = new PrintWriter(socket.getOutputStream(), true);
         isRunning = true;
     }
 

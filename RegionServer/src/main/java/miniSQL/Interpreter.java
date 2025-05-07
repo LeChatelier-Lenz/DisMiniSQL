@@ -38,7 +38,7 @@ public class Interpreter {
 
     public static String interpret(String sql) throws IOException {
         // 去掉最后的分号，否则有bug
-        sql = sql.substring(0, sql.length() - 2);
+        sql = sql.substring(0, sql.length() - 1);
         String resultValue = "";
 
         String result = sql.trim().replaceAll("\\s+", " ");
@@ -226,7 +226,6 @@ public class Interpreter {
         statement = statement.replaceAll(" *, *", ",");
         statement = statement.trim();
         statement = statement.replaceAll("^create table", "").trim(); //skip create table keyword
-
         StringBuilder result = new StringBuilder();
         int startIndex, endIndex;
         if (statement.equals("")) //no statement after create table
