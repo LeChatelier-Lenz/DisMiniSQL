@@ -75,7 +75,7 @@ public class Client  implements Runnable{
         // 执行结果
         String response = Interpreter.interpret(command);
         API.store();
-        //sendTCToFTP();
+        sendTCToFTP();
         String[] responseParts = response.trim().split("\s+");
         // 发送响应给客户端
         if (response.equals("")) response = "error";
@@ -133,8 +133,8 @@ public class Client  implements Runnable{
     }
 
     public void deleteFromFTP(String fileName) {
-        //ftpUtils.deleteFile(fileName, "table");
-        //ftpUtils.deleteFile(fileName + "_index.index", "index");
+        ftpUtils.deleteFile(fileName, "table");
+        ftpUtils.deleteFile(fileName + "_index.index", "index");
     }
 
     public void sendTCToFTP() {
