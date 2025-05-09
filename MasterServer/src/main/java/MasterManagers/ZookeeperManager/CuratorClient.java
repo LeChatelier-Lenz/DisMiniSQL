@@ -51,6 +51,15 @@ public class CuratorClient {
         this.setUpConnection(hostUrl);
     }
 
+    /**
+     * 不需要传入TableManager的构造函数，用于从节点注册自身信息
+     * @param hostUrl zookeeper集群服务器的ip地址:端口号
+     */
+    public CuratorClient(String hostUrl) {
+        this.tableManager = null;
+        this.setUpConnection(hostUrl);
+    }
+
 
 
 
