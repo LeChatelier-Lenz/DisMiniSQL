@@ -34,7 +34,9 @@ public class MasterSocketManager implements Runnable {
     public void sendTableInfoToMaster(String table_info) {
         output.println("<region>[1]" + table_info);
     }
-
+    public void sendChangeNotification(String tableName, String action) {
+        output.println("<region>[2]" + tableName + " " + action);
+    }
     public void receiveFromMaster() throws IOException {
         String line = null;
         if (socket.isClosed() || socket.isInputShutdown() || socket.isOutputShutdown()) {
