@@ -28,7 +28,7 @@ public class FtpUtils {
                 closeConnect();
                 System.out.println("FTP服务器连接失败");
             }
-            System.out.println("FTP连接成功");
+            //System.out.println("FTP连接成功");
         } catch (Exception e) {
             System.out.println("FTP登录失败" + e.getMessage());
         }
@@ -200,6 +200,7 @@ public class FtpUtils {
             try {
                 ftpClient.changeWorkingDirectory(filePath);
                 ftpClient.dele(fileName);
+                System.out.println("删除FTP文件： " + fileName);
                 flag = true;
             } catch (Exception e) {
                 e.printStackTrace();
