@@ -3,7 +3,6 @@ import lombok.extern.slf4j.Slf4j;
 
 
 import MasterManagers.TableManager;
-import org.apache.curator.framework.recipes.cache.TreeCache;
 
 /**
  * ZooKeeper的管理器，主要用于连接ZooKeeper集群，并创建ZooKeeper客户端
@@ -30,11 +29,9 @@ public class ZookeeperManager implements Runnable{
         this.tableManager = tableManager;
     }
 
-
     public void run(){
         this.startZookeeperService();
     }
-
 
     /**
      * 开启ZooKeeper服务
@@ -49,6 +46,21 @@ public class ZookeeperManager implements Runnable{
             }
             // 开始监听服务器目录（的所有子节点），如果有节点的变化，则处理相应事件
             curatorClient.monitorChildrenNodes(ZNODE);
+        } catch (Exception e) {
+            log.warn(e.getMessage(),e);
+        }
+    }
+
+    /**
+     * 用于给分布式系统中的从节点注册自身信息
+     */
+    public static void registerNode() {
+        try {
+            // 连接到Zookeeper服务器, 并创建一个ZooKeeper客户端
+            CuratorClient curatorClient = new CuratorClient(ZK_HOST);
+            // 创建一个节点，节点名为HOST_NAME_PREFIX+hostUrl，节点值为hostUrl
+            String hostUrl = HOST_NAME_PREFIX + ZK_HOST;
+            curatorClient.createNode(hostUrl, ZK_HOST);
         } catch (Exception e) {
             log.warn(e.getMessage(),e);
         }

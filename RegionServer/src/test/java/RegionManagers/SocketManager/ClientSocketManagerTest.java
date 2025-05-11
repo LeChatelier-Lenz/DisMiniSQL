@@ -14,7 +14,7 @@ import java.util.concurrent.CountDownLatch;
 public class ClientSocketManagerTest {
     private static final int TEST_PORT = 9999;
     private static volatile boolean isServerRunning = true; // 服务端运行标志
-    private static CountDownLatch latch = new CountDownLatch(5); // 5个测试步骤
+    private static CountDownLatch latch = new CountDownLatch(6); // 5个测试步骤
 
     public static void main(String[] args) throws Exception {
         MockMasterSocketManager mockMaster = new MockMasterSocketManager();
@@ -58,9 +58,13 @@ public class ClientSocketManagerTest {
                 // 测试用例2：INSERT
                 String insertCmd = "insert into test_table values (1, 'Alice');";
                 out.println(insertCmd);
+                String insertResponse = in.readLine();
+                System.out.println("测试：INSERT 响应: " + insertResponse);
+                latch.countDown();
+
                 insertCmd = "insert into test_table values (2, 'Bob');";
                 out.println(insertCmd);
-                String insertResponse = in.readLine();
+                insertResponse = in.readLine();
                 System.out.println("测试：INSERT 响应: " + insertResponse);
                 latch.countDown();
 
