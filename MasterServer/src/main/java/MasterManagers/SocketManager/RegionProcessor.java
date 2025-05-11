@@ -23,9 +23,8 @@ public class RegionProcessor {
     public String processRegionCommand(String cmd) {
         String result = "";
         String IP = socket.getInetAddress().getHostAddress();
-        if (IP.equals("127.0.0.1")) {
-            IP = SocketUtils.getHostAddress();
-        }
+        int port = socket.getPort();
+        IP += ":" + port;
 
         if (cmd.startsWith("[1]")) {
             // <region>[1]tableName1 tableName2 ...

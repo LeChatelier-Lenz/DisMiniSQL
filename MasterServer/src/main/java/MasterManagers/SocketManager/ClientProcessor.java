@@ -23,8 +23,14 @@ public class ClientProcessor {
         if (cmd.startsWith("[1]")) {
             // <client>[1]tableName 查询表所在所有节点
             List<String> IPs = this.tableManager.getRegionIPs(tableName);
-            result = "[1]" + String.join(",", IPs);
-            log.info("客户端查询表 {} 所在节点，返回IP列表: {}", tableName, String.join(",", IPs));
+            if (IPs != null) {
+                result = "[1]" + String.join(",", IPs);
+                log.info("客户端查询表 {} 所在节点，返回IP列表: {}", tableName, String.join(",", IPs));
+            } else {
+                result = "[1]127.0.0.1:9999";
+                log.info("未查询到表: {}", tableName);
+            }
+
         } else if (cmd.startsWith("[2]")) {
             // <client>[2]tableName 创建新表，返回创建节点IP
             String IP = this.tableManager.getBestServer();
