@@ -14,7 +14,7 @@ public class Client {
 
         String masterIP = "127.0.0.1";
         int masterPort = 8888;
-        MasterClient masterClient = new MasterClient(masterIP, masterPort);
+        MasterClient masterClient = new MasterClient(masterIP, masterPort,10000);
         SlaveClient slaveClient = new SlaveClient();
 
         System.out.println("MiniSQL 分布式客户端启动");
@@ -44,10 +44,10 @@ public class Client {
                         targetIP = cache.getIP(tableName);
                         System.out.println("从缓存中找到表 " + tableName + " 位于 " + targetIP);
                     } else {
-                        masterRequest = "[1]" + tableName;
+                        masterRequest = "client[1]" + tableName;
                         String response = masterClient.sendToMaster(masterRequest);
-                        if (response.startsWith("Master [1]")) {
-                            targetIP = response.substring(3).split(",")[0].trim(); // 默认取第一个IP
+                        if (response.startsWith("master[1]")) {
+                            targetIP = response.substring(9).split(",")[0].trim(); // 默认取第一个IP
                             cache.cache(tableName, targetIP);
                             System.out.println("主节点返回表位置，已缓存：" + tableName + " -> " + targetIP);
                         } else {
@@ -58,10 +58,10 @@ public class Client {
                     break;
 
                 case CREATE:
-                    masterRequest = "[2]" + tableName;
+                    masterRequest = "client[2]" + tableName;
                     String createResp = masterClient.sendToMaster(masterRequest);
-                    if (createResp.startsWith("[2]")) {
-                        targetIP = createResp.substring(3).trim();
+                    if (createResp.startsWith("master[2]")) {
+                        targetIP = createResp.substring(9).trim();
                         cache.cache(tableName, targetIP);
                         System.out.println("主节点分配创建表到：" + targetIP);
                     } else {
@@ -71,10 +71,10 @@ public class Client {
                     break;
 
                 case DROP:
-                    masterRequest = "[3]" + tableName;
+                    masterRequest = "client[3]" + tableName;
                     String dropResp = masterClient.sendToMaster(masterRequest);
-                    if (dropResp.startsWith("[3]")) {
-                        String status = dropResp.substring(3).trim();
+                    if (dropResp.startsWith("master[3]")) {
+                        String status = dropResp.substring(9).trim();
                         System.out.println("删除结果：" + status);
                         cache.remove(tableName);
                     } else {

@@ -29,25 +29,25 @@ public class test_MasterServer {
 
             System.out.println("接收到请求: " + request);
 
-            if (request.startsWith("[1]")) {
+            if (request.startsWith("client[1]")) {
                 // 查询表所在节点
-                String table = request.substring(3).trim().toLowerCase();
+                String table = request.substring(9).trim().toLowerCase();
                 // 假设每个表名都被分配到一个从节点
-                String response = "[1]127.0.0.1:9999,127.0.0.1:9998"; // 假设返回两个从节点 IP
+                String response = "master[1]127.0.0.1:9999,127.0.0.1:9998"; // 假设返回两个从节点 IP
                 out.println(response);
 
-            } else if (request.startsWith("[2]")) {
+            } else if (request.startsWith("client[2]")) {
                 // 创建表请求
-                String table = request.substring(3).trim().toLowerCase();
+                String table = request.substring(9).trim().toLowerCase();
                 // 假设每个创建请求都分配到一个随机从节点
-                String response = "[2]127.0.0.1:9999"; // 假设返回一个从节点 IP
+                String response = "master[2]127.0.0.1:9999"; // 假设返回一个从节点 IP
                 out.println(response);
 
-            } else if (request.startsWith("[3]")) {
+            } else if (request.startsWith("client[3]")) {
                 // 删除表请求
-                String table = request.substring(3).trim().toLowerCase();
+                String table = request.substring(9).trim().toLowerCase();
                 // 假设删除表的请求总是成功
-                String response = "[3]OK";
+                String response = "master[3]OK";
                 out.println(response);
 
             } else {

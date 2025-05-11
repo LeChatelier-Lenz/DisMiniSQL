@@ -24,6 +24,7 @@ public class SocketUtils {
                             && ip instanceof Inet4Address
                             && !ip.isLoopbackAddress() //loopback地址即本机地址，IPv4的loopback范围是127.0.0.0 ~ 127.255.255.255
                             && !ip.getHostAddress().contains(":")) {
+                        System.out.println("无法获取服务器IP地址");
                         return ip.getHostAddress();
                     }
                 }
