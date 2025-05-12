@@ -94,6 +94,5 @@ public class ChildrenListener implements PathChildrenCacheListener {
      */
     public void eventServerUpdate(String hostName, String hostUrl) {
         log.warn("更新服务器节点：主机名 {}, 地址 {}", hostName, hostUrl);
-
     }
 }
