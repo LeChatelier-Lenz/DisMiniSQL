@@ -1,0 +1,77 @@
+2025-05-11 19:45:29 INFO  ClientProcessor:39 - 客户端删除表 toDelete 成功
+2025-05-11 19:45:29 WARN  ClientProcessor:44 - 收到无效的客户端命令格式: [4]invalid
+2025-05-11 19:45:29 INFO  ClientProcessor:33 - 客户端创建表 newTable，分配到节点 192.168.1.2
+2025-05-11 19:45:29 INFO  ClientProcessor:27 - 客户端查询表 testTable 所在节点，返回IP列表: 192.168.1.1
+2025-05-11 19:45:29 INFO  RegionProcessor:74 - Region服务器 192.168.1.2 已完成故障恢复
+2025-05-11 19:45:29 INFO  RegionProcessor:83 - Region服务器 26.160.224.159 已清空本地数据
+2025-05-11 19:45:29 INFO  RegionProcessor:54 - Region服务器 192.168.1.2 添加表 newTable 成功
+2025-05-11 19:45:29 WARN  RegionProcessor:40 - Region服务器 192.168.1.2 表信息上报失败，可能服务器状态异常
+2025-05-11 19:45:29 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: null:0
+2025-05-11 19:45:29 INFO  SocketThread:64 - Socket连接已关闭: null:0
+2025-05-11 19:45:29 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: null:0
+2025-05-11 19:45:29 INFO  SocketThread:79 - <client>[1]testTable
+2025-05-11 19:45:29 INFO  ClientProcessor:27 - 客户端查询表 testTable 所在节点，返回IP列表: 192.168.1.1,192.168.1.2
+2025-05-11 19:47:50 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.235.224:55782
+2025-05-11 19:47:50 INFO  SocketThread:79 - client[1]users
+2025-05-11 19:56:34 INFO  ClientProcessor:40 - 客户端删除表 toDelete 成功
+2025-05-11 19:56:34 WARN  ClientProcessor:45 - 收到无效的客户端命令格式: [4]invalid
+2025-05-11 19:56:34 INFO  ClientProcessor:34 - 客户端创建表 newTable，分配到节点 192.168.1.2
+2025-05-11 19:56:34 INFO  RegionProcessor:74 - Region服务器 192.168.1.2 已完成故障恢复
+2025-05-11 19:56:34 INFO  RegionProcessor:83 - Region服务器 26.160.224.159 已清空本地数据
+2025-05-11 19:56:34 INFO  RegionProcessor:54 - Region服务器 192.168.1.2 添加表 newTable 成功
+2025-05-11 19:56:34 WARN  RegionProcessor:40 - Region服务器 192.168.1.2 表信息上报失败，可能服务器状态异常
+2025-05-11 19:56:35 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: null:0
+2025-05-11 19:56:35 INFO  SocketThread:64 - Socket连接已关闭: null:0
+2025-05-11 19:56:35 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: null:0
+2025-05-11 19:56:35 INFO  SocketThread:79 - <client>[1]testTable
+2025-05-11 19:57:13 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.235.224:56727
+2025-05-11 19:57:13 INFO  SocketThread:79 - client[1]users
+2025-05-11 20:02:07 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.235.224:57768
+2025-05-11 20:02:07 INFO  SocketThread:79 - <client>[1]users
+2025-05-11 20:02:07 INFO  SocketThread:64 - Socket连接已关闭: /10.192.235.224:57768
+2025-05-11 20:02:25 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.235.224:57803
+2025-05-11 20:02:25 INFO  SocketThread:79 - <client>[1]users
+2025-05-11 20:02:25 INFO  SocketThread:64 - Socket连接已关闭: /10.192.235.224:57803
+2025-05-11 20:05:59 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.235.224:58176
+2025-05-11 20:05:59 INFO  SocketThread:79 - <client>[1]users
+2025-05-11 20:05:59 INFO  SocketThread:64 - Socket连接已关闭: /10.192.235.224:58176
+2025-05-11 20:06:47 INFO  ClientProcessor:43 - 客户端删除表 toDelete 成功
+2025-05-11 20:06:48 WARN  ClientProcessor:48 - 收到无效的客户端命令格式: [4]invalid
+2025-05-11 20:06:48 INFO  ClientProcessor:37 - 客户端创建表 newTable，分配到节点 192.168.1.2
+2025-05-11 20:06:48 INFO  ClientProcessor:31 - 客户端查询表 testTable 所在节点，返回IP列表: 192.168.1.1
+2025-05-11 20:06:48 INFO  RegionProcessor:74 - Region服务器 192.168.1.2 已完成故障恢复
+2025-05-11 20:06:48 INFO  RegionProcessor:83 - Region服务器 26.160.224.159 已清空本地数据
+2025-05-11 20:06:48 INFO  RegionProcessor:54 - Region服务器 192.168.1.2 添加表 newTable 成功
+2025-05-11 20:06:48 WARN  RegionProcessor:40 - Region服务器 192.168.1.2 表信息上报失败，可能服务器状态异常
+2025-05-11 20:06:48 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: null:0
+2025-05-11 20:06:48 INFO  SocketThread:64 - Socket连接已关闭: null:0
+2025-05-11 20:06:48 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: null:0
+2025-05-11 20:06:48 INFO  SocketThread:79 - <client>[1]testTable
+2025-05-11 20:06:48 INFO  ClientProcessor:31 - 客户端查询表 testTable 所在节点，返回IP列表: 192.168.1.1,192.168.1.2
+2025-05-11 20:07:17 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.235.224:58320
+2025-05-11 20:07:17 INFO  SocketThread:79 - <client>[1]users
+2025-05-11 20:07:17 INFO  SocketThread:64 - Socket连接已关闭: /10.192.235.224:58320
+2025-05-11 20:09:47 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.235.224:58585
+2025-05-11 20:09:47 INFO  SocketThread:79 - <client>[1]users
+2025-05-11 20:09:47 INFO  ClientProcessor:25 - 接收到命令: [1]users
+2025-05-11 20:09:47 INFO  SocketThread:64 - Socket连接已关闭: /10.192.235.224:58585
+2025-05-11 20:11:00 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.235.224:58711
+2025-05-11 20:11:00 INFO  SocketThread:79 - <client>[1]users
+2025-05-11 20:11:00 INFO  ClientProcessor:25 - 接收到命令: [1]users
+2025-05-11 20:11:00 INFO  ClientProcessor:27 - 查询结果: null
+2025-05-11 20:11:00 INFO  SocketThread:64 - Socket连接已关闭: /10.192.235.224:58711
+2025-05-11 20:12:12 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.235.224:58860
+2025-05-11 20:12:12 INFO  SocketThread:79 - <client>[1]users
+2025-05-11 20:12:12 INFO  ClientProcessor:31 - 未查询到表: users
+2025-05-11 20:21:13 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.235.224:59819
+2025-05-11 20:21:13 INFO  SocketThread:79 - <region>[1]
+2025-05-11 20:21:13 INFO  RegionProcessor:38 - Region服务器 10.192.235.224 表信息上报成功
+2025-05-11 20:21:23 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.235.224:59836
+2025-05-11 20:21:23 INFO  SocketThread:79 - <client>[1]users
+2025-05-11 20:21:23 INFO  ClientProcessor:31 - 未查询到表: users
+2025-05-11 20:22:23 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.235.224:59940
+2025-05-11 20:22:23 INFO  SocketThread:79 - <region>[1]users
+2025-05-11 20:22:23 INFO  RegionProcessor:38 - Region服务器 10.192.235.224 表信息上报成功
+2025-05-11 20:22:33 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.235.224:59958
+2025-05-11 20:22:33 INFO  SocketThread:79 - <client>[1]users
+2025-05-11 20:22:33 INFO  ClientProcessor:28 - 客户端查询表 users 所在节点，返回IP列表: 10.192.235.224

@@ -1,8 +1,10 @@
 package MasterManagers.ZookeeperManager;
+import MasterManagers.Utils.SocketUtils;
 import lombok.extern.slf4j.Slf4j;
 
 
 import MasterManagers.TableManager;
+import org.apache.zookeeper.CreateMode;
 
 /**
  * ZooKeeper的管理器，主要用于连接ZooKeeper集群，并创建ZooKeeper客户端
@@ -10,6 +12,7 @@ import MasterManagers.TableManager;
 @Slf4j
 public class ZookeeperManager implements Runnable{
     private TableManager tableManager;
+    private final int TaskType;
 
     // ZooKeeper集群访问的端口
     public static final String ZK_HOST = "localhost:2181";
@@ -25,12 +28,28 @@ public class ZookeeperManager implements Runnable{
     //ZooKeeper集群内各个服务器注册自身信息的节点名前缀
     public static final String HOST_NAME_PREFIX = "Region_";
 
+
+    // 主节点调用
     public ZookeeperManager(TableManager tableManager) {
         this.tableManager = tableManager;
+        this.TaskType = 0;
+
     }
 
+    // 从节点简单调用
+    public ZookeeperManager() {
+        this.tableManager = null;
+        this.TaskType = 1;
+    }
+
+
+
     public void run(){
-        this.startZookeeperService();
+        if(TaskType == 0){
+            this.startZookeeperService();
+        }else{
+            this.serviceRegister();
+        }
     }
 
     /**
@@ -51,18 +70,32 @@ public class ZookeeperManager implements Runnable{
         }
     }
 
-    /**
-     * 用于给分布式系统中的从节点注册自身信息
-     */
-    public static void registerNode() {
+    private void serviceRegister() {
         try {
-            // 连接到Zookeeper服务器, 并创建一个ZooKeeper客户端
+            // 向ZooKeeper注册临时节点
             CuratorClient curatorClient = new CuratorClient(ZK_HOST);
-            // 创建一个节点，节点名为HOST_NAME_PREFIX+hostUrl，节点值为hostUrl
-            String hostUrl = HOST_NAME_PREFIX + ZK_HOST;
-            curatorClient.createNode(hostUrl, ZK_HOST);
+            int nChildren = curatorClient.getNodeChildren(ZookeeperManager.ZNODE).size();
+            if(nChildren==0)
+                curatorClient.createNode(getRegisterPath() + nChildren, SocketUtils.getHostAddress(), CreateMode.EPHEMERAL);
+            else{
+                String index = String.valueOf(Integer.parseInt((curatorClient.getNodeChildren(ZookeeperManager.ZNODE)).get(nChildren - 1).substring(7)) + 1);
+                curatorClient.createNode(getRegisterPath() + index, SocketUtils.getHostAddress(), CreateMode.EPHEMERAL);
+            }
+
+            // 阻塞该线程，直到发生异常或者主动退出
+            synchronized (this) {
+                wait();
+            }
         } catch (Exception e) {
-            log.warn(e.getMessage(),e);
+            log.warn(e.getMessage(), e);
         }
     }
+
+    /**
+     * @description: 获取Zookeeper注册的路径
+     */
+    private static String getRegisterPath() {
+        return ZookeeperManager.ZNODE + "/" + ZookeeperManager.HOST_NAME_PREFIX;
+    }
+
 }

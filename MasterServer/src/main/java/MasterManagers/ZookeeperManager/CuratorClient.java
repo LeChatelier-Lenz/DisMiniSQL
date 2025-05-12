@@ -74,11 +74,12 @@ public class CuratorClient {
         if (client == null) {
             synchronized (this) {
                 // 创建连接
-                client = CuratorFrameworkFactory.builder()
+                client = CuratorFrameworkFactory.builder() //高阶地创建CuratorFramework客户端
                         .connectString(hostUrl)
                         .connectionTimeoutMs(ZookeeperManager.ZK_CONNECTION_TIMEOUT_MS)
                         .sessionTimeoutMs(ZookeeperManager.ZK_SESSION_TIMEOUT_MS)
                         .retryPolicy(retryPolicy)   // 重试策略：初试时间为1s 重试5次
+                        .namespace(ZookeeperManager.ZNODE)
                         .build();
                 client.start();
                 System.out.println(client.getState());
@@ -100,7 +101,8 @@ public class CuratorClient {
 
 
     /**
-     * 创建节点
+     * 指定生成节点模式的节点生成
+     *
      * @param path 希望创建的节点路径
      * @param value 节点的值
      * @param mode 节点的类型【持久节点、临时节点、顺序节点】
@@ -154,7 +156,9 @@ public class CuratorClient {
      */
     public String getNodeValue(String nodePath) throws Exception{
         checkConnection();
-        return new String(client.getData().forPath(nodePath));
+        byte[] data =  client.getData().forPath(nodePath);
+        System.out.println("Node data:" + new String(data));
+        return new String(data);
     }
 
     /**

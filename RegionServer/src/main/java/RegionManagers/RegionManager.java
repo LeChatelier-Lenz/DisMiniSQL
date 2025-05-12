@@ -1,5 +1,6 @@
 package RegionManagers;
 
+import MasterManagers.ZookeeperManager.ZookeeperManager;
 import RegionManagers.SockectManager.ClientSocketManager;
 import RegionManagers.SockectManager.MasterSocketManager;
 import miniSQL.API;
@@ -12,13 +13,13 @@ public class RegionManager {
     private DataBaseManager dataBaseManager;
     private ClientSocketManager clientSocketManager;
     private MasterSocketManager masterSocketManager;
-    private zkServiceManager zkServiceManager;
+    private ZookeeperManager zkServiceManager;
 
     private final int PORT = 22222;
 
     public RegionManager() throws IOException, InterruptedException {
         dataBaseManager = new DataBaseManager();
-        zkServiceManager = new zkServiceManager();
+        zkServiceManager = new ZookeeperManager();
         masterSocketManager = new MasterSocketManager();
         masterSocketManager.sendTableInfoToMaster(dataBaseManager.getMetaInfo());
         clientSocketManager = new ClientSocketManager(PORT, masterSocketManager);
