@@ -176,3 +176,461 @@ java.lang.IllegalArgumentException: Invalid namespace: /db, Invalid path string 
 2025-05-12 20:40:42 INFO  SocketThread:79 - <region>[1]
 2025-05-12 20:40:42 INFO  RegionProcessor:37 - Region服务器 10.162.181.29:56624 表信息上报成功
 2025-05-12 20:41:01 INFO  SocketThread:64 - Socket连接已关闭: /10.192.251.91:50601
+2025-05-12 20:50:37 WARN  ZookeeperManager:69 - Invalid namespace: /db, Invalid path string "//db" caused by empty node name specified @1
+java.lang.IllegalArgumentException: Invalid namespace: /db, Invalid path string "//db" caused by empty node name specified @1
+	at org.apache.curator.framework.imps.NamespaceImpl.<init>(NamespaceImpl.java:48)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.<init>(CuratorFrameworkImpl.java:116)
+	at org.apache.curator.framework.CuratorFrameworkFactory$Builder.build(CuratorFrameworkFactory.java:145)
+	at MasterManagers.ZookeeperManager.CuratorClient.setUpConnection(CuratorClient.java:83)
+	at MasterManagers.ZookeeperManager.CuratorClient.<init>(CuratorClient.java:51)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:61)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 20:53:12 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-12 20:53:12 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-12 20:53:12 DEBUG ConnectionState:107 - Starting
+2025-05-12 20:53:12 DEBUG ConnectionState:255 - reset
+2025-05-12 20:53:12 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-12 20:54:00 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.181.29:63876
+2025-05-12 20:54:00 INFO  SocketThread:79 - <region>[1]
+2025-05-12 20:54:00 INFO  RegionProcessor:37 - Region服务器 10.162.181.29:63876 表信息上报成功
+2025-05-12 20:54:00 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-12 20:54:00 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.222.1
+2025-05-12 20:54:00 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-12 20:54:02 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.251.91:50840
+2025-05-12 20:54:02 INFO  SocketThread:79 - <region>[1]
+2025-05-12 20:54:02 INFO  RegionProcessor:37 - Region服务器 10.192.251.91:50840 表信息上报成功
+2025-05-12 20:55:06 INFO  SocketThread:64 - Socket连接已关闭: /10.192.251.91:50840
+2025-05-12 20:55:09 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.251.91:50865
+2025-05-12 20:55:09 INFO  SocketThread:79 - <region>[1]
+2025-05-12 20:55:09 INFO  RegionProcessor:37 - Region服务器 10.192.251.91:50865 表信息上报成功
+2025-05-12 20:55:10 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-12 20:55:10 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 172.17.48.1
+2025-05-12 20:55:10 WARN  ChildrenListener:69 - 对该服务器Region_1执行新增策略
+2025-05-12 20:55:47 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:60698
+2025-05-12 20:55:47 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 20:55:47 INFO  ClientProcessor:42 - 客户端创建表 student，分配到节点 10.192.251.91:50865
+2025-05-12 20:56:25 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:60771
+2025-05-12 20:56:25 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 20:56:25 INFO  ClientProcessor:42 - 客户端创建表 student，分配到节点 10.162.181.29:63876
+2025-05-12 20:56:58 INFO  SocketThread:64 - Socket连接已关闭: /10.192.251.91:50865
+2025-05-12 20:57:02 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_1
+2025-05-12 20:57:02 WARN  ChildrenListener:79 - 服务器节点失效：主机名 Region_1, 地址 172.17.48.1
+2025-05-12 20:57:02 ERROR PathChildrenCache:571 - 
+java.lang.RuntimeException: 需要删除信息的服务器不存在于服务器列表中
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:81)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 20:57:33 INFO  SocketThread:64 - Socket连接已关闭: /10.162.181.29:63876
+2025-05-12 20:57:38 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-12 20:57:38 WARN  ChildrenListener:79 - 服务器节点失效：主机名 Region_0, 地址 192.168.222.1
+2025-05-12 20:57:38 ERROR PathChildrenCache:571 - 
+java.lang.RuntimeException: 需要删除信息的服务器不存在于服务器列表中
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:81)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 20:58:04 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-12 20:58:04 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-12 20:58:04 DEBUG ConnectionState:107 - Starting
+2025-05-12 20:58:04 DEBUG ConnectionState:255 - reset
+2025-05-12 20:58:04 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-12 20:58:46 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.181.29:63991
+2025-05-12 20:58:46 INFO  SocketThread:79 - <region>[1]
+2025-05-12 20:58:46 INFO  RegionProcessor:37 - Region服务器 10.162.181.29:63991 表信息上报成功
+2025-05-12 20:58:47 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-12 20:58:47 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.222.1
+2025-05-12 20:58:47 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-12 20:58:50 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.251.91:50899
+2025-05-12 20:58:50 INFO  SocketThread:79 - <region>[1]
+2025-05-12 20:58:50 INFO  RegionProcessor:37 - Region服务器 10.192.251.91:50899 表信息上报成功
+2025-05-12 20:58:50 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-12 20:58:50 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 172.17.48.1
+2025-05-12 20:58:50 WARN  ChildrenListener:69 - 对该服务器Region_1执行新增策略
+2025-05-12 20:58:58 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:61053
+2025-05-12 20:58:58 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 20:58:58 INFO  ClientProcessor:42 - 客户端创建表 student，分配到节点 10.162.181.29:63991
+2025-05-12 21:02:31 INFO  SocketThread:64 - Socket连接已关闭: /10.162.181.29:63991
+2025-05-12 21:02:35 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.181.29:64049
+2025-05-12 21:02:35 INFO  SocketThread:79 - <region>[1]
+2025-05-12 21:02:35 INFO  RegionProcessor:37 - Region服务器 10.162.181.29:64049 表信息上报成功
+2025-05-12 21:02:35 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_2
+2025-05-12 21:02:35 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_2, 地址 192.168.222.1
+2025-05-12 21:02:35 WARN  ChildrenListener:69 - 对该服务器Region_2执行新增策略
+2025-05-12 21:02:36 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-12 21:02:36 WARN  ChildrenListener:79 - 服务器节点失效：主机名 Region_0, 地址 192.168.222.1
+2025-05-12 21:02:36 ERROR PathChildrenCache:571 - 
+java.lang.RuntimeException: 需要删除信息的服务器不存在于服务器列表中
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:81)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 21:02:52 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:61484
+2025-05-12 21:02:52 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 21:02:52 INFO  ClientProcessor:42 - 客户端创建表 student，分配到节点 10.162.181.29:64049
+2025-05-12 21:04:22 INFO  SocketThread:64 - Socket连接已关闭: /10.162.181.29:64049
+2025-05-12 21:04:26 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.181.29:64113
+2025-05-12 21:04:26 INFO  SocketThread:79 - <region>[1]
+2025-05-12 21:04:26 INFO  RegionProcessor:37 - Region服务器 10.162.181.29:64113 表信息上报成功
+2025-05-12 21:04:26 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_3
+2025-05-12 21:04:26 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_3, 地址 192.168.222.1
+2025-05-12 21:04:26 WARN  ChildrenListener:69 - 对该服务器Region_3执行新增策略
+2025-05-12 21:04:28 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_2
+2025-05-12 21:04:28 WARN  ChildrenListener:79 - 服务器节点失效：主机名 Region_2, 地址 192.168.222.1
+2025-05-12 21:04:28 ERROR PathChildrenCache:571 - 
+java.lang.RuntimeException: 需要删除信息的服务器不存在于服务器列表中
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:81)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 21:06:12 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-12 21:06:12 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-12 21:06:12 DEBUG ConnectionState:107 - Starting
+2025-05-12 21:06:12 DEBUG ConnectionState:255 - reset
+2025-05-12 21:06:12 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-12 21:06:16 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.181.29:64154
+2025-05-12 21:06:16 INFO  SocketThread:79 - <region>[1]
+2025-05-12 21:06:16 INFO  RegionProcessor:37 - Region服务器 10.162.181.29:64154 表信息上报成功
+2025-05-12 21:06:16 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-12 21:06:16 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.222.1
+2025-05-12 21:06:16 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-12 21:06:23 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.251.91:50989
+2025-05-12 21:06:23 INFO  SocketThread:79 - <region>[1]
+2025-05-12 21:06:23 INFO  RegionProcessor:37 - Region服务器 10.192.251.91:50989 表信息上报成功
+2025-05-12 21:06:24 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-12 21:06:24 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 172.17.48.1
+2025-05-12 21:06:24 WARN  ChildrenListener:69 - 对该服务器Region_1执行新增策略
+2025-05-12 21:06:28 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:62082
+2025-05-12 21:06:28 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 21:06:28 INFO  ClientProcessor:41 - 客户端创建表 student，分配到节点 10.192.251.91:50989
+2025-05-12 21:09:50 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:62672
+2025-05-12 21:09:50 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 21:09:50 INFO  ClientProcessor:41 - 客户端创建表 student，分配到节点 10.192.251.91:50989
+2025-05-12 21:11:05 INFO  SocketThread:64 - Socket连接已关闭: /10.192.251.91:50989
+2025-05-12 21:11:10 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_1
+2025-05-12 21:11:10 WARN  ChildrenListener:79 - 服务器节点失效：主机名 Region_1, 地址 172.17.48.1
+2025-05-12 21:11:10 ERROR PathChildrenCache:571 - 
+java.lang.RuntimeException: 需要删除信息的服务器不存在于服务器列表中
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:81)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 21:11:17 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.251.91:51058
+2025-05-12 21:11:17 INFO  SocketThread:79 - <region>[1]
+2025-05-12 21:11:17 INFO  RegionProcessor:37 - Region服务器 10.192.251.91:51058 表信息上报成功
+2025-05-12 21:11:17 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-12 21:11:17 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 172.17.48.1
+2025-05-12 21:11:17 WARN  ChildrenListener:69 - 对该服务器Region_1执行新增策略
+2025-05-12 21:11:29 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:62861
+2025-05-12 21:11:29 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 21:11:29 INFO  ClientProcessor:41 - 客户端创建表 student，分配到节点 10.192.251.91:50989
+2025-05-12 21:11:36 INFO  SocketThread:64 - Socket连接已关闭: /10.162.181.29:64154
+2025-05-12 21:11:42 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-12 21:11:42 WARN  ChildrenListener:79 - 服务器节点失效：主机名 Region_0, 地址 192.168.222.1
+2025-05-12 21:11:42 ERROR PathChildrenCache:571 - 
+java.lang.RuntimeException: 需要删除信息的服务器不存在于服务器列表中
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:81)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 21:11:58 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:62920
+2025-05-12 21:11:58 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 21:11:58 INFO  ClientProcessor:41 - 客户端创建表 student，分配到节点 10.192.251.91:50989
+2025-05-12 21:12:48 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:63013
+2025-05-12 21:12:48 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 21:12:48 INFO  ClientProcessor:41 - 客户端创建表 student，分配到节点 10.192.251.91:50989
+2025-05-12 21:15:34 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-12 21:15:34 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-12 21:15:34 DEBUG ConnectionState:107 - Starting
+2025-05-12 21:15:34 DEBUG ConnectionState:255 - reset
+2025-05-12 21:15:34 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-12 21:15:47 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.251.91:51128
+2025-05-12 21:15:47 INFO  SocketThread:79 - <region>[1]
+2025-05-12 21:15:47 INFO  RegionProcessor:37 - Region服务器 10.192.251.91:51128 表信息上报成功
+2025-05-12 21:15:47 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-12 21:15:47 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 172.17.48.1
+2025-05-12 21:15:47 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-12 21:16:17 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:63429
+2025-05-12 21:16:17 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 21:16:17 INFO  ClientProcessor:41 - 客户端创建表 student，分配到节点 10.192.251.91:51128
+2025-05-12 21:23:54 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-12 21:23:54 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-12 21:23:54 DEBUG ConnectionState:107 - Starting
+2025-05-12 21:23:54 DEBUG ConnectionState:255 - reset
+2025-05-12 21:23:54 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-12 21:24:04 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.251.91:51646
+2025-05-12 21:24:04 INFO  SocketThread:79 - <region>[1]
+2025-05-12 21:24:04 INFO  TableManager:269 - 查询节点是否已经注册: 10.192.251.91:51646, false
+2025-05-12 21:24:04 INFO  TableManager:269 - 查询节点是否已经注册: 10.192.251.91:51646, false
+2025-05-12 21:24:04 INFO  RegionProcessor:37 - Region服务器 10.192.251.91:51646 表信息上报成功
+2025-05-12 21:24:04 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-12 21:24:04 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 172.17.48.1
+2025-05-12 21:24:04 INFO  TableManager:269 - 查询节点是否已经注册: 172.17.48.1, false
+2025-05-12 21:24:04 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-12 21:28:44 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-12 21:28:44 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-12 21:28:44 DEBUG ConnectionState:107 - Starting
+2025-05-12 21:28:44 DEBUG ConnectionState:255 - reset
+2025-05-12 21:28:44 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-12 21:28:54 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.251.91:51730
+2025-05-12 21:28:54 INFO  SocketThread:79 - <region>[1]
+2025-05-12 21:28:54 INFO  TableManager:269 - 查询节点是否已经注册: 10.192.251.91, false
+2025-05-12 21:28:54 INFO  TableManager:269 - 查询节点是否已经注册: 10.192.251.91, false
+2025-05-12 21:28:54 INFO  RegionProcessor:37 - Region服务器 10.192.251.91 表信息上报成功
+2025-05-12 21:28:55 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-12 21:28:55 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 172.17.48.1
+2025-05-12 21:28:55 INFO  TableManager:269 - 查询节点是否已经注册: 172.17.48.1, false
+2025-05-12 21:28:55 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-12 21:29:05 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:64999
+2025-05-12 21:29:05 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 21:29:05 INFO  ClientProcessor:41 - 客户端创建表 student，分配到节点 10.192.251.91
+2025-05-12 21:30:00 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:65106
+2025-05-12 21:30:00 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 21:30:00 INFO  ClientProcessor:41 - 客户端创建表 student，分配到节点 10.192.251.91
+2025-05-12 21:31:02 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:65222
+2025-05-12 21:31:02 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 21:31:02 INFO  ClientProcessor:41 - 客户端创建表 student，分配到节点 10.192.251.91
+2025-05-12 21:31:28 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:65269
+2025-05-12 21:31:28 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 21:31:28 INFO  ClientProcessor:41 - 客户端创建表 student，分配到节点 10.192.251.91
+2025-05-12 21:31:49 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:65315
+2025-05-12 21:31:49 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 21:31:49 INFO  ClientProcessor:41 - 客户端创建表 student，分配到节点 10.192.251.91
+2025-05-12 21:32:04 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:65345
+2025-05-12 21:32:04 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 21:32:04 INFO  ClientProcessor:41 - 客户端创建表 student，分配到节点 10.192.251.91
+2025-05-12 21:33:01 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:65501
+2025-05-12 21:33:01 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 21:33:01 INFO  ClientProcessor:41 - 客户端创建表 student，分配到节点 10.192.251.91
+2025-05-12 21:34:00 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:49274
+2025-05-12 21:34:00 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 21:34:00 INFO  ClientProcessor:41 - 客户端创建表 student，分配到节点 10.192.251.91
+2025-05-12 21:34:01 INFO  SocketThread:79 - <region>[]2 student create
+2025-05-12 21:34:01 WARN  RegionProcessor:88 - Region命令格式出错 []2 student create
+2025-05-12 21:36:46 INFO  SocketThread:64 - Socket连接已关闭: /10.192.251.91:51730
+2025-05-12 21:36:49 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.251.91:51899
+2025-05-12 21:36:49 INFO  SocketThread:79 - <region>[1]student 
+2025-05-12 21:36:49 INFO  TableManager:269 - 查询节点是否已经注册: 10.192.251.91, true
+2025-05-12 21:36:49 INFO  RegionProcessor:37 - Region服务器 10.192.251.91 表信息上报成功
+2025-05-12 21:36:49 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-12 21:36:49 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 172.17.48.1
+2025-05-12 21:36:49 INFO  TableManager:269 - 查询节点是否已经注册: 172.17.48.1, false
+2025-05-12 21:36:49 WARN  ChildrenListener:69 - 对该服务器Region_1执行新增策略
+2025-05-12 21:36:50 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-12 21:36:50 WARN  ChildrenListener:81 - 服务器节点失效：主机名 Region_0, 地址 172.17.48.1
+2025-05-12 21:36:50 INFO  TableManager:269 - 查询节点是否已经注册: 172.17.48.1, false
+2025-05-12 21:36:50 ERROR PathChildrenCache:571 - 
+java.lang.RuntimeException: 需要删除信息的服务器不存在于服务器列表中
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:83)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 21:36:58 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:49816
+2025-05-12 21:36:58 INFO  SocketThread:79 - <client>[2]student1
+2025-05-12 21:36:58 INFO  ClientProcessor:41 - 客户端创建表 student1，分配到节点 10.192.251.91
+2025-05-12 21:36:59 INFO  SocketThread:79 - <region>[2] student1ADD
+2025-05-12 21:36:59 WARN  RegionProcessor:66 - Region命令[2]格式错误: student1ADD
+2025-05-12 21:37:30 INFO  SocketThread:64 - Socket连接已关闭: /10.192.251.91:51899
+2025-05-12 21:37:33 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.251.91:51915
+2025-05-12 21:37:33 INFO  SocketThread:79 - <region>[1]student student1 
+2025-05-12 21:37:33 INFO  TableManager:269 - 查询节点是否已经注册: 10.192.251.91, true
+2025-05-12 21:37:33 INFO  RegionProcessor:37 - Region服务器 10.192.251.91 表信息上报成功
+2025-05-12 21:37:34 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_1
+2025-05-12 21:37:34 WARN  ChildrenListener:81 - 服务器节点失效：主机名 Region_1, 地址 172.17.48.1
+2025-05-12 21:37:34 INFO  TableManager:269 - 查询节点是否已经注册: 172.17.48.1, false
+2025-05-12 21:37:34 ERROR PathChildrenCache:571 - 
+java.lang.RuntimeException: 需要删除信息的服务器不存在于服务器列表中
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:83)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 21:37:34 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-12 21:37:34 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 172.17.48.1
+2025-05-12 21:37:34 INFO  TableManager:269 - 查询节点是否已经注册: 172.17.48.1, false
+2025-05-12 21:37:34 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-12 21:38:00 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:49951
+2025-05-12 21:38:00 INFO  SocketThread:79 - <client>[2]student2
+2025-05-12 21:38:00 INFO  ClientProcessor:41 - 客户端创建表 student2，分配到节点 10.192.251.91
+2025-05-12 21:38:01 INFO  SocketThread:79 - <region>[2] student2 ADD
+2025-05-12 21:38:01 INFO  TableManager:269 - 查询节点是否已经注册: 10.192.251.91, true
+2025-05-12 21:38:01 INFO  RegionProcessor:53 - Region服务器 10.192.251.91 添加表 student2 成功
+2025-05-12 21:44:28 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:50792
+2025-05-12 21:44:28 INFO  SocketThread:79 - <client>[1]student
+2025-05-12 21:44:28 INFO  ClientProcessor:31 - 客户端查询表 student 所在节点，未搜索到IP
+2025-05-12 21:45:35 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:50932
+2025-05-12 21:45:35 INFO  SocketThread:79 - <client>[1]student
+2025-05-12 21:45:35 INFO  ClientProcessor:31 - 客户端查询表 student 所在节点，未搜索到IP
+2025-05-12 21:46:08 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:50994
+2025-05-12 21:46:08 INFO  SocketThread:79 - <client>[1]student
+2025-05-12 21:46:08 INFO  ClientProcessor:31 - 客户端查询表 student 所在节点，未搜索到IP
+2025-05-12 21:49:22 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:51398
+2025-05-12 21:49:22 INFO  SocketThread:79 - <client>[1]student
+2025-05-12 21:49:22 INFO  ClientProcessor:31 - 客户端查询表 student 所在节点，未搜索到IP
+2025-05-12 21:54:26 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-12 21:54:26 WARN  ChildrenListener:81 - 服务器节点失效：主机名 Region_0, 地址 172.17.48.1
+2025-05-12 21:54:26 INFO  TableManager:269 - 查询节点是否已经注册: 172.17.48.1, false
+2025-05-12 21:54:26 ERROR PathChildrenCache:571 - 
+java.lang.RuntimeException: 需要删除信息的服务器不存在于服务器列表中
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:83)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 21:54:30 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.251.91:52427
+2025-05-12 21:54:30 INFO  SocketThread:79 - <region>[1]student student1 student2 
+2025-05-12 21:54:30 INFO  TableManager:269 - 查询节点是否已经注册: 10.192.251.91, true
+2025-05-12 21:54:30 INFO  RegionProcessor:37 - Region服务器 10.192.251.91 表信息上报成功
+2025-05-12 21:54:32 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-12 21:54:32 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 172.17.48.1
+2025-05-12 21:54:32 INFO  TableManager:269 - 查询节点是否已经注册: 172.17.48.1, false
+2025-05-12 21:54:32 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-12 21:56:03 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:52176
+2025-05-12 21:56:03 INFO  SocketThread:79 - <client>[3]student
+2025-05-12 21:56:03 INFO  ClientProcessor:48 - 客户端删除表 student 成功
+2025-05-12 22:04:35 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-12 22:04:35 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-12 22:04:35 DEBUG ConnectionState:107 - Starting
+2025-05-12 22:04:35 DEBUG ConnectionState:255 - reset
+2025-05-12 22:04:36 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-12 22:04:36 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-12 22:04:36 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 172.17.48.1
+2025-05-12 22:04:36 INFO  TableManager:269 - 查询节点是否已经注册: 172.17.48.1, false
+2025-05-12 22:04:36 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-12 22:04:44 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-12 22:04:44 WARN  ChildrenListener:81 - 服务器节点失效：主机名 Region_0, 地址 172.17.48.1
+2025-05-12 22:04:44 INFO  TableManager:269 - 查询节点是否已经注册: 172.17.48.1, false
+2025-05-12 22:04:44 ERROR PathChildrenCache:571 - 
+java.lang.RuntimeException: 需要删除信息的服务器不存在于服务器列表中
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:83)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 22:04:44 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.251.91:53208
+2025-05-12 22:04:44 INFO  SocketThread:79 - <region>[1]student student1 student2 
+2025-05-12 22:04:44 INFO  TableManager:269 - 查询节点是否已经注册: 10.192.251.91, false
+2025-05-12 22:04:44 INFO  TableManager:269 - 查询节点是否已经注册: 10.192.251.91, false
+2025-05-12 22:04:44 INFO  RegionProcessor:40 - Region服务器 10.192.251.91 表信息上报成功
+2025-05-12 22:04:44 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-12 22:04:44 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 172.17.48.1
+2025-05-12 22:04:44 INFO  TableManager:269 - 查询节点是否已经注册: 172.17.48.1, false
+2025-05-12 22:04:44 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-12 22:05:55 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:53479
+2025-05-12 22:05:55 INFO  SocketThread:79 - <client>[1]student
+2025-05-12 22:05:55 INFO  ClientProcessor:31 - 客户端查询表 student 所在节点，未搜索到IP
+2025-05-12 22:05:56 INFO  SocketThread:79 - <region>[2] student DEL
+2025-05-12 22:05:56 INFO  RegionProcessor:61 - Region服务器 10.192.251.91 删除表 student 成功
+2025-05-12 22:07:13 WARN  ClientCnxn:1162 - Session 0x100155d700e0015 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:68)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:366)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-12 22:07:14 INFO  ConnectionStateManager:228 - State change: SUSPENDED
+2025-05-12 22:07:14 WARN  ClientCnxn:1162 - Session 0x100155d700e0015 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-12 22:07:15 WARN  ClientCnxn:1162 - Session 0x100155d700e0015 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-12 22:07:16 WARN  ClientCnxn:1162 - Session 0x100155d700e0015 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-12 22:07:17 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3023 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-12 22:07:17 DEBUG ConnectionState:255 - reset
+2025-05-12 22:07:17 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-12 22:07:17 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-12 22:07:18 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-12 22:07:19 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-12 22:07:20 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-12 22:07:20 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-12 22:07:20 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3654 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-12 22:07:20 DEBUG ConnectionState:255 - reset

@@ -33,7 +33,6 @@ public class ClientProcessor {
         } else if (cmd.startsWith("[2]")) {
             // <client>[2]tableName 创建新表，返回创建节点IP
             String IP = this.tableManager.getBestServer();
-            this.tableManager.addTable(tableName, IP);
             if (IP.equals("")) {
                 result = "[2]null";
                 log.info("客户端创建表 {}，未找到可以分配的节点", tableName);
@@ -46,9 +45,9 @@ public class ClientProcessor {
             boolean res = this.tableManager.deleteTableFromAllServers(tableName);
             result = "[3]" + (res ? "OK" : "FAIL");
             if (res) {
-                log.info("客户端删除表 {} 成功", tableName);
+                log.info("客户端删除表 {} 操作发送成功", tableName);
             } else {
-                log.warn("客户端删除表 {} 失败，表可能不存在", tableName);
+                log.warn("客户端删除表 {} 操作发送失败，表可能不存在", tableName);
             }
         } else {
             log.warn("收到无效的客户端命令格式: {}", cmd);
