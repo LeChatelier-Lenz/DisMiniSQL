@@ -23,13 +23,16 @@ public class RegionProcessor {
     public String processRegionCommand(String cmd) {
         String result = "";
         String IP = socket.getInetAddress().getHostAddress();
-        int port = socket.getPort();
-        IP += ":" + port;
+        //if (IP.equals("127.0.0.1")) {
+        //    IP = SocketUtils.getHostAddress();
+        //}
+        //int port = socket.getPort();
+        //IP += ":" + port;
 
         if (cmd.startsWith("[1]")) {
             // <region>[1]tableName1 tableName2 ...
             // 处理从节点启动时上报本地存储的所有表名
-            cmd = cmd.substring(3);
+            cmd = cmd.substring(3).trim();
             List<String> tableNames = Arrays.asList(cmd.split("\\s+"));
 
             boolean success = this.tableManger.addTables(tableNames, IP);

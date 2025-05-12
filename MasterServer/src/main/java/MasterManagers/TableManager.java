@@ -7,7 +7,9 @@ import java.util.List;
 import java.util.Map;
 
 import MasterManagers.SocketManager.SocketThread;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class TableManager {
 
     // 1. 表名到ip的映射关系
@@ -264,6 +266,7 @@ public class TableManager {
      * @return true 存在该服务器; false 不存在该服务器
      */
     public boolean isExistServer(String regionIP) {
+        log.info("查询节点是否已经注册: {}, {}", regionIP, IPList.contains(regionIP));
         return IPList.contains(regionIP);
     }
 
