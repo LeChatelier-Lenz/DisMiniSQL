@@ -70,27 +70,46 @@ public class Client {
                         continue;
                     }
                     break;
-
                 case DROP:
-                    masterRequest = "<client>[3]" + tableName;
-                    String dropResp = masterClient.sendToMaster(masterRequest);
-                    if (dropResp.startsWith("<master>[3]")) {
-                        String status = dropResp.substring(11).trim();
-                        System.out.println("删除结果：" + status);
-                        cache.remove(tableName);
+                    if (cache.contains(tableName)) {
+                        targetIP = cache.getIP(tableName);
+                        System.out.println("从缓存中找到表 " + tableName + " 位于 " + targetIP);
                     } else {
-                        System.out.println("主节点返回错误：" + dropResp);
+                        masterRequest = "<client>[1]" + tableName;
+                        String response = masterClient.sendToMaster(masterRequest);
+                        System.out.println("主节点返回内容" + response);
+                        if (response.startsWith("<master>[1]")) {
+                            targetIP = response.substring(11).split(",")[0].trim(); // 默认取第一个IP
+                            cache.remove(tableName);
+                            System.out.println("主节点返回表位置，已缓存：" + tableName + " -> " + targetIP);
+                        } else {
+                            System.out.println("主节点返回错误：" + response);
+                            continue;
+                        }
                     }
-                    continue; // DROP 不需要发到从节点了
+                    break;
+//                    masterRequest = "<client>[3]" + tableName;
+//                    String dropResp = masterClient.sendToMaster(masterRequest);
+//                    if (dropResp.startsWith("<master>[3]")) {
+//                        String status = dropResp.substring(11).trim();
+//                        System.out.println("删除结果：" + status);
+//                        cache.remove(tableName);
+//                    } else {
+//                        System.out.println("主节点返回错误：" + dropResp);
+//                    }
+//                    continue; // DROP 不需要发到从节点了
             }
 
             // 向从节点发送 SQL
             try {
                 String[] ipParts = targetIP.split(":");
                 String ip = ipParts[0];
-                int port = Integer.parseInt(ipParts[1]);
+                int port = 22222;
+                System.out.println(ip+":"+port+sql);
                 String result = slaveClient.sendToSlave(ip, port, sql);
-                System.out.println("查询结果：\n" + result);
+                System.out.println("运行结果：");
+                System.out.println(result);
+
             } catch (Exception e) {
                 System.out.println("发送 SQL 到从节点失败：" + e.getMessage());
             }

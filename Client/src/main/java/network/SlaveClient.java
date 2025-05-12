@@ -28,7 +28,20 @@ public class SlaveClient {
             out.println(sql);
 
             // 5. 接收并返回从节点的第一行响应结果（以换行符结束）
-            return in.readLine();
+            if (sql.trim().toUpperCase().startsWith("SELECT")) {
+                // SELECT：读取多行
+                StringBuilder response = new StringBuilder();
+                String line;
+                while ((line = in.readLine()) != null) {
+                    response.append(line).append("\n");
+                }
+                return response.toString().trim();
+            } else {
+                // 非 SELECT：只读取一行
+                return in.readLine();
+            }
+
+
 
         } catch (IOException e) {
             // 6. 如果出现异常，返回错误信息
