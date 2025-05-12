@@ -75,3 +75,104 @@
 2025-05-11 20:22:33 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.235.224:59958
 2025-05-11 20:22:33 INFO  SocketThread:79 - <client>[1]users
 2025-05-11 20:22:33 INFO  ClientProcessor:28 - 客户端查询表 users 所在节点，返回IP列表: 10.192.235.224
+2025-05-12 19:15:04 WARN  ZookeeperManager:69 - Invalid namespace: /db, Invalid path string "//db" caused by empty node name specified @1
+java.lang.IllegalArgumentException: Invalid namespace: /db, Invalid path string "//db" caused by empty node name specified @1
+	at org.apache.curator.framework.imps.NamespaceImpl.<init>(NamespaceImpl.java:48)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.<init>(CuratorFrameworkImpl.java:116)
+	at org.apache.curator.framework.CuratorFrameworkFactory$Builder.build(CuratorFrameworkFactory.java:145)
+	at MasterManagers.ZookeeperManager.CuratorClient.setUpConnection(CuratorClient.java:83)
+	at MasterManagers.ZookeeperManager.CuratorClient.<init>(CuratorClient.java:51)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:61)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 19:21:19 WARN  ZookeeperManager:69 - Invalid namespace: /db, Invalid path string "//db" caused by empty node name specified @1
+java.lang.IllegalArgumentException: Invalid namespace: /db, Invalid path string "//db" caused by empty node name specified @1
+	at org.apache.curator.framework.imps.NamespaceImpl.<init>(NamespaceImpl.java:48)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.<init>(CuratorFrameworkImpl.java:116)
+	at org.apache.curator.framework.CuratorFrameworkFactory$Builder.build(CuratorFrameworkFactory.java:145)
+	at MasterManagers.ZookeeperManager.CuratorClient.setUpConnection(CuratorClient.java:83)
+	at MasterManagers.ZookeeperManager.CuratorClient.<init>(CuratorClient.java:51)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:61)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 19:30:15 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:63782
+2025-05-12 19:30:15 INFO  SocketThread:79 - <client>[1]users
+2025-05-12 19:30:15 INFO  SocketThread:64 - Socket连接已关闭: /10.192.153.198:63782
+2025-05-12 19:30:54 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:63857
+2025-05-12 19:30:54 INFO  SocketThread:79 - <client>[1]orders
+2025-05-12 19:30:54 INFO  SocketThread:64 - Socket连接已关闭: /10.192.153.198:63857
+2025-05-12 19:31:02 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:63890
+2025-05-12 19:31:02 INFO  SocketThread:79 - <client>[1]product
+2025-05-12 19:31:02 INFO  SocketThread:64 - Socket连接已关闭: /10.192.153.198:63890
+2025-05-12 19:31:28 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:63947
+2025-05-12 19:31:28 INFO  SocketThread:79 - <client>[1]history
+2025-05-12 19:31:28 INFO  SocketThread:64 - Socket连接已关闭: /10.192.153.198:63947
+2025-05-12 19:31:39 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:63970
+2025-05-12 19:31:39 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 19:31:39 INFO  ClientProcessor:33 - 客户端创建表 student，分配到节点 
+2025-05-12 19:31:53 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:63996
+2025-05-12 19:31:53 INFO  SocketThread:79 - <client>[3]temp_data
+2025-05-12 19:31:53 WARN  ClientProcessor:41 - 客户端删除表 temp_data 失败，表可能不存在
+2025-05-12 20:32:03 WARN  ZookeeperManager:69 - Invalid namespace: /db, Invalid path string "//db" caused by empty node name specified @1
+java.lang.IllegalArgumentException: Invalid namespace: /db, Invalid path string "//db" caused by empty node name specified @1
+	at org.apache.curator.framework.imps.NamespaceImpl.<init>(NamespaceImpl.java:48)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.<init>(CuratorFrameworkImpl.java:116)
+	at org.apache.curator.framework.CuratorFrameworkFactory$Builder.build(CuratorFrameworkFactory.java:145)
+	at MasterManagers.ZookeeperManager.CuratorClient.setUpConnection(CuratorClient.java:83)
+	at MasterManagers.ZookeeperManager.CuratorClient.<init>(CuratorClient.java:51)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:61)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 20:32:04 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.251.91:49932
+2025-05-12 20:32:04 INFO  SocketThread:79 - <region>[1]
+2025-05-12 20:32:04 INFO  RegionProcessor:37 - Region服务器 10.192.251.91:49932 表信息上报成功
+2025-05-12 20:32:10 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.181.29:56428
+2025-05-12 20:32:10 INFO  SocketThread:79 - <region>[1]
+2025-05-12 20:32:10 INFO  RegionProcessor:37 - Region服务器 10.162.181.29:56428 表信息上报成功
+2025-05-12 20:33:18 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:57869
+2025-05-12 20:33:18 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 20:33:18 INFO  ClientProcessor:42 - 客户端创建表 student，分配到节点 10.162.181.29:56428
+2025-05-12 20:34:58 INFO  SocketThread:64 - Socket连接已关闭: /10.192.251.91:49932
+2025-05-12 20:35:42 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.251.91:61186
+2025-05-12 20:35:42 INFO  SocketThread:79 - <region>[1]
+2025-05-12 20:35:42 INFO  RegionProcessor:37 - Region服务器 10.192.251.91:61186 表信息上报成功
+2025-05-12 20:36:07 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:58273
+2025-05-12 20:36:07 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 20:36:07 INFO  ClientProcessor:42 - 客户端创建表 student，分配到节点 10.192.251.91:61186
+2025-05-12 20:37:33 WARN  ZookeeperManager:69 - Invalid namespace: /db, Invalid path string "//db" caused by empty node name specified @1
+java.lang.IllegalArgumentException: Invalid namespace: /db, Invalid path string "//db" caused by empty node name specified @1
+	at org.apache.curator.framework.imps.NamespaceImpl.<init>(NamespaceImpl.java:48)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.<init>(CuratorFrameworkImpl.java:116)
+	at org.apache.curator.framework.CuratorFrameworkFactory$Builder.build(CuratorFrameworkFactory.java:145)
+	at MasterManagers.ZookeeperManager.CuratorClient.setUpConnection(CuratorClient.java:83)
+	at MasterManagers.ZookeeperManager.CuratorClient.<init>(CuratorClient.java:51)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:61)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 20:38:08 WARN  ZookeeperManager:69 - Invalid namespace: /db, Invalid path string "//db" caused by empty node name specified @1
+java.lang.IllegalArgumentException: Invalid namespace: /db, Invalid path string "//db" caused by empty node name specified @1
+	at org.apache.curator.framework.imps.NamespaceImpl.<init>(NamespaceImpl.java:48)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.<init>(CuratorFrameworkImpl.java:116)
+	at org.apache.curator.framework.CuratorFrameworkFactory$Builder.build(CuratorFrameworkFactory.java:145)
+	at MasterManagers.ZookeeperManager.CuratorClient.setUpConnection(CuratorClient.java:83)
+	at MasterManagers.ZookeeperManager.CuratorClient.<init>(CuratorClient.java:51)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:61)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 20:38:13 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.181.29:56582
+2025-05-12 20:38:13 INFO  SocketThread:79 - <region>[1]
+2025-05-12 20:38:13 INFO  RegionProcessor:37 - Region服务器 10.162.181.29:56582 表信息上报成功
+2025-05-12 20:38:16 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.251.91:50601
+2025-05-12 20:38:16 INFO  SocketThread:79 - <region>[1]
+2025-05-12 20:38:16 INFO  RegionProcessor:37 - Region服务器 10.192.251.91:50601 表信息上报成功
+2025-05-12 20:38:29 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:58667
+2025-05-12 20:38:29 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 20:38:29 INFO  ClientProcessor:42 - 客户端创建表 student，分配到节点 10.162.181.29:56582
+2025-05-12 20:40:06 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.192.153.198:58865
+2025-05-12 20:40:06 INFO  SocketThread:79 - <client>[2]student
+2025-05-12 20:40:06 INFO  ClientProcessor:42 - 客户端创建表 student，分配到节点 10.192.251.91:50601
+2025-05-12 20:40:38 INFO  SocketThread:64 - Socket连接已关闭: /10.162.181.29:56582
+2025-05-12 20:40:42 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.181.29:56624
+2025-05-12 20:40:42 INFO  SocketThread:79 - <region>[1]
+2025-05-12 20:40:42 INFO  RegionProcessor:37 - Region服务器 10.162.181.29:56624 表信息上报成功
+2025-05-12 20:41:01 INFO  SocketThread:64 - Socket连接已关闭: /10.192.251.91:50601

@@ -54,6 +54,9 @@ public class TableManager {
      * @return true 表示成功添加; false 表示添加失败，指定Region服务器故障或其他原因，无法添加表
      */
     public boolean addTable(String tableName, String regionIP) {
+        if (regionIP.equals("")) {
+            return false;
+        }
         // 如果Region服务器不在已知列表中，先添加
         if (!isExistServer(regionIP)) {
             addServer(regionIP);
