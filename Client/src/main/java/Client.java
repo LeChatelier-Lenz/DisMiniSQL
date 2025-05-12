@@ -12,8 +12,8 @@ public class Client {
         Scanner scanner = new Scanner(System.in);
         TableLocationCache cache = new TableLocationCache();
 
-        String masterIP = "127.0.0.1";
-        int masterPort = 8888;
+        String masterIP = "10.192.211.225";
+        int masterPort = 12345;
         MasterClient masterClient = new MasterClient(masterIP, masterPort,10000);
         SlaveClient slaveClient = new SlaveClient();
 
@@ -36,6 +36,8 @@ public class Client {
 
             switch (info.type) {
                 case SELECT:
+                    masterRequest = "<region>[1]"+"users";
+                    String response = masterClient.sendToMaster(masterRequest);
                 case INSERT:
                 case UPDATE:
                 case DELETE:
@@ -44,10 +46,11 @@ public class Client {
                         targetIP = cache.getIP(tableName);
                         System.out.println("从缓存中找到表 " + tableName + " 位于 " + targetIP);
                     } else {
-                        masterRequest = "client[1]" + tableName;
-                        String response = masterClient.sendToMaster(masterRequest);
-                        if (response.startsWith("master[1]")) {
-                            targetIP = response.substring(9).split(",")[0].trim(); // 默认取第一个IP
+                        masterRequest = "<client>[1]" + tableName;
+                        response = masterClient.sendToMaster(masterRequest);
+                        System.out.println("主节点返回内容" + response);
+                        if (response.startsWith("<master>[1]")) {
+                            targetIP = response.substring(11).split(",")[0].trim(); // 默认取第一个IP
                             cache.cache(tableName, targetIP);
                             System.out.println("主节点返回表位置，已缓存：" + tableName + " -> " + targetIP);
                         } else {
@@ -58,10 +61,10 @@ public class Client {
                     break;
 
                 case CREATE:
-                    masterRequest = "client[2]" + tableName;
+                    masterRequest = "<client>[2]" + tableName;
                     String createResp = masterClient.sendToMaster(masterRequest);
-                    if (createResp.startsWith("master[2]")) {
-                        targetIP = createResp.substring(9).trim();
+                    if (createResp.startsWith("<master>[2]")) {
+                        targetIP = createResp.substring(11).trim();
                         cache.cache(tableName, targetIP);
                         System.out.println("主节点分配创建表到：" + targetIP);
                     } else {
@@ -71,10 +74,10 @@ public class Client {
                     break;
 
                 case DROP:
-                    masterRequest = "client[3]" + tableName;
+                    masterRequest = "<client>[3]" + tableName;
                     String dropResp = masterClient.sendToMaster(masterRequest);
-                    if (dropResp.startsWith("master[3]")) {
-                        String status = dropResp.substring(9).trim();
+                    if (dropResp.startsWith("<master>[3]")) {
+                        String status = dropResp.substring(11).trim();
                         System.out.println("删除结果：" + status);
                         cache.remove(tableName);
                     } else {
