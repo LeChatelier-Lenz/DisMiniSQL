@@ -22,6 +22,7 @@ public class ClientSocketManager implements Runnable {
         try {
             while (true) {
                 Thread.sleep(1000);
+                System.out.println("REGION> 等待客户端连接...");
                 // 等待客户端连接
                 Socket socket = serverSocket.accept();
                 Client client = new Client(socket, masterSocketManager);

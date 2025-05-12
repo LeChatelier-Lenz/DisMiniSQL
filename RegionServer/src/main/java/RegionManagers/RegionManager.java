@@ -23,8 +23,7 @@ public class RegionManager {
         masterSocketManager = new MasterSocketManager();
         masterSocketManager.sendTableInfoToMaster(dataBaseManager.getMetaInfo());
         clientSocketManager = new ClientSocketManager(PORT, masterSocketManager);
-        Thread centerThread = new Thread(clientSocketManager);
-        centerThread.start();
+
         // 测试代码，测试region和master的沟通情况
 //        masterSocketManager.sendToMaster(dataBaseManager.getMetaInfo());
 //        Thread masterThread = new Thread(masterSocketManager);
@@ -39,6 +38,8 @@ public class RegionManager {
         zkServiceThread.start();
         Thread MasterSocketThread = new Thread(masterSocketManager);
         MasterSocketThread.start();
+        Thread centerThread = new Thread(clientSocketManager);
+        centerThread.start();
 
         System.out.println("从节点开始运行！");
     }

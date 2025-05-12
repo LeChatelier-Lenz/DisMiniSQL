@@ -42,11 +42,10 @@ public class Client  implements Runnable{
                     break;
                 }
                 Thread.sleep(1000);
-                socket.setSoTimeout(5000); // 设置5秒超时
                 // 读取客户端输入命令
                 command = input.readLine();
                 if (command != null) {
-                    System.out.println("REGION> 客户端：" + socket.getInetAddress() + socket.getPort() + "\n   指令：" + command);
+                    System.out.println("REGION> 客户端：" + socket.getInetAddress() + ":" +socket.getPort() + "\n    指令：" + command);
                     // 处理传入命令
                     String res = commandExcutor(command, socket.getInetAddress().toString());
                     if (res.equals("error")) {
@@ -91,14 +90,14 @@ public class Client  implements Runnable{
                 }
                 sendToFTP(responseParts[2]);
                 // 更新数据并生成同步信息
-                return "<region>[]2 " + responseParts[2] + " create";
+                return "<region>[2] " + responseParts[2] + " ADD";
 
             case "DROP":
                 if (responseParts.length < 3) {
                     return "error";
                 }
                 deleteFromFTP(responseParts[2]);
-                return "<region>[]2 " + responseParts[2] + " drop";
+                return "<region>[2] " + responseParts[2] + " DEL";
 
             case "INSERT":
                 if (sqlParts.length < 3) {

@@ -79,7 +79,7 @@ public class CuratorClient {
                         .connectionTimeoutMs(ZookeeperManager.ZK_CONNECTION_TIMEOUT_MS)
                         .sessionTimeoutMs(ZookeeperManager.ZK_SESSION_TIMEOUT_MS)
                         .retryPolicy(retryPolicy)   // 重试策略：初试时间为1s 重试5次
-                        .namespace(ZookeeperManager.ZNODE)
+                        //.namespace(ZookeeperManager.ZNODE)
                         .build();
                 client.start();
                 System.out.println(client.getState());
