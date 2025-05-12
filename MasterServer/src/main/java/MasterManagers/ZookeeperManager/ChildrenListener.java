@@ -73,8 +73,10 @@ public class ChildrenListener implements PathChildrenCacheListener {
 
     /**
      * 处理服务器节点失效事件
-     *  @param hostName
-     * @param hostUrl*/
+     *
+     * @param hostName
+     * @param hostUrl
+     */
     public void eventServerDisappear(String hostName, String hostUrl) {
         log.warn("服务器节点失效：主机名 {}, 地址 {}", hostName, hostUrl);
         if (!strategyExecutor.existServer(hostUrl)) {
