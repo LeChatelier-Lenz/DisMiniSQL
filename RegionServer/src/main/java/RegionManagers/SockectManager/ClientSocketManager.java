@@ -12,7 +12,9 @@ public class ClientSocketManager implements Runnable {
 
     public ClientSocketManager(int port, MasterSocketManager masterSocketManager)
             throws IOException {
-        this.serverSocket = new ServerSocket(port);
+//        this.serverSocket = new ServerSocket(port);
+        this.serverSocket = new ServerSocket(0);   // 0 表示随机
+        System.out.println("Listening on port " + serverSocket.getLocalPort());
         this.masterSocketManager = masterSocketManager;
         this.clientHashMap = new HashMap<Socket, Thread>();
     }

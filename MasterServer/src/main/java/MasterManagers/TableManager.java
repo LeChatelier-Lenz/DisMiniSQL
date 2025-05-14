@@ -221,6 +221,7 @@ public class TableManager {
         // 创建活跃服务器到表的映射
         List<String> temp = new ArrayList<>();
         aliveIPToTable.put(regionIP, temp);
+        log.info("服务器列表中添加新的Region服务器: {}", regionIP);
 
         return true;
     }

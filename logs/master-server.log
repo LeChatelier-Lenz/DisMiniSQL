@@ -1,0 +1,2041 @@
+2025-05-13 22:59:48 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-13 22:59:48 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-13 22:59:48 DEBUG ConnectionState:107 - Starting
+2025-05-13 22:59:48 DEBUG ConnectionState:255 - reset
+2025-05-13 22:59:51 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3018ms for sessionid 0x0
+2025-05-13 22:59:52 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3385 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 22:59:52 DEBUG ConnectionState:255 - reset
+2025-05-13 22:59:55 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3006ms for sessionid 0x0
+2025-05-13 22:59:55 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 22:59:56 DEBUG RetryLoop:196 - Retrying operation
+2025-05-13 22:59:59 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4015ms for sessionid 0x0
+2025-05-13 22:59:59 WARN  ConnectionState:219 - Connection attempt unsuccessful after 7213 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 22:59:59 DEBUG ConnectionState:255 - reset
+2025-05-13 23:00:02 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3003ms for sessionid 0x0
+2025-05-13 23:00:02 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:00:04 DEBUG RetryLoop:196 - Retrying operation
+2025-05-13 23:00:06 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4005ms for sessionid 0x0
+2025-05-13 23:00:07 WARN  ConnectionState:219 - Connection attempt unsuccessful after 8229 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:00:07 DEBUG ConnectionState:255 - reset
+2025-05-13 23:00:09 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3010ms for sessionid 0x0
+2025-05-13 23:00:12 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3008ms for sessionid 0x0
+2025-05-13 23:00:12 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:01:01 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-13 23:01:01 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-13 23:01:01 DEBUG ConnectionState:107 - Starting
+2025-05-13 23:01:01 DEBUG ConnectionState:255 - reset
+2025-05-13 23:01:04 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3024ms for sessionid 0x0
+2025-05-13 23:01:04 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3341 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:01:04 DEBUG ConnectionState:255 - reset
+2025-05-13 23:01:07 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3011ms for sessionid 0x0
+2025-05-13 23:01:07 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:01:08 DEBUG RetryLoop:196 - Retrying operation
+2025-05-13 23:01:11 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4017ms for sessionid 0x0
+2025-05-13 23:01:11 WARN  ConnectionState:219 - Connection attempt unsuccessful after 7198 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:01:11 DEBUG ConnectionState:255 - reset
+2025-05-13 23:01:15 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3009ms for sessionid 0x0
+2025-05-13 23:01:15 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:01:18 DEBUG RetryLoop:196 - Retrying operation
+2025-05-13 23:01:19 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4024ms for sessionid 0x0
+2025-05-13 23:01:21 WARN  ConnectionState:219 - Connection attempt unsuccessful after 9254 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:01:21 DEBUG ConnectionState:255 - reset
+2025-05-13 23:01:22 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3003ms for sessionid 0x0
+2025-05-13 23:01:25 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3014ms for sessionid 0x0
+2025-05-13 23:01:25 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:01:29 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4022ms for sessionid 0x0
+2025-05-13 23:01:30 DEBUG RetryLoop:196 - Retrying operation
+2025-05-13 23:01:33 WARN  ConnectionState:219 - Connection attempt unsuccessful after 12405 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:01:33 DEBUG ConnectionState:255 - reset
+2025-05-13 23:01:33 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3922ms for sessionid 0x0
+2025-05-13 23:01:36 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3015ms for sessionid 0x0
+2025-05-13 23:01:36 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:01:40 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4020ms for sessionid 0x0
+2025-05-13 23:01:45 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4019ms for sessionid 0x0
+2025-05-13 23:01:49 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4017ms for sessionid 0x0
+2025-05-13 23:01:51 DEBUG RetryLoop:196 - Retrying operation
+2025-05-13 23:01:53 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4022ms for sessionid 0x0
+2025-05-13 23:01:54 WARN  ConnectionState:219 - Connection attempt unsuccessful after 21267 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:01:54 DEBUG ConnectionState:255 - reset
+2025-05-13 23:01:56 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3001ms for sessionid 0x0
+2025-05-13 23:02:28 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-13 23:02:28 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-13 23:02:28 DEBUG ConnectionState:107 - Starting
+2025-05-13 23:02:28 DEBUG ConnectionState:255 - reset
+2025-05-13 23:02:28 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:28 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:29 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:29 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:30 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:31 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:31 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3262 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:02:31 DEBUG ConnectionState:255 - reset
+2025-05-13 23:02:32 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:32 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:32 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:02:33 DEBUG RetryLoop:196 - Retrying operation
+2025-05-13 23:02:33 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:33 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:34 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:34 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:35 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:36 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:36 WARN  ConnectionState:219 - Connection attempt unsuccessful after 4913 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:02:36 DEBUG ConnectionState:255 - reset
+2025-05-13 23:02:37 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:37 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:02:37 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:38 DEBUG RetryLoop:196 - Retrying operation
+2025-05-13 23:02:38 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:38 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:39 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:39 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:40 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:41 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:41 WARN  ConnectionState:219 - Connection attempt unsuccessful after 5062 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:02:41 DEBUG ConnectionState:255 - reset
+2025-05-13 23:02:42 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:42 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:02:42 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:43 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:43 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:44 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:44 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:45 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:46 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:47 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:47 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:48 DEBUG RetryLoop:196 - Retrying operation
+2025-05-13 23:02:48 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:48 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:49 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:49 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:50 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:50 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:51 WARN  ConnectionState:219 - Connection attempt unsuccessful after 9972 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:02:51 DEBUG ConnectionState:255 - reset
+2025-05-13 23:02:52 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:02:52 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:02:52 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:01 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-13 23:04:01 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-13 23:04:01 DEBUG ConnectionState:107 - Starting
+2025-05-13 23:04:01 DEBUG ConnectionState:255 - reset
+2025-05-13 23:04:02 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:02 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:03 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:03 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:04 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:04 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:05 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3317 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:04:05 DEBUG ConnectionState:255 - reset
+2025-05-13 23:04:05 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:06 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:06 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:04:07 DEBUG RetryLoop:196 - Retrying operation
+2025-05-13 23:04:07 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:07 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:08 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:08 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:09 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:09 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:10 WARN  ConnectionState:219 - Connection attempt unsuccessful after 4884 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:04:10 DEBUG ConnectionState:255 - reset
+2025-05-13 23:04:10 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:11 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:04:11 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:12 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:12 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:13 DEBUG RetryLoop:196 - Retrying operation
+2025-05-13 23:04:13 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:13 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:14 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:14 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:15 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:16 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:16 WARN  ConnectionState:219 - Connection attempt unsuccessful after 6053 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:04:16 DEBUG ConnectionState:255 - reset
+2025-05-13 23:04:17 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:17 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:04:17 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:18 DEBUG RetryLoop:196 - Retrying operation
+2025-05-13 23:04:18 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:18 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:19 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:19 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:20 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:21 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:21 WARN  ConnectionState:219 - Connection attempt unsuccessful after 5250 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:04:21 DEBUG ConnectionState:255 - reset
+2025-05-13 23:04:22 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:22 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:04:22 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:23 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:23 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:24 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:24 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:25 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:26 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:27 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:27 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:28 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:28 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:29 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:29 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:30 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:30 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:32 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:32 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:33 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:33 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:34 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:34 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:35 DEBUG RetryLoop:196 - Retrying operation
+2025-05-13 23:04:35 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:35 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:37 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:37 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:38 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:38 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:38 WARN  ConnectionState:219 - Connection attempt unsuccessful after 17043 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:04:38 DEBUG ConnectionState:255 - reset
+2025-05-13 23:04:38 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:38 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:04:38 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:39 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:39 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:40 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:41 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:42 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:42 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:43 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:43 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:44 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:44 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:45 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:45 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:47 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:47 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:48 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:48 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:49 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:49 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:50 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:50 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:51 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:52 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:53 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:53 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:54 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:54 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:55 DEBUG RetryLoop:196 - Retrying operation
+2025-05-13 23:04:55 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:55 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:56 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:56 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:58 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:58 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:58 WARN  ConnectionState:219 - Connection attempt unsuccessful after 20200 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:04:58 DEBUG ConnectionState:255 - reset
+2025-05-13 23:04:59 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:04:59 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:04:59 DEBUG RetryLoop:205 - Retry policy not allowing retry
+2025-05-13 23:04:59 WARN  ZookeeperManager:69 - KeeperErrorCode = ConnectionLoss for /db
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-13 23:04:59 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:00 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:00 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:01 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:02 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:03 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:03 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:04 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:04 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:05 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:05 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:06 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:06 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:08 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:08 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:09 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:09 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:10 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:10 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:11 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:11 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:12 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:13 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:14 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:14 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:15 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:15 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:16 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:16 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:17 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:17 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:19 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:19 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:20 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:20 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:21 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:21 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:22 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:22 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:24 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:24 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:25 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:25 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:26 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:26 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:27 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:05:27 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:18:02 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-13 23:18:03 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-13 23:18:03 DEBUG ConnectionState:107 - Starting
+2025-05-13 23:18:03 DEBUG ConnectionState:255 - reset
+2025-05-13 23:18:03 WARN  ClientCnxn:1162 - Session 0x0 for server 127.0.0.1/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:18:04 WARN  ClientCnxn:1162 - Session 0x0 for server 127.0.0.1/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:18:05 WARN  ClientCnxn:1162 - Session 0x0 for server 127.0.0.1/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-13 23:18:06 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3297 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-13 23:18:06 DEBUG ConnectionState:255 - reset
+2025-05-13 23:18:06 WARN  ClientCnxn:1162 - Session 0x0 for server 127.0.0.1/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 00:00:35 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 00:00:35 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 00:00:35 DEBUG ConnectionState:107 - Starting
+2025-05-14 00:00:35 DEBUG ConnectionState:255 - reset
+2025-05-14 00:00:35 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 00:02:32 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:7452
+2025-05-14 00:02:32 INFO  SocketThread:79 - <region>[1]
+2025-05-14 00:02:32 INFO  TableManager:269 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 00:02:32 INFO  TableManager:269 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 00:02:32 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 00:02:32 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 00:02:32 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 00:02:32 DEBUG ConnectionState:107 - Starting
+2025-05-14 00:02:32 DEBUG ConnectionState:255 - reset
+2025-05-14 00:02:33 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 00:02:33 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-14 00:02:33 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 00:02:33 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 00:02:33 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-14 00:03:15 INFO  SocketThread:64 - Socket连接已关闭: /127.0.0.1:7452
+2025-05-14 00:03:18 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:7477
+2025-05-14 00:03:18 INFO  SocketThread:79 - <region>[1]
+2025-05-14 00:03:18 INFO  TableManager:269 - 查询节点是否已经注册: 127.0.0.1, true
+2025-05-14 00:03:18 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 00:03:18 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 00:03:18 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 00:03:18 DEBUG ConnectionState:107 - Starting
+2025-05-14 00:03:18 DEBUG ConnectionState:255 - reset
+2025-05-14 00:03:19 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-14 00:03:19 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 00:03:19 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 00:03:19 ERROR PathChildrenCache:571 - 
+java.lang.RuntimeException: 需要删除信息的服务器不存在于服务器列表中
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:82)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 00:03:19 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 00:03:19 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-14 00:03:19 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 00:03:19 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 00:03:19 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-14 00:05:38 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 00:05:38 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 00:05:38 DEBUG ConnectionState:107 - Starting
+2025-05-14 00:05:38 DEBUG ConnectionState:255 - reset
+2025-05-14 00:05:38 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 00:05:50 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:3642
+2025-05-14 00:05:50 INFO  SocketThread:79 - <region>[1]
+2025-05-14 00:05:50 INFO  TableManager:269 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 00:05:50 INFO  TableManager:269 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 00:05:50 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 00:05:50 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 00:05:50 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 00:05:50 DEBUG ConnectionState:107 - Starting
+2025-05-14 00:05:50 DEBUG ConnectionState:255 - reset
+2025-05-14 00:05:51 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 00:05:51 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-14 00:05:51 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 00:05:51 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 00:05:51 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-14 00:09:41 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:10508
+2025-05-14 00:09:41 INFO  SocketThread:79 - <region>[1]
+2025-05-14 00:09:41 INFO  TableManager:269 - 查询节点是否已经注册: 127.0.0.1, true
+2025-05-14 00:09:41 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 00:09:42 INFO  SocketThread:64 - Socket连接已关闭: /127.0.0.1:10508
+2025-05-14 00:38:52 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 00:38:52 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 00:38:52 DEBUG ConnectionState:107 - Starting
+2025-05-14 00:38:52 DEBUG ConnectionState:255 - reset
+2025-05-14 00:38:52 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 00:42:38 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:6434
+2025-05-14 00:42:38 INFO  SocketThread:79 - <region>[1]
+2025-05-14 00:42:38 INFO  TableManager:269 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 00:42:38 INFO  TableManager:269 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 00:42:38 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 00:42:38 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 00:42:38 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 00:42:38 DEBUG ConnectionState:107 - Starting
+2025-05-14 00:42:38 DEBUG ConnectionState:255 - reset
+2025-05-14 00:42:39 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 00:42:39 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-14 00:42:39 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 00:42:39 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 00:42:39 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-14 00:42:43 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:6448
+2025-05-14 00:42:43 INFO  SocketThread:79 - <region>[1]
+2025-05-14 00:42:43 INFO  TableManager:269 - 查询节点是否已经注册: 127.0.0.1, true
+2025-05-14 00:42:43 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 00:42:43 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 00:42:43 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 00:42:43 DEBUG ConnectionState:107 - Starting
+2025-05-14 00:42:43 DEBUG ConnectionState:255 - reset
+2025-05-14 00:42:43 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 00:42:43 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-14 00:42:43 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 192.168.56.1
+2025-05-14 00:42:43 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 00:42:43 WARN  ChildrenListener:69 - 对该服务器Region_1执行新增策略
+2025-05-14 00:44:42 INFO  SocketThread:64 - Socket连接已关闭: /127.0.0.1:6434
+2025-05-14 00:44:47 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-14 00:44:47 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 00:44:47 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 00:44:47 ERROR PathChildrenCache:571 - 
+java.lang.RuntimeException: 需要删除信息的服务器不存在于服务器列表中
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:82)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 00:54:59 INFO  SocketThread:64 - Socket连接已关闭: /127.0.0.1:6448
+2025-05-14 00:55:03 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_1
+2025-05-14 00:55:03 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_1, 地址 192.168.56.1
+2025-05-14 00:55:03 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 00:55:03 ERROR PathChildrenCache:571 - 
+java.lang.RuntimeException: 需要删除信息的服务器不存在于服务器列表中
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:82)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 00:58:33 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:7283
+2025-05-14 00:58:33 INFO  SocketThread:79 - <region>[1]
+2025-05-14 00:58:33 INFO  TableManager:269 - 查询节点是否已经注册: 127.0.0.1, true
+2025-05-14 00:58:33 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 00:58:33 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 00:58:33 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 00:58:33 DEBUG ConnectionState:107 - Starting
+2025-05-14 00:58:33 DEBUG ConnectionState:255 - reset
+2025-05-14 00:58:33 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 00:58:33 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-14 00:58:33 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 00:58:33 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 00:58:33 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-14 01:08:50 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 01:08:50 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 01:08:50 DEBUG ConnectionState:107 - Starting
+2025-05-14 01:08:50 DEBUG ConnectionState:255 - reset
+2025-05-14 01:08:51 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 01:08:56 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:5485
+2025-05-14 01:08:56 INFO  SocketThread:79 - <region>[1]
+2025-05-14 01:08:56 INFO  TableManager:269 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 01:08:56 INFO  TableManager:269 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 01:08:56 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 01:08:56 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 01:08:56 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 01:08:56 DEBUG ConnectionState:107 - Starting
+2025-05-14 01:08:56 DEBUG ConnectionState:255 - reset
+2025-05-14 01:08:57 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 01:08:57 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-14 01:08:57 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 01:08:57 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 01:08:57 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-14 01:22:50 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 01:22:50 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 01:22:50 DEBUG ConnectionState:107 - Starting
+2025-05-14 01:22:50 DEBUG ConnectionState:255 - reset
+2025-05-14 01:22:51 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 01:22:58 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:7951
+2025-05-14 01:22:58 INFO  SocketThread:79 - <region>[1]
+2025-05-14 01:22:58 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 01:22:58 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 01:22:58 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: 127.0.0.1
+2025-05-14 01:22:58 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 01:22:59 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 01:22:59 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 01:22:59 DEBUG ConnectionState:107 - Starting
+2025-05-14 01:22:59 DEBUG ConnectionState:255 - reset
+2025-05-14 01:22:59 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 01:22:59 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-14 01:22:59 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 01:22:59 INFO  TableManager:270 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 01:22:59 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-14 01:26:24 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 01:26:24 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 01:26:24 DEBUG ConnectionState:107 - Starting
+2025-05-14 01:26:24 DEBUG ConnectionState:255 - reset
+2025-05-14 01:26:24 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 01:26:31 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:3259
+2025-05-14 01:26:31 INFO  SocketThread:79 - <region>[1]
+2025-05-14 01:26:31 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 01:26:31 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 01:26:31 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: 127.0.0.1
+2025-05-14 01:26:31 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 01:26:31 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 01:26:31 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 01:26:31 DEBUG ConnectionState:107 - Starting
+2025-05-14 01:26:31 DEBUG ConnectionState:255 - reset
+2025-05-14 01:26:31 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 01:26:31 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-14 01:26:31 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 01:26:31 INFO  TableManager:270 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 01:26:31 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-14 02:53:54 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 02:53:54 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 02:53:54 DEBUG ConnectionState:107 - Starting
+2025-05-14 02:53:54 DEBUG ConnectionState:255 - reset
+2025-05-14 02:53:54 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 03:04:22 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:10284
+2025-05-14 03:04:22 INFO  SocketThread:79 - <region>[1]
+2025-05-14 03:04:22 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 03:04:22 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 03:04:22 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: 127.0.0.1
+2025-05-14 03:04:22 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 03:04:23 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 03:04:23 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 03:04:23 DEBUG ConnectionState:107 - Starting
+2025-05-14 03:04:23 DEBUG ConnectionState:255 - reset
+2025-05-14 03:04:23 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 03:04:23 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-14 03:04:23 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 03:04:23 INFO  TableManager:270 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 03:04:23 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-14 12:51:56 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 12:51:56 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 12:51:56 DEBUG ConnectionState:107 - Starting
+2025-05-14 12:51:56 DEBUG ConnectionState:255 - reset
+2025-05-14 12:51:56 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 12:51:56 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 12:51:57 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 12:51:57 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 12:51:58 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 12:51:59 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 12:51:59 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3290 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 12:51:59 DEBUG ConnectionState:255 - reset
+2025-05-14 12:52:00 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 12:52:00 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 12:52:00 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:62)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:49)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 12:52:01 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 12:52:01 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 12:52:01 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 12:52:02 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 12:52:52 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 12:52:52 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 12:52:52 DEBUG ConnectionState:107 - Starting
+2025-05-14 12:52:52 DEBUG ConnectionState:255 - reset
+2025-05-14 12:52:52 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 12:53:16 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:9604
+2025-05-14 12:53:16 INFO  SocketThread:79 - <region>[1]
+2025-05-14 12:53:16 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 12:53:16 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 12:53:16 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: 127.0.0.1
+2025-05-14 12:53:16 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 12:53:16 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 12:53:16 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 12:53:16 DEBUG ConnectionState:107 - Starting
+2025-05-14 12:53:16 DEBUG ConnectionState:255 - reset
+2025-05-14 12:53:16 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 12:53:16 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-14 12:53:16 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 12:53:16 INFO  TableManager:270 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 12:53:16 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-14 13:01:49 INFO  SocketThread:64 - Socket连接已关闭: /127.0.0.1:9604
+2025-05-14 13:01:54 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-14 13:01:54 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 13:01:54 INFO  TableManager:270 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 13:01:54 ERROR PathChildrenCache:571 - 
+java.lang.RuntimeException: 需要删除信息的服务器不存在于服务器列表中
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:82)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

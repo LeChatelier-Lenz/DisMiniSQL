@@ -15,7 +15,8 @@ public class ZookeeperManager implements Runnable{
     private final int TaskType;
 
     // ZooKeeper集群访问的端口
-    public static final String ZK_HOST = "10.192.158.73:2181";
+    //public static final String ZK_HOST = "localhost:2181";
+    public static final String ZK_HOST = "host.docker.internal:2181";
     // ZooKeeper会话超时时间
     public static final Integer ZK_SESSION_TIMEOUT_MS = 3000;
     // ZooKeeper连接超时时间

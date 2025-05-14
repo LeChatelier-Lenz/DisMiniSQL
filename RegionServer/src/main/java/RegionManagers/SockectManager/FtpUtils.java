@@ -8,7 +8,8 @@ import java.io.*;
 
 public class FtpUtils {
     // 此处设置为FTP的IP地址
-    public String hostname = "192.168.116.1";
+    // public String hostname = "192.168.116.1";
+    public String hostname = "host.docker.internal";  // 或者使用主机的实际 IP
     public int port = 21;
     public String username = "user1";
     public String password = "1234";
