@@ -16,7 +16,7 @@ public class MasterSocketManager implements Runnable {
     private boolean isRunning = false;
 
     public final int SERVER_PORT = 12345;
-    public final String MASTER = "10.192.158.73";
+    public final String MASTER = "10.162.234.78";
 
     public MasterSocketManager() throws IOException {
         this.socket = new Socket(MASTER, SERVER_PORT);
@@ -139,5 +139,9 @@ public class MasterSocketManager implements Runnable {
                 e.printStackTrace();
             }
         }
+    }
+
+    public String getMyIP() {
+        return socket.getLocalAddress().getHostAddress();
     }
 }
