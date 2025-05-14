@@ -8,9 +8,7 @@ import java.net.Socket;
 import java.net.SocketException;
 
 import MasterManagers.TableManager;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 public class SocketThread implements Runnable {
 
     private volatile boolean isRunning = false;
@@ -30,7 +28,8 @@ public class SocketThread implements Runnable {
         // 创建输入输出流
         this.input = new BufferedReader(new InputStreamReader(_socket.getInputStream()));
         this.output = new PrintWriter(_socket.getOutputStream(), true);
-        log.info("服务端建立了新的客户端子线程: {}:{}", _socket.getInetAddress(), _socket.getPort());
+//        log.info("服务端建立了新的客户端子线程: {}:{}", _socket.getInetAddress(), _socket.getPort());
+        System.out.println("主节点建立了新的socket进程 " + _socket.getInetAddress() + ":" + _socket.getPort());
     }
 
     @Override
@@ -44,9 +43,11 @@ public class SocketThread implements Runnable {
                 }
             }
         } catch (SocketException e) {
-            log.debug("Socket连接已关闭: {}", e.getMessage());
+//            log.debug("Socket连接已关闭: {}", e.getMessage());
+            System.out.println("Socket连接已关闭: " + e.getMessage());
         } catch (IOException e) {
-            log.error("I/O错误: {}", e.getMessage());
+//            log.error("I/O错误: {}", e.getMessage());
+            System.out.println("I/O错误: " + e.getMessage());
         } finally {
             close(); // 确保资源释放
         }
@@ -61,8 +62,9 @@ public class SocketThread implements Runnable {
         try {
             if (socket != null && !socket.isClosed()) {
                 socket.close();
-                log.info("Socket连接已关闭: {}:{}",
-                        socket.getInetAddress(), socket.getPort());
+//                log.info("Socket连接已关闭: {}:{}",
+//                        socket.getInetAddress(), socket.getPort());
+                System.out.println("Socket连接已关闭: " + socket.getInetAddress() + ":" + socket.getPort());
             }
             if (input != null) {
                 input.close();
@@ -71,12 +73,14 @@ public class SocketThread implements Runnable {
                 output.close();
             }
         } catch (IOException e) {
-            log.error("关闭连接时发生错误: {}", e.getMessage());
+//            log.error("关闭连接时发生错误: {}", e.getMessage());
+            System.out.println("关闭连接时发生错误: " + e.getMessage());
         }
     }
 
     public String commandProcess(String cmd) {
-        log.info(cmd);
+//        log.info(cmd);
+        System.out.println("命令处理: " + cmd);
         String result = "";
         if (cmd.startsWith("<client>")) {
             result = this.clientProcessor.processClientCommand(cmd.substring(8));

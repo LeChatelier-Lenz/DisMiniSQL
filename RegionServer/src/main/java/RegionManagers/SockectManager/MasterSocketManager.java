@@ -16,7 +16,9 @@ public class MasterSocketManager implements Runnable {
     private boolean isRunning = false;
 
     public final int SERVER_PORT = 12345;
-    public final String MASTER = "host.docker.internal";
+    public final String MASTER = "master";
+//    public final String MASTER = "172.20.0.1";
+//    public final String MASTER = "10.162.234.78";
 
     public MasterSocketManager() throws IOException {
         this.socket = new Socket(MASTER, SERVER_PORT);

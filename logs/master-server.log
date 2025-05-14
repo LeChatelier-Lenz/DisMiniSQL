@@ -2039,3 +2039,659 @@ java.lang.RuntimeException: 需要删除信息的服务器不存在于服务器�
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:05:28 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 14:05:28 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 14:05:28 DEBUG ConnectionState:107 - Starting
+2025-05-14 14:05:28 DEBUG ConnectionState:255 - reset
+2025-05-14 14:05:31 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3021ms for sessionid 0x0
+2025-05-14 14:05:31 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3196 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 14:05:31 DEBUG ConnectionState:255 - reset
+2025-05-14 14:05:34 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3016ms for sessionid 0x0
+2025-05-14 14:05:34 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:05:35 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 14:05:38 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4013ms for sessionid 0x0
+2025-05-14 14:05:38 WARN  ConnectionState:219 - Connection attempt unsuccessful after 7267 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 14:05:38 DEBUG ConnectionState:255 - reset
+2025-05-14 14:05:41 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3010ms for sessionid 0x0
+2025-05-14 14:05:41 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:05:42 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 14:05:45 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4014ms for sessionid 0x0
+2025-05-14 14:05:45 WARN  ConnectionState:219 - Connection attempt unsuccessful after 7241 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 14:05:45 DEBUG ConnectionState:255 - reset
+2025-05-14 14:05:49 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3005ms for sessionid 0x0
+2025-05-14 14:05:49 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:05:50 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 14:05:53 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4022ms for sessionid 0x0
+2025-05-14 14:05:53 WARN  ConnectionState:219 - Connection attempt unsuccessful after 7218 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 14:05:53 DEBUG ConnectionState:255 - reset
+2025-05-14 14:05:56 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3006ms for sessionid 0x0
+2025-05-14 14:05:56 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:05:59 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 14:06:00 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4020ms for sessionid 0x0
+2025-05-14 14:06:02 WARN  ConnectionState:219 - Connection attempt unsuccessful after 9263 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 14:06:02 DEBUG ConnectionState:255 - reset
+2025-05-14 14:06:03 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3010ms for sessionid 0x0
+2025-05-14 14:06:06 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3002ms for sessionid 0x0
+2025-05-14 14:06:06 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:06:10 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4008ms for sessionid 0x0
+2025-05-14 14:06:14 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4020ms for sessionid 0x0
+2025-05-14 14:06:19 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4024ms for sessionid 0x0
+2025-05-14 14:06:21 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 14:06:23 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4013ms for sessionid 0x0
+2025-05-14 14:06:24 WARN  ConnectionState:219 - Connection attempt unsuccessful after 22364 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 14:06:24 DEBUG ConnectionState:255 - reset
+2025-05-14 14:06:26 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3011ms for sessionid 0x0
+2025-05-14 14:06:31 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 14:06:31 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 14:06:31 DEBUG ConnectionState:107 - Starting
+2025-05-14 14:06:31 DEBUG ConnectionState:255 - reset
+2025-05-14 14:06:34 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3011ms for sessionid 0x0
+2025-05-14 14:06:34 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3212 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 14:06:34 DEBUG ConnectionState:255 - reset
+2025-05-14 14:06:37 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3001ms for sessionid 0x0
+2025-05-14 14:06:37 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:06:38 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 14:06:41 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4021ms for sessionid 0x0
+2025-05-14 14:06:41 WARN  ConnectionState:219 - Connection attempt unsuccessful after 7208 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 14:06:41 DEBUG ConnectionState:255 - reset
+2025-05-14 14:06:44 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3010ms for sessionid 0x0
+2025-05-14 14:06:44 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:06:45 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 14:06:48 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4019ms for sessionid 0x0
+2025-05-14 14:06:48 WARN  ConnectionState:219 - Connection attempt unsuccessful after 7267 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 14:06:48 DEBUG ConnectionState:255 - reset
+2025-05-14 14:06:51 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3008ms for sessionid 0x0
+2025-05-14 14:06:52 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:06:56 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4014ms for sessionid 0x0
+2025-05-14 14:06:59 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 14:07:00 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4017ms for sessionid 0x0
+2025-05-14 14:07:14 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 14:07:14 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 14:07:14 DEBUG ConnectionState:107 - Starting
+2025-05-14 14:07:14 DEBUG ConnectionState:255 - reset
+2025-05-14 14:07:17 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3015ms for sessionid 0x0
+2025-05-14 14:07:17 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3233 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 14:07:17 DEBUG ConnectionState:255 - reset
+2025-05-14 14:07:20 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3006ms for sessionid 0x0
+2025-05-14 14:07:20 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:07:21 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 14:07:24 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4021ms for sessionid 0x0
+2025-05-14 14:07:24 WARN  ConnectionState:219 - Connection attempt unsuccessful after 7215 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 14:07:24 DEBUG ConnectionState:255 - reset
+2025-05-14 14:07:27 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3012ms for sessionid 0x0
+2025-05-14 14:07:27 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:07:29 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 14:07:31 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4011ms for sessionid 0x0
+2025-05-14 14:07:32 WARN  ConnectionState:219 - Connection attempt unsuccessful after 8253 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 14:07:32 DEBUG ConnectionState:255 - reset
+2025-05-14 14:07:34 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3006ms for sessionid 0x0
+2025-05-14 14:07:37 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3013ms for sessionid 0x0
+2025-05-14 14:07:38 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:07:41 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 14:07:42 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4019ms for sessionid 0x0
+2025-05-14 14:07:44 WARN  ConnectionState:219 - Connection attempt unsuccessful after 11366 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 14:07:44 DEBUG ConnectionState:255 - reset
+2025-05-14 14:07:45 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3003ms for sessionid 0x0
+2025-05-14 14:07:48 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3010ms for sessionid 0x0
+2025-05-14 14:07:48 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:07:49 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 14:07:52 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4015ms for sessionid 0x0
+2025-05-14 14:07:52 WARN  ConnectionState:219 - Connection attempt unsuccessful after 8355 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 14:07:52 DEBUG ConnectionState:255 - reset
+2025-05-14 14:07:55 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3010ms for sessionid 0x0
+2025-05-14 14:07:55 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:07:59 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4014ms for sessionid 0x0
+2025-05-14 14:08:03 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 14:08:03 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4011ms for sessionid 0x0
+2025-05-14 14:08:06 WARN  ConnectionState:219 - Connection attempt unsuccessful after 14249 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 14:08:06 DEBUG ConnectionState:255 - reset
+2025-05-14 14:08:06 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3009ms for sessionid 0x0
+2025-05-14 14:08:10 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3010ms for sessionid 0x0
+2025-05-14 14:08:10 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:08:10 DEBUG RetryLoop:205 - Retry policy not allowing retry
+2025-05-14 14:08:10 WARN  ZookeeperManager:70 - KeeperErrorCode = ConnectionLoss for /db
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:50)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 14:08:14 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4017ms for sessionid 0x0
+2025-05-14 14:08:18 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4013ms for sessionid 0x0
+2025-05-14 14:08:22 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4005ms for sessionid 0x0
+2025-05-14 14:08:26 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4015ms for sessionid 0x0
+2025-05-14 14:08:30 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4023ms for sessionid 0x0
+2025-05-14 14:08:34 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4009ms for sessionid 0x0
+2025-05-14 14:08:38 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4012ms for sessionid 0x0
+2025-05-14 14:08:43 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4018ms for sessionid 0x0
+2025-05-14 14:08:47 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4023ms for sessionid 0x0
+2025-05-14 14:08:51 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4014ms for sessionid 0x0
+2025-05-14 14:08:59 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 14:08:59 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 14:08:59 DEBUG ConnectionState:107 - Starting
+2025-05-14 14:08:59 DEBUG ConnectionState:255 - reset
+2025-05-14 14:08:59 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 14:11:21 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:8497
+2025-05-14 14:11:21 INFO  SocketThread:79 - <region>[1]
+2025-05-14 14:11:21 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 14:11:21 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 14:11:21 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: 127.0.0.1
+2025-05-14 14:11:21 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 14:11:59 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:8521
+2025-05-14 14:12:00 INFO  SocketThread:79 - <region>[1]
+2025-05-14 14:12:00 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, true
+2025-05-14 14:12:00 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 14:21:29 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:8868
+2025-05-14 14:21:29 INFO  SocketThread:79 - <region>[1]
+2025-05-14 14:21:29 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, true
+2025-05-14 14:21:29 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 14:22:20 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:8902
+2025-05-14 14:22:20 INFO  SocketThread:79 - <region>[1]
+2025-05-14 14:22:20 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, true
+2025-05-14 14:22:20 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 14:24:54 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 14:24:54 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 14:24:54 DEBUG ConnectionState:107 - Starting
+2025-05-14 14:24:54 DEBUG ConnectionState:255 - reset
+2025-05-14 14:24:54 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 14:25:07 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:9050
+2025-05-14 14:25:07 INFO  SocketThread:79 - <region>[1]
+2025-05-14 14:25:07 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 14:25:07 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 14:25:07 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: 127.0.0.1
+2025-05-14 14:25:07 INFO  RegionProcessor:40 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 14:27:21 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 14:27:21 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 14:27:21 DEBUG ConnectionState:107 - Starting
+2025-05-14 14:27:21 DEBUG ConnectionState:255 - reset
+2025-05-14 14:27:21 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 14:27:32 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:9144
+2025-05-14 14:27:32 INFO  SocketThread:79 - <region>[1]
+2025-05-14 14:27:32 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 14:27:32 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 14:27:32 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: 127.0.0.1
+2025-05-14 14:27:32 INFO  RegionProcessor:41 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 14:29:47 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:9199
+2025-05-14 14:29:47 INFO  SocketThread:79 - <region>[1]
+2025-05-14 14:29:47 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, true
+2025-05-14 14:29:47 INFO  RegionProcessor:41 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 14:30:53 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 14:30:53 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 14:30:53 DEBUG ConnectionState:107 - Starting
+2025-05-14 14:30:53 DEBUG ConnectionState:255 - reset
+2025-05-14 14:30:54 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 14:30:58 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:9240
+2025-05-14 14:30:58 INFO  SocketThread:79 - <region>[1]
+2025-05-14 14:30:58 INFO  TableManager:270 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 14:30:58 INFO  TableManager:270 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 14:30:58 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: 192.168.56.1
+2025-05-14 14:30:58 INFO  RegionProcessor:41 - Region服务器 192.168.56.1 表信息上报成功
+2025-05-14 14:41:31 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 14:41:31 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 14:41:31 DEBUG ConnectionState:107 - Starting
+2025-05-14 14:41:31 DEBUG ConnectionState:255 - reset
+2025-05-14 14:41:31 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 14:41:43 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:9587
+2025-05-14 14:41:43 INFO  SocketThread:79 - <region>[1]
+2025-05-14 14:41:43 INFO  TableManager:270 - 查询节点是否已经注册: /127.0.0.1, false
+2025-05-14 14:41:43 INFO  TableManager:270 - 查询节点是否已经注册: /127.0.0.1, false
+2025-05-14 14:41:43 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: /127.0.0.1
+2025-05-14 14:41:43 INFO  RegionProcessor:41 - Region服务器 /127.0.0.1 表信息上报成功
+2025-05-14 14:50:12 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 14:50:12 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 14:50:12 DEBUG ConnectionState:107 - Starting
+2025-05-14 14:50:12 DEBUG ConnectionState:255 - reset
+2025-05-14 14:50:12 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 14:54:37 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 14:54:37 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 14:54:37 DEBUG ConnectionState:107 - Starting
+2025-05-14 14:54:37 DEBUG ConnectionState:255 - reset
+2025-05-14 14:54:37 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 15:05:25 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 15:05:25 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 15:05:25 DEBUG ConnectionState:107 - Starting
+2025-05-14 15:05:25 DEBUG ConnectionState:255 - reset
+2025-05-14 15:05:25 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 15:33:15 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.234.78:6181
+2025-05-14 15:33:15 INFO  SocketThread:79 - <region>[1]
+2025-05-14 15:33:15 INFO  TableManager:270 - 查询节点是否已经注册: 10.162.234.78, false
+2025-05-14 15:33:15 INFO  TableManager:270 - 查询节点是否已经注册: 10.162.234.78, false
+2025-05-14 15:33:15 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: 10.162.234.78
+2025-05-14 15:33:15 INFO  RegionProcessor:41 - Region服务器 10.162.234.78 表信息上报成功
+2025-05-14 15:34:42 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 15:34:42 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 15:34:42 DEBUG ConnectionState:107 - Starting
+2025-05-14 15:34:42 DEBUG ConnectionState:255 - reset
+2025-05-14 15:34:42 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 15:34:47 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.234.78:10484
+2025-05-14 15:34:47 INFO  SocketThread:79 - <region>[1]
+2025-05-14 15:34:47 INFO  TableManager:270 - 查询节点是否已经注册: /10.162.234.78:10484, false
+2025-05-14 15:34:47 INFO  TableManager:270 - 查询节点是否已经注册: /10.162.234.78:10484, false
+2025-05-14 15:34:47 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: /10.162.234.78:10484
+2025-05-14 15:34:47 INFO  RegionProcessor:41 - Region服务器 /10.162.234.78:10484 表信息上报成功
+2025-05-14 15:36:16 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 15:36:16 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 15:36:16 DEBUG ConnectionState:107 - Starting
+2025-05-14 15:36:16 DEBUG ConnectionState:255 - reset
+2025-05-14 15:36:17 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 15:36:19 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.234.78:10543
+2025-05-14 15:36:19 INFO  SocketThread:79 - <region>[1]
+2025-05-14 15:36:19 INFO  TableManager:270 - 查询节点是否已经注册: /10.162.234.78:10543, false
+2025-05-14 15:36:19 INFO  TableManager:270 - 查询节点是否已经注册: /10.162.234.78:10543, false
+2025-05-14 15:36:19 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: /10.162.234.78:10543
+2025-05-14 15:36:19 INFO  RegionProcessor:41 - Region服务器 /10.162.234.78:10543 表信息上报成功
+2025-05-14 15:36:19 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 15:36:19 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 15:36:19 DEBUG ConnectionState:107 - Starting
+2025-05-14 15:36:19 DEBUG ConnectionState:255 - reset
+2025-05-14 15:36:23 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3009ms for sessionid 0x0
+2025-05-14 15:36:23 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3151 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 15:36:23 DEBUG ConnectionState:255 - reset
+2025-05-14 15:36:26 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3006ms for sessionid 0x0
+2025-05-14 15:36:26 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1650)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl$3.call(GetChildrenBuilderImpl.java:230)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl$3.call(GetChildrenBuilderImpl.java:219)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.pathInForeground(GetChildrenBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenBuilderImpl.java:207)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenBuilderImpl.java:40)
+	at MasterManagers.ZookeeperManager.CuratorClient.getNodeChildren(CuratorClient.java:173)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.serviceRegister(ZookeeperManager.java:80)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 15:36:27 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.234.78:10552
+2025-05-14 15:36:27 INFO  SocketThread:79 - <region>[1]
+2025-05-14 15:36:27 INFO  TableManager:270 - 查询节点是否已经注册: /10.162.234.78:10552, false
+2025-05-14 15:36:27 INFO  TableManager:270 - 查询节点是否已经注册: /10.162.234.78:10552, false
+2025-05-14 15:36:27 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: /10.162.234.78:10552
+2025-05-14 15:36:27 INFO  RegionProcessor:41 - Region服务器 /10.162.234.78:10552 表信息上报成功
+2025-05-14 15:36:27 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 15:36:27 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 15:36:27 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 15:36:27 DEBUG ConnectionState:107 - Starting
+2025-05-14 15:36:27 DEBUG ConnectionState:255 - reset
+2025-05-14 15:36:30 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4029ms for sessionid 0x0
+2025-05-14 15:36:30 WARN  ConnectionState:219 - Connection attempt unsuccessful after 7219 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 15:36:30 DEBUG ConnectionState:255 - reset
+2025-05-14 15:36:30 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3022ms for sessionid 0x0
+2025-05-14 15:36:30 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3158 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 15:36:30 DEBUG ConnectionState:255 - reset
+2025-05-14 15:36:33 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3003ms for sessionid 0x0
+2025-05-14 15:36:33 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1650)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl$3.call(GetChildrenBuilderImpl.java:230)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl$3.call(GetChildrenBuilderImpl.java:219)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.pathInForeground(GetChildrenBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenBuilderImpl.java:207)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenBuilderImpl.java:40)
+	at MasterManagers.ZookeeperManager.CuratorClient.getNodeChildren(CuratorClient.java:173)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.serviceRegister(ZookeeperManager.java:80)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 15:36:33 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3014ms for sessionid 0x0
+2025-05-14 15:36:33 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1650)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl$3.call(GetChildrenBuilderImpl.java:230)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl$3.call(GetChildrenBuilderImpl.java:219)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.pathInForeground(GetChildrenBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenBuilderImpl.java:207)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenBuilderImpl.java:40)
+	at MasterManagers.ZookeeperManager.CuratorClient.getNodeChildren(CuratorClient.java:173)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.serviceRegister(ZookeeperManager.java:80)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 15:36:34 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 15:36:36 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 15:36:37 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4019ms for sessionid 0x0
+2025-05-14 15:36:37 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4014ms for sessionid 0x0
+2025-05-14 15:36:37 WARN  ConnectionState:219 - Connection attempt unsuccessful after 7247 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 15:36:37 DEBUG ConnectionState:255 - reset
+2025-05-14 15:36:39 INFO  SocketThread:64 - Socket连接已关闭: /10.162.234.78:10543
+2025-05-14 15:36:40 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3001ms for sessionid 0x0
+2025-05-14 15:36:40 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1650)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl$3.call(GetChildrenBuilderImpl.java:230)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl$3.call(GetChildrenBuilderImpl.java:219)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.pathInForeground(GetChildrenBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenBuilderImpl.java:207)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenBuilderImpl.java:40)
+	at MasterManagers.ZookeeperManager.CuratorClient.getNodeChildren(CuratorClient.java:173)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.serviceRegister(ZookeeperManager.java:80)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 15:36:41 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 15:36:44 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4017ms for sessionid 0x0
+2025-05-14 15:36:44 WARN  ConnectionState:219 - Connection attempt unsuccessful after 7203 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 15:36:44 DEBUG ConnectionState:255 - reset
+2025-05-14 15:36:48 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3010ms for sessionid 0x0
+2025-05-14 15:36:48 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1650)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl$3.call(GetChildrenBuilderImpl.java:230)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl$3.call(GetChildrenBuilderImpl.java:219)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.pathInForeground(GetChildrenBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenBuilderImpl.java:207)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenBuilderImpl.java:40)
+	at MasterManagers.ZookeeperManager.CuratorClient.getNodeChildren(CuratorClient.java:173)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.serviceRegister(ZookeeperManager.java:80)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 15:36:51 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 15:36:52 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 4026ms for sessionid 0x0
+2025-05-14 15:37:14 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 15:37:14 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 15:37:14 DEBUG ConnectionState:107 - Starting
+2025-05-14 15:37:14 DEBUG ConnectionState:255 - reset
+2025-05-14 15:37:14 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 15:37:17 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.234.78:10592
+2025-05-14 15:37:17 INFO  SocketThread:79 - <region>[1]
+2025-05-14 15:37:17 INFO  TableManager:270 - 查询节点是否已经注册: /10.162.234.78:10592, false
+2025-05-14 15:37:17 INFO  TableManager:270 - 查询节点是否已经注册: /10.162.234.78:10592, false
+2025-05-14 15:37:17 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: /10.162.234.78:10592
+2025-05-14 15:37:17 INFO  RegionProcessor:41 - Region服务器 /10.162.234.78:10592 表信息上报成功
+2025-05-14 15:37:17 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 15:37:17 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 15:37:17 DEBUG ConnectionState:107 - Starting
+2025-05-14 15:37:17 DEBUG ConnectionState:255 - reset
+2025-05-14 15:37:18 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 15:37:18 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-14 15:37:18 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 15:37:18 INFO  TableManager:270 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 15:37:18 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-14 15:37:46 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 15:37:46 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 15:37:46 DEBUG ConnectionState:107 - Starting
+2025-05-14 15:37:46 DEBUG ConnectionState:255 - reset
+2025-05-14 15:37:47 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 15:37:50 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.234.78:10618
+2025-05-14 15:37:50 INFO  SocketThread:79 - <region>[1]
+2025-05-14 15:37:50 INFO  TableManager:270 - 查询节点是否已经注册: /10.162.234.78:10618, false
+2025-05-14 15:37:50 INFO  TableManager:270 - 查询节点是否已经注册: /10.162.234.78:10618, false
+2025-05-14 15:37:50 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: /10.162.234.78:10618
+2025-05-14 15:37:50 INFO  RegionProcessor:41 - Region服务器 /10.162.234.78:10618 表信息上报成功
+2025-05-14 15:39:05 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.234.78:10673
+2025-05-14 15:39:05 INFO  SocketThread:79 - <region>[1]
+2025-05-14 15:39:05 INFO  TableManager:270 - 查询节点是否已经注册: /10.162.234.78:10673, false
+2025-05-14 15:39:05 INFO  TableManager:270 - 查询节点是否已经注册: /10.162.234.78:10673, false
+2025-05-14 15:39:05 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: /10.162.234.78:10673
+2025-05-14 15:39:05 INFO  RegionProcessor:41 - Region服务器 /10.162.234.78:10673 表信息上报成功
+2025-05-14 15:42:01 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:10966
+2025-05-14 15:42:01 INFO  SocketThread:79 - <client>[2]test_table
+2025-05-14 15:42:01 INFO  ClientProcessor:41 - 客户端创建表 test_table，分配到节点 /10.162.234.78:10673
+2025-05-14 15:44:59 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 15:44:59 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 15:44:59 DEBUG ConnectionState:107 - Starting
+2025-05-14 15:44:59 DEBUG ConnectionState:255 - reset
+2025-05-14 15:44:59 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 15:45:07 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.234.78:10738
+2025-05-14 15:45:07 INFO  SocketThread:79 - <region>[1]
+2025-05-14 15:45:07 INFO  TableManager:270 - 查询节点是否已经注册: 10.162.234.78, false
+2025-05-14 15:45:07 INFO  TableManager:270 - 查询节点是否已经注册: 10.162.234.78, false
+2025-05-14 15:45:07 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: 10.162.234.78
+2025-05-14 15:45:07 INFO  RegionProcessor:42 - Region服务器 10.162.234.78 表信息上报成功
+2025-05-14 15:51:25 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 15:51:25 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 15:51:25 DEBUG ConnectionState:107 - Starting
+2025-05-14 15:51:25 DEBUG ConnectionState:255 - reset
+2025-05-14 15:51:25 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 15:51:31 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:11274
+2025-05-14 15:51:31 INFO  SocketThread:79 - <region>[1]
+2025-05-14 15:51:31 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 15:51:31 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 15:51:31 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: 127.0.0.1
+2025-05-14 15:51:31 INFO  RegionProcessor:42 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 15:51:59 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 15:51:59 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 15:51:59 DEBUG ConnectionState:107 - Starting
+2025-05-14 15:51:59 DEBUG ConnectionState:255 - reset
+2025-05-14 15:51:59 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 15:52:04 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:11312
+2025-05-14 15:52:04 INFO  SocketThread:79 - <region>[1]
+2025-05-14 15:52:04 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 15:52:04 INFO  TableManager:270 - 查询节点是否已经注册: 127.0.0.1, false
+2025-05-14 15:52:04 INFO  TableManager:224 - 服务器列表中添加新的Region服务器: 127.0.0.1
+2025-05-14 15:52:04 INFO  RegionProcessor:42 - Region服务器 127.0.0.1 表信息上报成功
+2025-05-14 15:56:52 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 15:56:52 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 15:56:52 DEBUG ConnectionState:107 - Starting
+2025-05-14 15:56:52 DEBUG ConnectionState:255 - reset
+2025-05-14 15:56:52 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 15:57:10 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:14133

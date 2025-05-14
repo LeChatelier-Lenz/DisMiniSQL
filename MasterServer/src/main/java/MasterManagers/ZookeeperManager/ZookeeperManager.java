@@ -1,6 +1,5 @@
 package MasterManagers.ZookeeperManager;
 import MasterManagers.Utils.SocketUtils;
-import lombok.extern.slf4j.Slf4j;
 
 
 import MasterManagers.TableManager;
@@ -9,14 +8,14 @@ import org.apache.zookeeper.CreateMode;
 /**
  * ZooKeeper的管理器，主要用于连接ZooKeeper集群，并创建ZooKeeper客户端
  */
-@Slf4j
 public class ZookeeperManager implements Runnable{
     private TableManager tableManager;
     private final int TaskType;
 
     // ZooKeeper集群访问的端口
     //public static final String ZK_HOST = "localhost:2181";
-    public static final String ZK_HOST = "host.docker.internal:2181";
+    public static final String ZK_HOST = "10.162.234.78:2181"; // 本机的对外WLAN IP地址
+
     // ZooKeeper会话超时时间
     public static final Integer ZK_SESSION_TIMEOUT_MS = 3000;
     // ZooKeeper连接超时时间
@@ -41,6 +40,7 @@ public class ZookeeperManager implements Runnable{
     public ZookeeperManager() {
         this.tableManager = null;
         this.TaskType = 1;
+//        ZK_HOST = "host.docker.internal:2181";
     }
 
 
@@ -67,7 +67,9 @@ public class ZookeeperManager implements Runnable{
             // 开始监听服务器目录（的所有子节点），如果有节点的变化，则处理相应事件
             curatorClient.monitorChildrenNodes(ZNODE);
         } catch (Exception e) {
-            log.warn(e.getMessage(),e);
+//            log.warn(e.getMessage(),e);
+            System.out.println("ZooKeeper服务启动失败: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -88,7 +90,10 @@ public class ZookeeperManager implements Runnable{
                 wait();
             }
         } catch (Exception e) {
-            log.warn(e.getMessage(), e);
+//            log.warn(e.getMessage(), e);
+            System.out.println("ZooKeeper服务注册失败: " + e.getMessage());
+            e.printStackTrace();
+
         }
     }
 

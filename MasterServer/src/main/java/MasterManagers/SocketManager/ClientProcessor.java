@@ -4,9 +4,7 @@ import java.net.Socket;
 import java.util.List;
 
 import MasterManagers.TableManager;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 public class ClientProcessor {
 
     private final TableManager tableManager;
@@ -25,32 +23,38 @@ public class ClientProcessor {
             List<String> IPs = this.tableManager.getRegionIPs(tableName);
             if (tableName == null) {
                 result = "[1]null";
-                log.info("客户端查询表 {} 所在节点，返回IP列表: {}", tableName, String.join(",", IPs));
+//                log.info("客户端查询表 {} 所在节点，返回IP列表: {}", tableName, String.join(",", IPs));
+                System.out.println("客户端查询表 " + tableName + " 所在节点，返回IP列表: " + String.join(",", IPs));
             } else {
                 result = "[1]" + String.join(",", IPs);
-                log.info("客户端查询表 {} 所在节点，未搜索到IP", tableName);
+//                log.info("客户端查询表 {} 所在节点，未搜索到IP", tableName);
+                System.out.println("客户端查询表 " + tableName + " 所在节点，返回IP列表: " + String.join(",", IPs));
             }
         } else if (cmd.startsWith("[2]")) {
             // <client>[2]tableName 创建新表，返回创建节点IP
             String IP = this.tableManager.getBestServer();
             if (IP.equals("")) {
                 result = "[2]null";
-                log.info("客户端创建表 {}，未找到可以分配的节点", tableName);
+                System.out.println("客户端创建表 " + tableName + "，未找到可以分配的节点");
             } else {
                 result = "[2]" + IP;
-                log.info("客户端创建表 {}，分配到节点 {}", tableName, IP);
+//                log.info("客户端创建表 {}，分配到节点 {}", tableName, IP);
+                System.out.println("客户端创建表 " + tableName + "，分配到节点 " + IP);
             }
         } else if (cmd.startsWith("[3]")) {
             // <client>[3]tableName 删除所有节点上的该表
             boolean res = this.tableManager.deleteTableFromAllServers(tableName);
             result = "[3]" + (res ? "OK" : "FAIL");
             if (res) {
-                log.info("客户端删除表 {} 操作发送成功", tableName);
+//                log.info("客户端删除表 {} 操作发送成功", tableName);
+                System.out.println("客户端删除表 " + tableName + " 操作发送成功");
             } else {
-                log.warn("客户端删除表 {} 操作发送失败，表可能不存在", tableName);
+//                log.warn("客户端删除表 {} 操作发送失败，表可能不存在", tableName);
+                System.out.println("客户端删除表 " + tableName + " 操作发送失败，表可能不存在");
             }
         } else {
-            log.warn("收到无效的客户端命令格式: {}", cmd);
+//            log.warn("收到无效的客户端命令格式: {}", cmd);
+            System.out.println("收到无效的客户端命令格式: " + cmd);
         }
         return result;
     }

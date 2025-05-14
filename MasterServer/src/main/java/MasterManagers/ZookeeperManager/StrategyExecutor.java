@@ -1,12 +1,10 @@
 package MasterManagers.ZookeeperManager;
 import MasterManagers.SocketManager.SocketThread;
 import MasterManagers.TableManager;
-import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Slf4j
 public class StrategyExecutor {
     private TableManager tableManager;
 
@@ -33,7 +31,8 @@ public class StrategyExecutor {
                     break;
             }
         } catch (Exception e) {
-            log.warn(e.getMessage(), e);
+//            log.warn(e.getMessage(), e);
+            System.out.println("执行策略失败: " + e.getMessage());
         }
     }
 
@@ -42,7 +41,12 @@ public class StrategyExecutor {
         List<String> tableList = tableManager.getTableList(hostUrl);
         //<master>[3]ip#name@name@
         String bestInet = tableManager.getBestServer(hostUrl);
-        log.warn("bestInet:{}", bestInet);
+//        log.warn("bestInet:{}", bestInet);
+        if (bestInet == null) {
+            System.out.println("没有找到可用的服务器,负载均衡失败");
+            return;
+        }
+        System.out.println("bestInet: " + bestInet);
         allTable.append(hostUrl).append("#");
         int i = 0;
         for(String s:tableList){
@@ -54,7 +58,9 @@ public class StrategyExecutor {
     }
 
     private void execDiscoverStrategy(String hostUrl) {
-
+        // 生成一个新的表，为空
+        List<String> tableList = new ArrayList<>();
+        tableManager.addTables(tableList, hostUrl);
     }
 
     private void execRecoverStrategy(String hostUrl) {

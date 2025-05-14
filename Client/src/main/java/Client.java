@@ -12,7 +12,7 @@ public class Client {
         Scanner scanner = new Scanner(System.in);
         TableLocationCache cache = new TableLocationCache();
 
-        String masterIP = "10.192.158.73";
+        String masterIP = System.getenv("MASTER_IP");
         int masterPort = 12345;
         MasterClient masterClient = new MasterClient(masterIP, masterPort);
         SlaveClient slaveClient = new SlaveClient();

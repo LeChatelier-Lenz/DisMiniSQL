@@ -7,9 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import MasterManagers.SocketManager.SocketThread;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 public class TableManager {
 
     // 1. 表名到ip的映射关系
@@ -221,7 +219,8 @@ public class TableManager {
         // 创建活跃服务器到表的映射
         List<String> temp = new ArrayList<>();
         aliveIPToTable.put(regionIP, temp);
-        log.info("服务器列表中添加新的Region服务器: {}", regionIP);
+//        log.info("服务器列表中添加新的Region服务器: {}", regionIP);
+        System.out.println("服务器列表中添加新的Region服务器: " + regionIP);
 
         return true;
     }
@@ -267,7 +266,8 @@ public class TableManager {
      * @return true 存在该服务器; false 不存在该服务器
      */
     public boolean isExistServer(String regionIP) {
-        log.info("查询节点是否已经注册: {}, {}", regionIP, IPList.contains(regionIP));
+//        log.info("查询节点是否已经注册: {}, {}", regionIP, IPList.contains(regionIP));
+        System.out.println("查询节点是否已经注册: " + regionIP + ", " + IPList.contains(regionIP));
         return IPList.contains(regionIP);
     }
 
@@ -300,6 +300,7 @@ public class TableManager {
     public String getBestServer(String... regionIPs) {
         Integer min = Integer.MAX_VALUE;
         String bestServerIP = "";
+        // 先确认是否有活跃的Region服务器
 
         // 遍历除了指定IP以外的服务器，找到表数量最少的
         for (Map.Entry<String, List<String>> e : aliveIPToTable.entrySet()) {
