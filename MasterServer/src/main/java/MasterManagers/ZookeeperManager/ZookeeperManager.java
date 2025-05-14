@@ -7,16 +7,19 @@ import lombok.extern.slf4j.Slf4j;
 import MasterManagers.TableManager;
 import org.apache.zookeeper.CreateMode;
 
+import java.net.Socket;
+
 /**
  * ZooKeeper的管理器，主要用于连接ZooKeeper集群，并创建ZooKeeper客户端
  */
 @Slf4j
 public class ZookeeperManager implements Runnable{
+    private String temp_ip;
     private TableManager tableManager;
     private final int TaskType;
 
     // ZooKeeper集群访问的端口
-    public static String ZK_HOST = "10.192.158.73:2181";
+    public static String ZK_HOST = "10.162.234.78:2181";
     // ZooKeeper会话超时时间
     public static final Integer ZK_SESSION_TIMEOUT_MS = 3000;
     // ZooKeeper连接超时时间
@@ -38,9 +41,10 @@ public class ZookeeperManager implements Runnable{
     }
 
     // 从节点简单调用
-    public ZookeeperManager() {
+    public ZookeeperManager(String temp_ip) {
         this.tableManager = null;
         this.TaskType = 1;
+        this.temp_ip = temp_ip;
     }
 
 
@@ -76,12 +80,12 @@ public class ZookeeperManager implements Runnable{
             // 向ZooKeeper注册临时节点
             CuratorClient curatorClient = new CuratorClient(ZK_HOST);
             int nChildren = curatorClient.getNodeChildren(ZookeeperManager.ZNODE).size();
-            System.out.println("本机IP地址为: " + SocketUtils.getHostAddress());
+            System.out.println("本机IP地址为: " + this.temp_ip);
             if(nChildren==0)
-                curatorClient.createNode(getRegisterPath() + nChildren, SocketUtils.getHostAddress(), CreateMode.EPHEMERAL);
+                curatorClient.createNode(getRegisterPath() + nChildren, this.temp_ip, CreateMode.EPHEMERAL);
             else{
                 String index = String.valueOf(Integer.parseInt((curatorClient.getNodeChildren(ZookeeperManager.ZNODE)).get(nChildren - 1).substring(7)) + 1);
-                curatorClient.createNode(getRegisterPath() + index, SocketUtils.getHostAddress(), CreateMode.EPHEMERAL);
+                curatorClient.createNode(getRegisterPath() + index, this.temp_ip, CreateMode.EPHEMERAL);
             }
 
             // 阻塞该线程，直到发生异常或者主动退出

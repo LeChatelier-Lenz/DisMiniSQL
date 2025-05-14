@@ -19,8 +19,8 @@ public class RegionManager {
 
     public RegionManager() throws IOException, InterruptedException {
         dataBaseManager = new DataBaseManager();
-        zkServiceManager = new ZookeeperManager();
         masterSocketManager = new MasterSocketManager();
+        zkServiceManager = new ZookeeperManager(masterSocketManager.getMyIP());
         masterSocketManager.sendTableInfoToMaster(dataBaseManager.getMetaInfo());
         clientSocketManager = new ClientSocketManager(PORT, masterSocketManager);
 

@@ -128,3 +128,175 @@ java.lang.NullPointerException: Cannot invoke "MasterManagers.SocketManager.Sock
 2025-05-14 22:23:09 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
 2025-05-14 22:23:09 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
 2025-05-14 22:23:09 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 22:45:43 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 22:45:43 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 22:45:43 DEBUG ConnectionState:107 - Starting
+2025-05-14 22:45:43 DEBUG ConnectionState:255 - reset
+2025-05-14 22:45:43 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 23:05:48 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.248.176:61675
+2025-05-14 23:05:48 INFO  SocketThread:79 - <client>[2]test_py
+2025-05-14 23:05:48 INFO  ClientProcessor:38 - 客户端创建表 test_py，未找到可以分配的节点
+2025-05-14 23:06:13 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.248.176:61718
+2025-05-14 23:06:13 INFO  SocketThread:79 - <client>[2]test_py
+2025-05-14 23:06:13 INFO  ClientProcessor:38 - 客户端创建表 test_py，未找到可以分配的节点
+2025-05-14 23:07:12 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.248.176:61901
+2025-05-14 23:07:12 INFO  SocketThread:79 - <client>[2]test_c
+2025-05-14 23:07:12 INFO  ClientProcessor:38 - 客户端创建表 test_c，未找到可以分配的节点
+2025-05-14 23:08:58 INFO  SocketThread:64 - Socket连接已关闭: /10.162.248.176:61901
+2025-05-14 23:09:04 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.193.47.105:63681
+2025-05-14 23:09:04 INFO  SocketThread:79 - <region>[1]student1 student2 
+2025-05-14 23:09:04 INFO  TableManager:269 - 查询节点是否已经注册: 10.193.47.105, false
+2025-05-14 23:09:04 INFO  TableManager:269 - 查询节点是否已经注册: 10.193.47.105, false
+2025-05-14 23:09:04 INFO  RegionProcessor:46 - Region服务器 10.193.47.105 表信息上报成功
+2025-05-14 23:09:05 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-14 23:09:05 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 172.17.48.1
+2025-05-14 23:09:05 INFO  TableManager:269 - 查询节点是否已经注册: 172.17.48.1, false
+2025-05-14 23:09:05 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-14 23:09:05 INFO  TableManager:269 - 查询节点是否已经注册: 172.17.48.1, false
+2025-05-14 23:09:05 INFO  TableManager:269 - 查询节点是否已经注册: 172.17.48.1, false
+2025-05-14 23:15:20 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-14 23:15:20 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_0, 地址 172.17.48.1
+2025-05-14 23:15:20 INFO  TableManager:269 - 查询节点是否已经注册: 172.17.48.1, true
+2025-05-14 23:15:20 WARN  ChildrenListener:85 - 对该服务器Region_0执行失效策略
+2025-05-14 23:15:20 WARN  StrategyExecutor:45 - bestInet:10.193.47.105
+2025-05-14 23:15:20 INFO  TableManager:269 - 查询节点是否已经注册: 10.193.47.105, true
+2025-05-14 23:15:41 INFO  SocketThread:64 - Socket连接已关闭: /10.193.47.105:63681
+2025-05-14 23:17:10 WARN  ClientCnxn:1162 - Session 0x1000008f8d5000d for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:68)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:366)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 23:17:10 INFO  ConnectionStateManager:228 - State change: SUSPENDED
+2025-05-14 23:17:11 WARN  ClientCnxn:1162 - Session 0x1000008f8d5000d for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 23:17:12 WARN  ClientCnxn:1162 - Session 0x1000008f8d5000d for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 23:17:13 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3002 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 23:17:13 DEBUG ConnectionState:255 - reset
+2025-05-14 23:17:13 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 23:17:13 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 23:17:14 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 23:17:15 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 23:17:16 WARN  ClientCnxn:1162 - Session 0x0 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 23:17:16 WARN  ClientCnxn:1162 - Session 0x0 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 23:17:17 INFO  ConnectionStateManager:228 - State change: RECONNECTED
+2025-05-14 23:18:00 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 23:18:00 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 23:18:00 DEBUG ConnectionState:107 - Starting
+2025-05-14 23:18:00 DEBUG ConnectionState:255 - reset
+2025-05-14 23:18:01 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 23:30:58 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 23:30:58 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 23:30:58 DEBUG ConnectionState:107 - Starting
+2025-05-14 23:30:58 DEBUG ConnectionState:255 - reset
+2025-05-14 23:30:59 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 23:31:04 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.234.78:5348
+2025-05-14 23:31:04 INFO  SocketThread:79 - <region>[1]
+2025-05-14 23:31:04 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 23:31:04 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 23:31:04 DEBUG ConnectionState:107 - Starting
+2025-05-14 23:31:04 DEBUG ConnectionState:255 - reset
+2025-05-14 23:31:06 WARN  ClientCnxn:1162 - Session 0x0 for server 10.192.158.73/10.192.158.73:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 23:31:07 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3133 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 23:31:07 DEBUG ConnectionState:255 - reset
+2025-05-14 23:31:09 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3001ms for sessionid 0x0
+2025-05-14 23:31:12 WARN  ClientCnxn:1162 - Session 0x0 for server 10.192.158.73/10.192.158.73:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 23:31:12 DEBUG RetryLoop:188 - Retry-able exception received
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /db
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1650)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl$3.call(GetChildrenBuilderImpl.java:230)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl$3.call(GetChildrenBuilderImpl.java:219)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.pathInForeground(GetChildrenBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenBuilderImpl.java:207)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenBuilderImpl.java:40)
+	at MasterManagers.ZookeeperManager.CuratorClient.getNodeChildren(CuratorClient.java:173)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.serviceRegister(ZookeeperManager.java:82)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 23:31:13 DEBUG RetryLoop:196 - Retrying operation
+2025-05-14 23:31:15 WARN  ClientCnxn:1162 - Session 0x0 for server 10.192.158.73/10.192.158.73:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 23:31:16 WARN  ConnectionState:219 - Connection attempt unsuccessful after 9163 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 23:31:16 DEBUG ConnectionState:255 - reset
+2025-05-14 23:31:18 INFO  SocketThread:64 - Socket连接已关闭: /10.162.234.78:5348
+2025-05-14 23:32:25 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.234.78:5419
+2025-05-14 23:32:25 INFO  SocketThread:79 - <region>[1]
+2025-05-14 23:32:25 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 23:32:25 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 23:32:25 DEBUG ConnectionState:107 - Starting
+2025-05-14 23:32:25 DEBUG ConnectionState:255 - reset
+2025-05-14 23:32:26 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 23:32:26 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-14 23:32:26 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 23:32:26 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 23:32:26 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-14 23:32:26 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 23:32:26 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
