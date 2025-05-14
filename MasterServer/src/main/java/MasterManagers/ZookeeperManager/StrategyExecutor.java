@@ -54,7 +54,9 @@ public class StrategyExecutor {
     }
 
     private void execDiscoverStrategy(String hostUrl) {
-
+        // 生成一个新的表，为空
+        List<String> tableList = new ArrayList<>();
+        tableManager.addTables(tableList, hostUrl);
     }
 
     private void execRecoverStrategy(String hostUrl) {

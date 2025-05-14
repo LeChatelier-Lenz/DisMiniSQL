@@ -1,0 +1,130 @@
+2025-05-14 22:14:07 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 22:14:07 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 22:14:07 DEBUG ConnectionState:107 - Starting
+2025-05-14 22:14:07 DEBUG ConnectionState:255 - reset
+2025-05-14 22:14:09 WARN  ClientCnxn:1162 - Session 0x0 for server 10.192.158.73/10.192.158.73:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 22:14:10 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3301 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 22:14:10 DEBUG ConnectionState:255 - reset
+2025-05-14 22:14:12 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 3012ms for sessionid 0x0
+2025-05-14 22:14:14 WARN  ClientCnxn:1162 - Session 0x0 for server 10.192.158.73/10.192.158.73:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-14 22:14:48 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 22:14:48 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 22:14:48 DEBUG ConnectionState:107 - Starting
+2025-05-14 22:14:48 DEBUG ConnectionState:255 - reset
+2025-05-14 22:14:56 ERROR CuratorFrameworkImpl:566 - Background exception was not retry-able or retry gave up
+java.net.UnknownHostException: 不知道这样的主机。 (lcoalhost)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at org.apache.zookeeper.client.StaticHostProvider.<init>(StaticHostProvider.java:61)
+	at org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:446)
+	at org.apache.curator.utils.DefaultZookeeperFactory.newZooKeeper(DefaultZookeeperFactory.java:29)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl$2.newZooKeeper(CuratorFrameworkImpl.java:150)
+	at org.apache.curator.HandleHolder$1.getZooKeeper(HandleHolder.java:94)
+	at org.apache.curator.HandleHolder.getZooKeeper(HandleHolder.java:55)
+	at org.apache.curator.ConnectionState.reset(ConnectionState.java:262)
+	at org.apache.curator.ConnectionState.start(ConnectionState.java:109)
+	at org.apache.curator.CuratorZookeeperClient.start(CuratorZookeeperClient.java:191)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.start(CuratorFrameworkImpl.java:259)
+	at MasterManagers.ZookeeperManager.CuratorClient.setUpConnection(CuratorClient.java:82)
+	at MasterManagers.ZookeeperManager.CuratorClient.<init>(CuratorClient.java:51)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:63)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:51)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 22:14:59 WARN  ConnectionState:219 - Connection attempt unsuccessful after 10307 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-14 22:14:59 DEBUG ConnectionState:255 - reset
+2025-05-14 22:14:59 WARN  ZookeeperManager:71 - lcoalhost
+java.net.UnknownHostException: lcoalhost
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at org.apache.zookeeper.client.StaticHostProvider.<init>(StaticHostProvider.java:61)
+	at org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:446)
+	at org.apache.curator.utils.DefaultZookeeperFactory.newZooKeeper(DefaultZookeeperFactory.java:29)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl$2.newZooKeeper(CuratorFrameworkImpl.java:150)
+	at org.apache.curator.HandleHolder$1.getZooKeeper(HandleHolder.java:94)
+	at org.apache.curator.HandleHolder.internalClose(HandleHolder.java:128)
+	at org.apache.curator.HandleHolder.closeAndReset(HandleHolder.java:77)
+	at org.apache.curator.ConnectionState.reset(ConnectionState.java:261)
+	at org.apache.curator.ConnectionState.checkTimeouts(ConnectionState.java:221)
+	at org.apache.curator.ConnectionState.getZooKeeper(ConnectionState.java:94)
+	at org.apache.curator.CuratorZookeeperClient.getZooKeeper(CuratorZookeeperClient.java:117)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.getZooKeeper(CuratorFrameworkImpl.java:489)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:237)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:226)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:223)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:216)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:175)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:32)
+	at MasterManagers.ZookeeperManager.CuratorClient.checkNodeExist(CuratorClient.java:226)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.startZookeeperService(ZookeeperManager.java:64)
+	at MasterManagers.ZookeeperManager.ZookeeperManager.run(ZookeeperManager.java:51)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 22:15:11 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 22:15:11 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 22:15:11 DEBUG ConnectionState:107 - Starting
+2025-05-14 22:15:11 DEBUG ConnectionState:255 - reset
+2025-05-14 22:15:12 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 22:15:19 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:11091
+2025-05-14 22:15:19 INFO  SocketThread:79 - <region>[1]
+2025-05-14 22:15:19 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 22:15:19 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 22:15:19 DEBUG ConnectionState:107 - Starting
+2025-05-14 22:15:19 DEBUG ConnectionState:255 - reset
+2025-05-14 22:15:19 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 22:15:20 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-14 22:15:20 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 获取失败
+2025-05-14 22:15:20 INFO  TableManager:269 - 查询节点是否已经注册: 获取失败, false
+2025-05-14 22:15:20 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-14 22:15:20 INFO  TableManager:269 - 查询节点是否已经注册: 获取失败, false
+2025-05-14 22:15:20 INFO  TableManager:269 - 查询节点是否已经注册: 获取失败, false
+2025-05-14 22:23:03 INFO  SocketThread:64 - Socket连接已关闭: /127.0.0.1:11091
+2025-05-14 22:23:06 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-14 22:23:06 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_0, 地址 获取失败
+2025-05-14 22:23:06 INFO  TableManager:269 - 查询节点是否已经注册: 获取失败, true
+2025-05-14 22:23:06 WARN  ChildrenListener:85 - 对该服务器Region_0执行失效策略
+2025-05-14 22:23:06 WARN  StrategyExecutor:45 - bestInet:
+2025-05-14 22:23:06 INFO  TableManager:269 - 查询节点是否已经注册: , false
+2025-05-14 22:23:06 INFO  TableManager:269 - 查询节点是否已经注册: , false
+2025-05-14 22:23:06 WARN  StrategyExecutor:36 - Cannot invoke "MasterManagers.SocketManager.SocketThread.sendCommand(String)" because "socketThread" is null
+java.lang.NullPointerException: Cannot invoke "MasterManagers.SocketManager.SocketThread.sendCommand(String)" because "socketThread" is null
+	at MasterManagers.ZookeeperManager.StrategyExecutor.execInvalidStrategy(StrategyExecutor.java:53)
+	at MasterManagers.ZookeeperManager.StrategyExecutor.execStrategy(StrategyExecutor.java:32)
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:86)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-14 22:23:09 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /127.0.0.1:12871
+2025-05-14 22:23:09 INFO  SocketThread:79 - <region>[1]
+2025-05-14 22:23:09 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-14 22:23:09 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-14 22:23:09 DEBUG ConnectionState:107 - Starting
+2025-05-14 22:23:09 DEBUG ConnectionState:255 - reset
+2025-05-14 22:23:09 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-14 22:23:09 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-14 22:23:09 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 192.168.56.1
+2025-05-14 22:23:09 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 22:23:09 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-14 22:23:09 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false
+2025-05-14 22:23:09 INFO  TableManager:269 - 查询节点是否已经注册: 192.168.56.1, false

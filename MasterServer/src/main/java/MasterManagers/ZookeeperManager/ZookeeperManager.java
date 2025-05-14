@@ -1,4 +1,5 @@
 package MasterManagers.ZookeeperManager;
+import MasterManagers.Utils.PublicIPFetcher;
 import MasterManagers.Utils.SocketUtils;
 import lombok.extern.slf4j.Slf4j;
 
@@ -15,7 +16,7 @@ public class ZookeeperManager implements Runnable{
     private final int TaskType;
 
     // ZooKeeper集群访问的端口
-    public static final String ZK_HOST = "10.192.158.73:2181";
+    public static String ZK_HOST = "10.192.158.73:2181";
     // ZooKeeper会话超时时间
     public static final Integer ZK_SESSION_TIMEOUT_MS = 3000;
     // ZooKeeper连接超时时间
@@ -33,7 +34,7 @@ public class ZookeeperManager implements Runnable{
     public ZookeeperManager(TableManager tableManager) {
         this.tableManager = tableManager;
         this.TaskType = 0;
-
+        ZK_HOST = "localhost:2181";
     }
 
     // 从节点简单调用
@@ -75,6 +76,7 @@ public class ZookeeperManager implements Runnable{
             // 向ZooKeeper注册临时节点
             CuratorClient curatorClient = new CuratorClient(ZK_HOST);
             int nChildren = curatorClient.getNodeChildren(ZookeeperManager.ZNODE).size();
+            System.out.println("本机IP地址为: " + SocketUtils.getHostAddress());
             if(nChildren==0)
                 curatorClient.createNode(getRegisterPath() + nChildren, SocketUtils.getHostAddress(), CreateMode.EPHEMERAL);
             else{

@@ -33,6 +33,12 @@ public class RegionProcessor {
             // <region>[1]tableName1 tableName2 ...
             // 处理从节点启动时上报本地存储的所有表名
             cmd = cmd.substring(3).trim();
+            // 如果不存在表名，则说明只是简单的socket连接，节点注册交给ZookeeperManager，此处不处理
+            if(cmd.isEmpty()) {
+                System.out.println("Region服务器 " +  " (IP: " + IP + ") 准备注册");
+                return result;
+            }
+
             List<String> tableNames = Arrays.asList(cmd.split("\\s+"));
 
             boolean success = this.tableManger.addTables(tableNames, IP);
