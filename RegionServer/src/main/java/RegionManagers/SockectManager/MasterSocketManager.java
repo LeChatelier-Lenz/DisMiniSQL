@@ -53,30 +53,28 @@ public class MasterSocketManager implements Runnable {
     public void handleMasterCommand(String line) {
         try {
             if (line.startsWith("<master>[3]")) {
-                // 容灾恢复格式: <master>[3]表名1@SQL1#表名2@SQL2...
+                // 容灾恢复格式: <master>[3]ip#name@name@...
                 String info = line.substring(11);
-                if (info.isEmpty()) return;
-
-                String[] tableSqlPairs = info.split("#");
-                for (String pair : tableSqlPairs) {
-                    String[] parts = pair.split("@", 2);
-                    if (parts.length == 2) {
-                        String table = parts[0];
-                        String sql = parts[1];
-
-                        delFile(table);
-                        delFile(table + "_index.index");
-                        ftpUtils.downLoadFile("table", table, "");
-                        ftpUtils.downLoadFile("index", table + "_index.index", "");
-                        Interpreter.interpret(sql);
-                    }
+                if(line.length()==11) return;
+                String[] tables = info.split("#")[1].split("@");
+                for(String table : tables) {
+                    delFile(table);
+                    delFile(table + "_index.index");
+                    ftpUtils.downLoadFile("table", table, "");
+                    System.out.println("success " + table);
+                    ftpUtils.downLoadFile("index", table + "_index.index", "");
+                    System.out.println("success " + table + "_index.index");
                 }
-
-                ftpUtils.additionalDownloadFile("catalog", "table_catalog");
-                ftpUtils.additionalDownloadFile("catalog", "index_catalog");
-
-                API.initial();
-                System.out.println("Disaster recovery complete.");
+                String ip = info.split("#")[0];
+                ftpUtils.additionalDownloadFile("catalog", ip + "#table_catalog");
+                ftpUtils.additionalDownloadFile("catalog", ip + "#index_catalog");
+                try {
+                    API.initial();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+                System.out.println("here");
                 output.println("<region>[3]Complete disaster recovery");
 
             } else if (line.equals("<master>[4]recover")) {
@@ -98,10 +96,10 @@ public class MasterSocketManager implements Runnable {
                     String targetIp = parts[0];
                     String tableName = parts[1];
 
-                    ftpUtils.uploadFile("table", tableName, targetIp);
-                    ftpUtils.uploadFile("index", tableName + "_index.index", targetIp);
-                    ftpUtils.uploadFile("catalog", "table_catalog", targetIp + "#table_catalog");
-                    ftpUtils.uploadFile("catalog", "index_catalog", targetIp + "#index_catalog");
+                    ftpUtils.uploadFile(tableName,"table");
+                    ftpUtils.uploadFile(tableName + "_index.index", "index");
+                    ftpUtils.uploadFile(targetIp + "#table_catalog", targetIp , "catalog");
+                    ftpUtils.uploadFile(targetIp + "#index_catalog", targetIp , "catalog");
 
                     System.out.println("迁移完成：" + tableName + " 到 " + targetIp);
                 }
