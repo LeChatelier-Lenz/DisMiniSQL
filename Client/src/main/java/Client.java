@@ -39,23 +39,36 @@ public class Client {
                 case INSERT:
                 case UPDATE:
                 case DELETE:
+                case DROP:
                     // 查询表所在节点（如果缓存中没有）
                     if (cache.contains(tableName)) {
                         targetIP = cache.getIP(tableName);
                         System.out.println("从缓存中找到表 " + tableName + " 位于 " + targetIP);
-                    } else {
-                        masterRequest = "<client>[1]" + tableName;
-                        String response = masterClient.sendToMaster(masterRequest);
-                        System.out.println("主节点返回内容" + response);
-                        if (response.startsWith("<master>[1]")) {
-                            targetIP = response.substring(11).split(",")[0].trim(); // 默认取第一个IP
-                            cache.cache(tableName, targetIP);
-                            System.out.println("主节点返回表位置，已缓存：" + tableName + " -> " + targetIP);
+                        String[] ipParts = targetIP.split(":");
+                        String ip = ipParts[0];
+                        int port = 22222;
+                        System.out.println(ip+":"+port+" act: "+sql);
+                        String result = slaveClient.sendToSlave(ip, port, sql);
+                        if(result.startsWith("Slave Error:")){
+                            System.out.println("缓存从节点返回错误：" + result);
                         } else {
-                            System.out.println("主节点返回错误：" + response);
+                            System.out.println("运行结果：");
+                            System.out.println(result);
                             continue;
                         }
                     }
+                    masterRequest = "<client>[1]" + tableName;
+                    String response = masterClient.sendToMaster(masterRequest);
+                    System.out.println("主节点返回内容" + response);
+                    if (response.startsWith("<master>[1]")) {
+                        targetIP = response.substring(11).split(",")[0].trim(); // 默认取第一个IP
+                        cache.cache(tableName, targetIP);
+                        System.out.println("主节点返回表位置，已缓存：" + tableName + " -> " + targetIP);
+                    } else {
+                        System.out.println("主节点返回错误：" + response);
+                        continue;
+                    }
+
                     break;
 
                 case CREATE:
@@ -70,24 +83,24 @@ public class Client {
                         continue;
                     }
                     break;
-                case DROP:
-                    if (cache.contains(tableName)) {
-                        targetIP = cache.getIP(tableName);
-                        System.out.println("从缓存中找到表 " + tableName + " 位于 " + targetIP);
-                    } else {
-                        masterRequest = "<client>[1]" + tableName;
-                        String response = masterClient.sendToMaster(masterRequest);
-                        System.out.println("主节点返回内容" + response);
-                        if (response.startsWith("<master>[1]")) {
-                            targetIP = response.substring(11).split(",")[0].trim(); // 默认取第一个IP
-                            cache.remove(tableName);
-                            System.out.println("主节点返回表位置，已缓存：" + tableName + " -> " + targetIP);
-                        } else {
-                            System.out.println("主节点返回错误：" + response);
-                            continue;
-                        }
-                    }
-                    break;
+//                case DROP:
+//                    if (cache.contains(tableName)) {
+//                        targetIP = cache.getIP(tableName);
+//                        System.out.println("从缓存中找到表 " + tableName + " 位于 " + targetIP);
+//                    } else {
+//                        masterRequest = "<client>[1]" + tableName;
+//                        String response = masterClient.sendToMaster(masterRequest);
+//                        System.out.println("主节点返回内容" + response);
+//                        if (response.startsWith("<master>[1]")) {
+//                            targetIP = response.substring(11).split(",")[0].trim(); // 默认取第一个IP
+//                            cache.remove(tableName);
+//                            System.out.println("主节点返回表位置，已缓存：" + tableName + " -> " + targetIP);
+//                        } else {
+//                            System.out.println("主节点返回错误：" + response);
+//                            continue;
+//                        }
+//                    }
+//                    break;
 //                    masterRequest = "<client>[3]" + tableName;
 //                    String dropResp = masterClient.sendToMaster(masterRequest);
 //                    if (dropResp.startsWith("<master>[3]")) {

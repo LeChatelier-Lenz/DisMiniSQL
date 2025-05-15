@@ -43,6 +43,10 @@ public class StrategyExecutor {
         //<master>[3]ip#name@name@
         String bestInet = tableManager.getBestServer(hostUrl);
         log.warn("bestInet:{}", bestInet);
+        if (bestInet == null) {
+            System.out.println("没有找到可用的服务器,负载均衡失败");
+            return;
+        }
         allTable.append(hostUrl).append("#");
         int i = 0;
         for(String s:tableList){
