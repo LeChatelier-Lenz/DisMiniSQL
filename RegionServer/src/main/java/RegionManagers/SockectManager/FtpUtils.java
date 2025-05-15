@@ -8,10 +8,12 @@ import java.io.*;
 
 public class FtpUtils {
     // 此处设置为FTP的IP地址
-    public String hostname = "192.168.116.1";
+    public String hostname = "10.162.234.78";
     public int port = 21;
-    public String username = "user1";
-    public String password = "1234";
+    //public String username = "user1";
+    //public String password = "1234";
+    public String username = "LeChatelierLenz";
+    public String password = "031716cqp";
     private static final int BUFFER_SIZE = 1024 * 1024 * 4;
     public FTPClient ftpClient = null;
 
@@ -28,7 +30,7 @@ public class FtpUtils {
                 closeConnect();
                 System.out.println("FTP服务器连接失败");
             }
-            //System.out.println("FTP连接成功");
+            System.out.println("FTP连接成功");
         } catch (Exception e) {
             System.out.println("FTP登录失败" + e.getMessage());
         }
@@ -139,11 +141,19 @@ public class FtpUtils {
         InputStream inputStream = null;
         if (ftpClient != null) {
             try{
-                inputStream = new FileInputStream(new File(fileName));
+                File file = new File(fileName);
+if (!file.exists()) {
+    System.out.println("本地文件不存在：" + fileName);
+    return false;
+}
+inputStream = new FileInputStream(file);
                 ftpClient.setFileType(FTPClient.BINARY_FILE_TYPE);
                 ftpClient.makeDirectory(savePath);
                 ftpClient.changeWorkingDirectory(savePath);
-                ftpClient.storeFile(fileName, inputStream);
+                boolean done = ftpClient.storeFile(fileName, inputStream);
+if (!done) {
+    System.out.println("上传失败：" + fileName);
+}
                 inputStream.close();
                 System.out.println("创建FTP文件： " + fileName);
                 flag = true;
@@ -169,11 +179,19 @@ public class FtpUtils {
         InputStream inputStream = null;
         if (ftpClient != null) {
             try{
-                inputStream = new FileInputStream(new File(fileName));
+                File file = new File(fileName);
+if (!file.exists()) {
+    System.out.println("本地文件不存在：" + fileName);
+    return false;
+}
+inputStream = new FileInputStream(file);
                 ftpClient.setFileType(FTPClient.BINARY_FILE_TYPE);
                 ftpClient.makeDirectory(savePath);
                 ftpClient.changeWorkingDirectory(savePath);
-                ftpClient.storeFile(fileName, inputStream);
+                boolean done = ftpClient.storeFile(fileName, inputStream);
+if (!done) {
+    System.out.println("上传失败：" + fileName);
+}
                 ftpClient.rename(fileName, "/catalog/" + IP + "#" + fileName);
                 inputStream.close();
                 flag = true;

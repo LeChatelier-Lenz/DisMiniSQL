@@ -137,7 +137,7 @@ public class Client  implements Runnable{
     }
 
     public void sendTCToFTP() {
-        ftpUtils.uploadFile("table_catalog", SocketUtils.getHostAddress(), "catalog");
-        ftpUtils.uploadFile("index_catalog", SocketUtils.getHostAddress(), "catalog");
+        ftpUtils.uploadFile("table_catalog", socket.getLocalAddress().getHostAddress(), "catalog");
+        ftpUtils.uploadFile("index_catalog", socket.getLocalAddress().getHostAddress(), "catalog");
     }
 }
