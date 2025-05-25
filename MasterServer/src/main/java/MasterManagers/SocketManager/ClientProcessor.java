@@ -32,6 +32,7 @@ public class ClientProcessor {
             }
         } else if (cmd.startsWith("[2]")) {
             // <client>[2]tableName 创建新表，返回创建节点IP
+            // 这个只在一个节点上创建表 现废弃
             String IP = this.tableManager.getBestServer();
             if (IP.equals("")) {
                 result = "[2]null";
@@ -48,6 +49,16 @@ public class ClientProcessor {
                 log.info("客户端删除表 {} 操作发送成功", tableName);
             } else {
                 log.warn("客户端删除表 {} 操作发送失败，表可能不存在", tableName);
+            }
+        } else if (cmd.startsWith("[4]")) {
+            // <client>[4] 获取当前所有活跃节点
+            List<String> IPs = this.tableManager.getAllAliveIPs();
+            if (IPs.isEmpty()) {
+                result = "[4]";
+                log.warn("现无活跃子节点");
+            } else {
+                result = "[4]" + String.join(",", IPs);
+                log.info("返回现活跃子节点: {}", IPs);
             }
         } else {
             log.warn("收到无效的客户端命令格式: {}", cmd);
