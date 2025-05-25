@@ -41,6 +41,7 @@ public class test_MasterServer {
                 String table = request.substring(9).trim().toLowerCase();
                 // 假设每个创建请求都分配到一个随机从节点
                 String response = "master[2]127.0.0.1:9999"; // 假设返回一个从节点 IP
+                System.out.println(response);
                 out.println(response);
 
             } else if (request.startsWith("client[3]")) {
