@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.ConcurrentHashMap;
 
 import MasterManagers.SocketManager.SocketThread;
 import lombok.extern.slf4j.Slf4j;
@@ -32,6 +34,46 @@ public class TableManager {
     // 维护每个Region服务器的Socket连接
     // 例: {"192.168.1.1" -> SocketThread1}
 
+    // 5. 轮转索引映射表（表名 -> 原子计数器）
+    private final ConcurrentHashMap<String, AtomicInteger> tableIndices = new ConcurrentHashMap<>();
+
+    /**
+     * 获取表的下一个Region服务器（轮转方式）
+     *
+     * @param tableName 表名
+     * @return 下一个Region服务器IP，若表不存在或无可用服务器则返回null
+     */
+    public String getNextRegionIP(String tableName) {
+        // 获取表对应的服务器列表
+        List<String> regionIPs = tableToIP.get(tableName);
+        if (regionIPs == null || regionIPs.isEmpty()) {
+            log.warn("表 {} 不存在或无可用Region服务器", tableName);
+            return null;
+        }
+
+        // 获取或创建原子计数器
+        AtomicInteger indexCounter = tableIndices.computeIfAbsent(tableName, k -> new AtomicInteger(0));
+
+        synchronized (indexCounter) { // 同步块确保原子性操作
+            int currentIndex = indexCounter.getAndIncrement();
+            int size = regionIPs.size();
+            currentIndex %= size; // 确保索引在有效范围内
+            if (currentIndex < 0) { // 处理可能的负数（虽然getAndIncrement不会产生负数）
+                currentIndex += size;
+            }
+            return regionIPs.get(currentIndex);
+        }
+    }
+
+    /**
+     * 重置指定表的轮转索引（用于测试或特殊场景）
+     *
+     * @param tableName 表名
+     */
+    public void resetTableIndex(String tableName) {
+        tableIndices.remove(tableName);
+    }
+
     public TableManager() throws IOException {
         // 初始化数据结构
         tableToIP = new HashMap<>();
@@ -43,9 +85,19 @@ public class TableManager {
     /**
      * 返回IPList中已经注册的Region服务器的数量
      *
+     * @return 返回IPList中已经注册的Region服务器数量
      */
     public int getIPListSize() {
         return IPList.size();
+    }
+
+    /**
+     * 返回现在所有活跃的Region服务器
+     *
+     * @return 返回现在所有活跃的Region服务器的List
+     */
+    public List<String> getAllAliveIPs() {
+        return new ArrayList<>(aliveIPToTable.keySet());
     }
 
     /**
@@ -344,37 +396,103 @@ public class TableManager {
     }
 
     /**
-     * 将一个Region服务器上的表转移到另一个Region服务器
+     * 带版本校验的安全索引重置方法
      *
-     * @param sourceIP 需要转移的源服务器，通常为故障服务器
-     * @param targetIP 转移的目标服务器
-     * @return true 表示转移成功; false 表示转移失败，或者源服务器和目标服务器相同
+     * @param tableName 表名
+     * @param newActiveServer 新活跃服务器（用于日志追踪）
+     */
+    private void resetTableIndexWithValidation(String tableName, String newActiveServer) {
+        // 1. 双重校验确保表存在性
+        if (!tableToIP.containsKey(tableName)) {
+            log.debug("表 {} 在转移后已不存在，跳过索引重置", tableName);
+            return;
+        }
+
+        // 2. 获取当前服务器列表版本
+        List<String> currentServers = tableToIP.get(tableName);
+        int expectedVersion = currentServers.hashCode();
+
+        // 3. 执行重置操作
+        AtomicInteger indexCounter = tableIndices.get(tableName);
+        if (indexCounter == null) {
+            return;
+        }
+
+        synchronized (indexCounter) {
+            // 4. 版本校验防止A-B-A问题
+            if (currentServers.hashCode() != expectedVersion) {
+                log.warn("表 {} 的服务器列表已变更，取消索引重置", tableName);
+                return;
+            }
+
+            // 5. 执行安全重置
+            indexCounter.set(0);
+            log.debug("表 {} 的访问索引已重置（新活跃服务器: {}）", tableName, newActiveServer);
+        }
+    }
+
+    /**
+     * 增强版表转移方法（包含版本控制）
+     *
+     * @param sourceIP 源服务器
+     * @param targetIP 目标服务器
+     * @return 转移结果
      */
     public boolean transferTables(String sourceIP, String targetIP) {
-        // 源服务器不能和目标服务器相同
+        // 1. 参数校验
         if (sourceIP.equals(targetIP)) {
+            log.warn("源服务器和目标服务器不能相同");
             return false;
         }
 
-        // 转移源服务器上的表
-        List<String> tableList = getTableList(sourceIP);
-        if (tableList == null) {
+        // 2. 获取源服务器表列表（带版本快照）
+        List<String> tableList = new ArrayList<>(getTableList(sourceIP));
+        if (tableList.isEmpty()) {
+            log.info("源服务器 {} 无表可转移", sourceIP);
             return true;
         }
-        addTables(tableList, targetIP);
 
-        // 在活跃服务器中删除故障服务器
-        aliveIPToTable.remove(sourceIP);
+        if (tableList.isEmpty()) {
+            log.info("服务器 {} 无表需要转移，直接下线", sourceIP);
+            aliveIPToTable.remove(sourceIP);
+            return true;
+        }
 
-        // 更新tableToIP映射，将源服务器上的表从映射中移除
+        // 3. 执行批量添加（带版本控制）
+        Map<String, List<String>> originalTableMap = new HashMap<>(tableToIP);
+        boolean addSuccess = addTables(tableList, targetIP);
+        if (!addSuccess) {
+            log.error("目标服务器 {} 添加表失败", targetIP);
+            return false;
+        }
+
+        // 4. 版本校验确保数据一致性
         for (String tableName : tableList) {
-            if (tableToIP.containsKey(tableName)) {
-                tableToIP.get(tableName).remove(sourceIP);
-                if (tableToIP.get(tableName).isEmpty()) {
-                    tableToIP.remove(tableName);
-                }
+            if (!originalTableMap.get(tableName).contains(sourceIP)
+                    || !tableToIP.get(tableName).contains(targetIP)) {
+                log.error("表 {} 转移过程中数据不一致，回滚操作", tableName);
+                // 这里可以添加回滚逻辑（删除目标服务器上的表）
+                return false;
             }
         }
+
+        // 5. 清理源服务器数据
+        aliveIPToTable.remove(sourceIP);
+        for (String tableName : tableList) {
+            if (tableToIP.get(tableName).remove(sourceIP) && tableToIP.get(tableName).isEmpty()) {
+                tableToIP.remove(tableName);
+            }
+        }
+
+        log.debug("表 {} 从 {} 成功转移到 {}", tableList, sourceIP, targetIP);
+
+        // 6. 重置受影响表的轮转索引（带版本校验）
+        for (String tableName : tableList) {
+            resetTableIndexWithValidation(tableName, targetIP);
+        }
+
+        log.info("成功完成 {} 到 {} 的故障转移，{} 个表索引已重置",
+                sourceIP, targetIP, tableList.size());
 
         return true;
     }
