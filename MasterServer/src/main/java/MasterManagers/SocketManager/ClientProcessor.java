@@ -22,13 +22,13 @@ public class ClientProcessor {
         String tableName = cmd.substring(3);
         if (cmd.startsWith("[1]")) {
             // <client>[1]tableName 查询表所在所有节点
-            List<String> IPs = this.tableManager.getRegionIPs(tableName);
+            String IPs = this.tableManager.getNextRegionIP(tableName);
             if (tableName == null) {
                 result = "[1]null";
-                log.info("客户端查询表 {} 所在节点，返回IP列表: {}", tableName, String.join(",", IPs));
+                log.info("客户端查询表 {} 所在节点，未搜索到IP", tableName);
             } else {
                 result = "[1]" + String.join(",", IPs);
-                log.info("客户端查询表 {} 所在节点，未搜索到IP", tableName);
+                log.info("客户端查询表 {} 所在节点，返回IP列表: {}", tableName, IPs);
             }
         } else if (cmd.startsWith("[2]")) {
             // <client>[2]tableName 创建新表，返回创建节点IP

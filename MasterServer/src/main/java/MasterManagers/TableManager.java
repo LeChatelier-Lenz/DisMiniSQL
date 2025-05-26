@@ -445,6 +445,11 @@ public class TableManager {
             return false;
         }
 
+        if (targetIP.equals("")) {
+            log.error("无从节点可以转移表数据");
+            return false;
+        }
+
         // 2. 获取源服务器表列表（带版本快照）
         List<String> tableList = new ArrayList<>(getTableList(sourceIP));
         if (tableList.isEmpty()) {
