@@ -2,6 +2,9 @@ package network;
 
 import java.io.*;
 import java.net.*;
+import utils.SQLParser;
+import utils.SQLParser.SQLInfo;
+import utils.SQLParser.SQLType;
 
 public class SlaveClient {
 
@@ -37,11 +40,60 @@ public class SlaveClient {
                         break;
                     }
                     response.append(line).append("\n");
-                    System.out.println("接受内容："+ line);
+                    //System.out.println("接受内容："+ line);
                 }
-                System.out.println("接受结束");
+                //System.out.println("接受结束");
                 return response.toString().trim();
-            } else {
+            } else if (sql.trim().toUpperCase().startsWith("CREATE")) {
+                // SELECT：读取多行
+                StringBuilder response = new StringBuilder();
+                String line= in.readLine();
+                SQLInfo info = SQLParser.parse(sql);
+                if (line != null && line.contains("-->Create table") && line.contains(info.tableName + " successfully!")) {
+                    return "success";
+                } else {
+                    return line;
+                }
+            }else if (sql.trim().toUpperCase().startsWith("INSERT")) {
+                // SELECT：读取多行
+                StringBuilder response = new StringBuilder();
+                String line= in.readLine();
+                if (line != null && line.contains("-->Insert successfully")) {
+                    return "success";
+                } else {
+                    return line;
+                }
+            }else if (sql.trim().toUpperCase().startsWith("DELETE")) {
+                // 删除操作，读取响应第一行并判断是否包含“-->Delete”以及数字大于零
+                String line = in.readLine();
+                if (line != null && line.contains("-->Delete")) {
+                    // 提取数字部分
+                    String[] parts = line.split(" ");
+                    for (String part : parts) {
+                        try {
+                            int number = Integer.parseInt(part);
+                            if (number > 0) {
+                                return "success";
+                            } else {
+                                return "false";
+                            }
+                        } catch (NumberFormatException e) {
+                            // 继续检查下一个部分
+                        }
+                    }
+                }
+                return "false";
+            } else if (sql.trim().toUpperCase().startsWith("DROP")) {
+                // SELECT：读取多行
+                StringBuilder response = new StringBuilder();
+                String line= in.readLine();
+                SQLInfo info = SQLParser.parse(sql);
+                if (line != null && line.contains("-->Drop table") && line.contains(info.tableName + " successfully!")) {
+                    return "success";
+                } else {
+                    return line;
+                }
+            }else{
                 // 非 SELECT：只读取一行
                 return in.readLine();
             }
