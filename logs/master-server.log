@@ -1018,3 +1018,26 @@ java.lang.NullPointerException: Cannot invoke "MasterManagers.SocketManager.Sock
 2025-05-15 18:33:33 INFO  SocketThread:79 - <region>[2] test_table ADD
 2025-05-15 18:33:33 INFO  TableManager:269 - 查询节点是否已经注册: 10.162.18.52, true
 2025-05-15 18:33:33 INFO  RegionProcessor:62 - Region服务器 10.162.18.52 添加表 test_table 成功
+2025-05-26 19:11:29 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-26 19:11:29 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-26 19:11:29 DEBUG ConnectionState:107 - Starting
+2025-05-26 19:11:29 DEBUG ConnectionState:255 - reset
+2025-05-26 19:11:30 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-26 19:14:58 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-26 19:14:58 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-26 19:14:58 DEBUG ConnectionState:107 - Starting
+2025-05-26 19:14:58 DEBUG ConnectionState:255 - reset
+2025-05-26 19:14:59 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-26 19:16:54 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-26 19:16:54 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-26 19:16:54 DEBUG ConnectionState:107 - Starting
+2025-05-26 19:16:54 DEBUG ConnectionState:255 - reset
+2025-05-26 19:16:54 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-26 19:20:09 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-26 19:20:09 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-26 19:20:09 DEBUG ConnectionState:107 - Starting
+2025-05-26 19:20:09 DEBUG ConnectionState:255 - reset
+2025-05-26 19:20:09 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-26 19:20:48 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 2666ms for sessionid 0x100184a4ae20009
+2025-05-26 19:20:48 INFO  ConnectionStateManager:228 - State change: SUSPENDED
+2025-05-26 19:20:50 INFO  ConnectionStateManager:228 - State change: RECONNECTED

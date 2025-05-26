@@ -19,7 +19,7 @@ public class ZookeeperManager implements Runnable{
     private final int TaskType;
 
     // ZooKeeper集群访问的端口
-    public static String ZK_HOST = "10.162.234.78:2181";
+    public static String ZK_HOST = "10.192.31.16:2181";
     // ZooKeeper会话超时时间
     public static final Integer ZK_SESSION_TIMEOUT_MS = 3000;
     // ZooKeeper连接超时时间
