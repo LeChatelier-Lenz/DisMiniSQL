@@ -77,8 +77,16 @@ public class Client  implements Runnable{
         sendTCToFTP();
         String[] responseParts = response.trim().split("\s+");
         // 发送响应给客户端
-        if (response.equals("")) response = "error";
-        output.println(response);
+        if (response.isEmpty()) response = "error";
+
+        String[] lines = response.split( "\n");
+        for (String line : lines){
+            output.println(line);
+        }
+        output.println("END_OF_RESPONSE");// 结束标记
+        output.flush();
+        System.out.println("REGION> 响应:"+response);
+        //output.println(response);
 
         switch (operation) {
             case "SELECT":
