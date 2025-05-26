@@ -12,8 +12,8 @@ public class Client {
         Scanner scanner = new Scanner(System.in);
         TableLocationCache cache = new TableLocationCache();
 
-        String masterIP = "127.0.0.1";
-        int masterPort = 8888;
+        String masterIP = "10.192.31.16";
+        int masterPort = 12345;
         MasterClient masterClient = new MasterClient(masterIP, masterPort);
         SlaveClient slaveClient = new SlaveClient();
 
@@ -35,8 +35,8 @@ public class Client {
             try {
                 switch (info.type) {
                     case CREATE: {
-                        String resp = masterClient.sendToMaster("<client>[2]" + tableName);
-                        if (resp.startsWith("<master>[2]")) {
+                        String resp = masterClient.sendToMaster("<client>[4]" + tableName);
+                        if (resp.startsWith("<master>[4]")) {
                             List<String> ipList = Arrays.asList(resp.substring(11).split(","));
                             List<String> outputs = new ArrayList<>();
                             for (String ip : ipList) {
@@ -59,14 +59,29 @@ public class Client {
 
                     case SELECT: {
                         boolean retried = false;
-
+                        System.out.println("开始执行select");
                         while (true) {
                             List<String> ipList = cache.getIPList(tableName);
+
+                            if (ipList == null || ipList.isEmpty()) {
+                                System.out.println("IP列表为空，向主节点请求IP");
+                                String resp = masterClient.sendToMaster("<client>[4]" + tableName);
+                                if (resp.startsWith("<master>[4]")) {
+                                    List<String> newIPs = Arrays.asList(resp.substring(11).split(","));
+                                    cache.replace(tableName, newIPs);
+                                    ipList = newIPs;
+                                } else {
+                                    System.out.println("主节点返回错误：" + resp);
+                                    break;
+                                }
+                            }
+
                             List<String> outputs = new ArrayList<>();
                             boolean failed = false;
 
                             for (String ip : ipList) {
                                 try {
+                                    System.out.println("开始尝试第一个节点发送");
                                     String result = slaveClient.sendToSlave(ip, 22222, sql);
                                     outputs.add("[" + ip + "] " + result);
                                 } catch (Exception e) {
@@ -80,8 +95,8 @@ public class Client {
                                 outputs.forEach(System.out::println);
                                 break;
                             } else if (!retried) {
-                                String resp = masterClient.sendToMaster("<client>[1]" + tableName);
-                                if (resp.startsWith("<master>[1]")) {
+                                String resp = masterClient.sendToMaster("<client>[4]" + tableName);
+                                if (resp.startsWith("<master>[4]")) {
                                     List<String> newIPs = Arrays.asList(resp.substring(11).split(","));
                                     cache.replace(tableName, newIPs);
                                     retried = true;
@@ -100,8 +115,8 @@ public class Client {
                     case INSERT: {
                         boolean retried = false;
                         while (true) {
-                            String resp = masterClient.sendToMaster("<client>[4]" + tableName);
-                            if (resp.startsWith("<master>[4]")) {
+                            String resp = masterClient.sendToMaster("<client>[1]" + tableName);
+                            if (resp.startsWith("<master>[1]")) {
                                 String ip = resp.substring(11).trim();
                                 try {
                                     String result = slaveClient.sendToSlave(ip, 22222, sql);
@@ -148,8 +163,8 @@ public class Client {
                                 outputs.forEach(System.out::println);
                                 break;
                             } else if (!retried) {
-                                String resp = masterClient.sendToMaster("<client>[1]" + tableName);
-                                if (resp.startsWith("<master>[1]")) {
+                                String resp = masterClient.sendToMaster("<client>[4]" + tableName);
+                                if (resp.startsWith("<master>[4]")) {
                                     List<String> newIPs = Arrays.asList(resp.substring(11).split(","));
                                     cache.replace(tableName, newIPs);
                                     retried = true;

@@ -17,6 +17,7 @@ public class MasterSocketManager implements Runnable {
     private boolean isRunning = false;
 
     public final int SERVER_PORT = 12345;
+
     public final String MASTER = "10.192.31.16";
 
     public MasterSocketManager() throws IOException {

@@ -33,8 +33,13 @@ public class SlaveClient {
                 StringBuilder response = new StringBuilder();
                 String line;
                 while ((line = in.readLine()) != null) {
+                    if("END_OF_RESPONSE".equals(line)){
+                        break;
+                    }
                     response.append(line).append("\n");
+                    System.out.println("接受内容："+ line);
                 }
+                System.out.println("接受结束");
                 return response.toString().trim();
             } else {
                 // 非 SELECT：只读取一行
