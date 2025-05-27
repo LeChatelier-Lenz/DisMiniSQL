@@ -77,16 +77,15 @@ public class Client  implements Runnable{
         sendTCToFTP();
         String[] responseParts = response.trim().split("\s+");
         // 发送响应给客户端
-        if (response.isEmpty()) response = "error";
-
-        String[] lines = response.split( "\n");
-        for (String line : lines){
-            output.println(line);
-        }
-        output.println("END_OF_RESPONSE");// 结束标记
-        output.flush();
-        System.out.println("REGION> 响应:"+response);
+        if (response.equals("")) response = "error";
         //output.println(response);
+
+String[] lines = response.split( "\n");
+for (String line : lines){
+output.println(line);}
+output.println("END_OF_RESPONSE");// 结束标记
+output.flush();
+System.out.println("REGION> 响应:"+response);
 
         switch (operation) {
             case "SELECT":
@@ -135,8 +134,8 @@ public class Client  implements Runnable{
     }
 
     public void sendToFTP(String fileName) {
-        ftpUtils.uploadFile(fileName, "table");
-        ftpUtils.uploadFile(fileName + "_index.index", "index");
+        ftpUtils.upLoadtableFile(fileName, socket.getLocalAddress().getHostAddress(),"table");
+        ftpUtils.upLoadtableFile(fileName + "_index.index",socket.getLocalAddress().getHostAddress(), "index");
     }
 
     public void deleteFromFTP(String fileName) {
@@ -145,7 +144,6 @@ public class Client  implements Runnable{
     }
 
     public void sendTCToFTP() {
-        ftpUtils.uploadFile("table_catalog", socket.getLocalAddress().getHostAddress(), "catalog");
-        ftpUtils.uploadFile("index_catalog", socket.getLocalAddress().getHostAddress(), "catalog");
+        ftpUtils.upLoadcatalogFile();
     }
 }
