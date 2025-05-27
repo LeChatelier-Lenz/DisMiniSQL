@@ -2,13 +2,14 @@ package RegionManagers.SockectManager;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
 
 import miniSQL.API;
 import miniSQL.Interpreter;
 import RegionManagers.DataBaseManager;
 
 public class MasterSocketManager implements Runnable {
-
     private Socket socket;
     private BufferedReader input = null;
     private PrintWriter output = null;
@@ -17,8 +18,7 @@ public class MasterSocketManager implements Runnable {
     private boolean isRunning = false;
 
     public final int SERVER_PORT = 12345;
-
-    public final String MASTER = "10.192.31.16";
+    public final String MASTER = "10.162.251.198";
 
     public MasterSocketManager() throws IOException {
         this.socket = new Socket(MASTER, SERVER_PORT);
@@ -27,6 +27,7 @@ public class MasterSocketManager implements Runnable {
         input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         output = new PrintWriter(socket.getOutputStream(), true);
         isRunning = true;
+        //text_function();
     }
 
     public void sendToMaster(String modified_info) {
@@ -36,11 +37,9 @@ public class MasterSocketManager implements Runnable {
     public void sendTableInfoToMaster(String table_info) {
         output.println("<region>[1]" + table_info);
     }
-
     public void sendChangeNotification(String tableName, String action) {
         output.println("<region>[2]" + tableName + " " + action);
     }
-
     public void receiveFromMaster() throws IOException {
         String line = null;
         if (socket.isClosed() || socket.isInputShutdown() || socket.isOutputShutdown()) {
@@ -58,25 +57,27 @@ public class MasterSocketManager implements Runnable {
         try {
             if (line.startsWith("<master>[3]")) {
                 // 容灾恢复格式: <master>[3]ip#name@name@...
+                System.out.println("收到指令-容灾回复");
                 String info = line.substring(11);
-                if (line.length() == 11) {
-                    return;
-                }
+                if(line.length()==11) return;
+                String ip = info.split("#")[0];
                 String[] tables = info.split("#")[1].split("@");
-                for (String table : tables) {
+                for(String table : tables) {
                     delFile(table);
                     delFile(table + "_index.index");
-                    ftpUtils.downLoadFile("table", table, "");
+                    ftpUtils.downloadtableFile("table", ip,table, "");
                     System.out.println("success " + table);
-                    ftpUtils.downLoadFile("index", table + "_index.index", "");
+                    ftpUtils.downloadtableFile("index", ip, table + "_index.index", "");
                     System.out.println("success " + table + "_index.index");
                 }
-                String ip = info.split("#")[0];
-                ftpUtils.additionalDownloadFile("catalog", ip + "#table_catalog");
-                ftpUtils.additionalDownloadFile("catalog", ip + "#index_catalog");
+
+                //ftpUtils.additionalDownloadFile("catalog", ip + "#table_catalog");
+                //ftpUtils.additionalDownloadFile("catalog", ip + "#index_catalog");
                 try {
                     API.initial();
-                } catch (Exception e) {
+                    System.out.println("additionalDownloadFile finished and initial finished");
+                }
+                catch (Exception e) {
                     e.printStackTrace();
                 }
                 System.out.println("here");
@@ -88,6 +89,17 @@ public class MasterSocketManager implements Runnable {
                 String[] tableNames = tableName.split(" ");
                 for (String table : tableNames) {
                     Interpreter.interpret("drop table " + table + " ;");
+                }
+                ftpUtils.downLoadcatalogFile();
+                try (BufferedReader reader = new BufferedReader(new FileReader("table_catalog"))) {
+                    String lineSQL;
+                    while ((lineSQL = reader.readLine()) != null) {
+                        if (!lineSQL.trim().isEmpty()) {
+                            Interpreter.interpret(lineSQL.trim());  // 执行 create table 语句
+                        }
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
                 API.store();
                 API.initial();
@@ -101,10 +113,8 @@ public class MasterSocketManager implements Runnable {
                     String targetIp = parts[0];
                     String tableName = parts[1];
 
-                    ftpUtils.uploadFile(tableName, "table");
-                    ftpUtils.uploadFile(tableName + "_index.index", "index");
-                    ftpUtils.uploadFile(targetIp + "#table_catalog", targetIp, "catalog");
-                    ftpUtils.uploadFile(targetIp + "#index_catalog", targetIp, "catalog");
+                    ftpUtils.upLoadtableFile(tableName,targetIp,"table");
+                    ftpUtils.upLoadtableFile(tableName + "_index.index", targetIp,"index");
 
                     System.out.println("迁移完成：" + tableName + " 到 " + targetIp);
                 }
@@ -119,6 +129,12 @@ public class MasterSocketManager implements Runnable {
         if (file.exists() && file.isFile()) {
             file.delete();
         }
+    }
+
+     public void text_function() {
+        String IP=socket.getLocalAddress().getHostAddress();
+        //ftpUtils.additionaluploadFile("text.txt",IP,"");
+        //ftpUtils.additionalDownloadFile("",IP, "text.txt","");
     }
 
     @Override
