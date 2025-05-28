@@ -91,6 +91,7 @@ public class MasterSocketManager implements Runnable {
                     Interpreter.interpret("drop table " + table + " ;");
                 }
                 //initial();
+
                 API.store();
                 API.initial();
                 output.println("<region>[4]");
