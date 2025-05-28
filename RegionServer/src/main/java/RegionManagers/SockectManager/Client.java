@@ -139,8 +139,8 @@ System.out.println("REGION> 响应:"+response);
     }
 
     public void deleteFromFTP(String fileName) {
-        ftpUtils.deleteFile(fileName, "table");
-        ftpUtils.deleteFile(fileName + "_index.index", "index");
+        ftpUtils.deleteFile(fileName,socket.getLocalAddress().getHostAddress(), "table");
+        ftpUtils.deleteFile(fileName + "_index.index",socket.getLocalAddress().getHostAddress(), "index");
     }
 
     public void sendTCToFTP() {
