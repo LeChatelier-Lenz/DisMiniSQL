@@ -252,4 +252,22 @@ public class FtpUtils {
         }
         return flag;
     }
+    public boolean deleteFile(String fileName,String localIP ,String filePath) {
+        login();
+        boolean flag = false;
+        fileName=localIP + "#" + fileName;
+        if (ftpClient != null) {
+            try {
+                ftpClient.changeWorkingDirectory(filePath);
+                ftpClient.dele(fileName);
+                System.out.println("删除FTP文件： " + fileName);
+                flag = true;
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                closeConnect();
+            }
+        }
+        return flag;
+    }
 }
