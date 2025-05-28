@@ -90,17 +90,7 @@ public class MasterSocketManager implements Runnable {
                 for (String table : tableNames) {
                     Interpreter.interpret("drop table " + table + " ;");
                 }
-                ftpUtils.downLoadcatalogFile();
-                try (BufferedReader reader = new BufferedReader(new FileReader("table_catalog"))) {
-                    String lineSQL;
-                    while ((lineSQL = reader.readLine()) != null) {
-                        if (!lineSQL.trim().isEmpty()) {
-                            Interpreter.interpret(lineSQL.trim());  // 执行 create table 语句
-                        }
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                //initial();
                 API.store();
                 API.initial();
                 output.println("<region>[4]");
@@ -135,6 +125,20 @@ public class MasterSocketManager implements Runnable {
         String IP=socket.getLocalAddress().getHostAddress();
         //ftpUtils.additionaluploadFile("text.txt",IP,"");
         //ftpUtils.additionalDownloadFile("",IP, "text.txt","");
+    }
+
+    public void initial(){
+        ftpUtils.downLoadcatalogFile();
+        try (BufferedReader reader = new BufferedReader(new FileReader("table_catalog"))) {
+            String lineSQL;
+            while ((lineSQL = reader.readLine()) != null) {
+                if (!lineSQL.trim().isEmpty()) {
+                    Interpreter.interpret(lineSQL.trim());  // 执行 create table 语句
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
