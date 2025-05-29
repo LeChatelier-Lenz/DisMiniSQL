@@ -18,7 +18,7 @@ public class MasterSocketManager implements Runnable {
     private boolean isRunning = false;
 
     public final int SERVER_PORT = 12345;
-    public final String MASTER = "10.162.251.198";
+    public final String MASTER = "10.192.114.34";
 
     public MasterSocketManager() throws IOException {
         this.socket = new Socket(MASTER, SERVER_PORT);
@@ -63,9 +63,9 @@ public class MasterSocketManager implements Runnable {
                 String ip = info.split("#")[0];
                 String[] tables = info.split("#")[1].split("@");
                 for(String table : tables) {
-                    delFile(table);
-                    delFile(table + "_index.index");
-                    ftpUtils.downloadtableFile("table", ip,table, "");
+                    //delFile(table);
+                    //delFile(table + "_index.index");
+                    ftpUtils.downloadtable1File("table", ip,table, "");
                     System.out.println("success " + table);
                     ftpUtils.downloadtableFile("index", ip, table + "_index.index", "");
                     System.out.println("success " + table + "_index.index");
@@ -158,4 +158,7 @@ public class MasterSocketManager implements Runnable {
     public String getMyIP() {
         return socket.getLocalAddress().getHostAddress();
     }
+
+
+    
 }
