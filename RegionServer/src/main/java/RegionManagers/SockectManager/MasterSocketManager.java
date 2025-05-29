@@ -75,7 +75,7 @@ public class MasterSocketManager implements Runnable {
                 //ftpUtils.additionalDownloadFile("catalog", ip + "#index_catalog");
                 try {
                     API.initial();
-                    System.out.println("additionalDownloadFile finished and initial finished");
+                    System.out.println("DownloadtableFile finished and initial finished");
                 }
                 catch (Exception e) {
                     e.printStackTrace();
@@ -90,7 +90,7 @@ public class MasterSocketManager implements Runnable {
                 for (String table : tableNames) {
                     Interpreter.interpret("drop table " + table + " ;");
                 }
-                //initial();
+                initial();
 
                 API.store();
                 API.initial();
@@ -129,17 +129,7 @@ public class MasterSocketManager implements Runnable {
     }
 
     public void initial(){
-        ftpUtils.downLoadcatalogFile();
-        try (BufferedReader reader = new BufferedReader(new FileReader("table_catalog"))) {
-            String lineSQL;
-            while ((lineSQL = reader.readLine()) != null) {
-                if (!lineSQL.trim().isEmpty()) {
-                    Interpreter.interpret(lineSQL.trim());  // 执行 create table 语句
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        ftpUtils.downLoadblankFile();
     }
 
     @Override
