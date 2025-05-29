@@ -308,6 +308,8 @@ public class TableManager {
             }
         }
 
+        log.info("恢复服务器 {}", regionIP);
+
         return true;
     }
 

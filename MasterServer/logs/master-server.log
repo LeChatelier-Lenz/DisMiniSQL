@@ -1153,3 +1153,657 @@ java.lang.NullPointerException: Cannot invoke "MasterManagers.SocketManager.Sock
 2025-05-26 21:52:41 INFO  SocketThread:79 - <client>[1]test_2
 2025-05-26 21:52:41 INFO  ClientProcessor:31 - 客户端查询表 test_2 所在节点，返回IP列表: 10.196.138.241
 2025-05-26 21:53:31 INFO  SocketThread:64 - Socket连接已关闭: /10.162.18.52:62790
+2025-05-29 13:45:01 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 13:45:01 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 13:45:01 DEBUG ConnectionState:107 - Starting
+2025-05-29 13:45:01 DEBUG ConnectionState:255 - reset
+2025-05-29 13:45:01 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 13:45:24 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.18.52:58999
+2025-05-29 13:45:24 INFO  SocketThread:79 - <region>[1]
+2025-05-29 13:45:25 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-29 13:45:25 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 10.162.18.52
+2025-05-29 13:45:25 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 13:45:25 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-29 13:45:25 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 13:45:25 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 13:45:26 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:12141
+2025-05-29 13:45:26 INFO  SocketThread:79 - <region>[1]test_table2 test_table test_table5 test_table7 test_table30 
+2025-05-29 13:45:26 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 13:45:26 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 13:45:26 INFO  RegionProcessor:46 - Region服务器 10.162.251.198 表信息上报成功
+2025-05-29 13:45:27 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-29 13:45:27 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 13:45:27 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 13:45:27 WARN  ChildrenListener:65 - 对该服务器Region_1执行恢复策略
+2025-05-29 13:45:27 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 13:45:27 INFO  SocketThread:79 - <region>[4]
+2025-05-29 13:45:27 INFO  RegionProcessor:91 - Region服务器 10.162.251.198 已清空本地数据
+2025-05-29 13:49:20 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:3185
+2025-05-29 13:49:20 INFO  SocketThread:79 - <client>[4]test_table30
+2025-05-29 13:49:20 INFO  ClientProcessor:61 - 返回现活跃子节点: [10.162.18.52, 10.162.251.198]
+2025-05-29 13:49:21 INFO  SocketThread:79 - <region>[2] test_table30 ADD
+2025-05-29 13:49:21 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 13:49:21 INFO  RegionProcessor:62 - Region服务器 10.162.18.52 添加表 test_table30 成功
+2025-05-29 13:49:22 INFO  SocketThread:79 - <region>[2] test_table30 ADD
+2025-05-29 13:49:22 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 13:49:22 INFO  RegionProcessor:62 - Region服务器 10.162.251.198 添加表 test_table30 成功
+2025-05-29 13:50:12 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7004
+2025-05-29 13:50:12 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 13:50:12 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.251.198
+2025-05-29 13:50:37 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7034
+2025-05-29 13:50:37 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 13:50:37 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.18.52
+2025-05-29 13:50:57 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7044
+2025-05-29 13:50:57 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 13:50:57 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.251.198
+2025-05-29 13:51:31 INFO  SocketThread:64 - Socket连接已关闭: /10.162.251.198:12141
+2025-05-29 13:51:35 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_1
+2025-05-29 13:51:35 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 13:51:35 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 13:51:35 WARN  ChildrenListener:85 - 对该服务器Region_1执行失效策略
+2025-05-29 13:51:35 WARN  StrategyExecutor:45 - bestInet:10.162.18.52
+2025-05-29 13:51:35 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 13:51:35 INFO  TableManager:499 - 成功完成 10.162.251.198 到 10.162.18.52 的故障转移，5 个表索引已重置
+2025-05-29 13:51:35 INFO  SocketThread:79 - <region>[3]Complete disaster recovery
+2025-05-29 13:51:35 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 13:51:35 INFO  RegionProcessor:82 - Region服务器 10.162.18.52 已完成故障恢复
+2025-05-29 13:55:12 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7285
+2025-05-29 13:55:13 INFO  SocketThread:79 - <region>[1]test_table30 
+2025-05-29 13:55:13 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 13:55:13 WARN  RegionProcessor:48 - Region服务器 10.162.251.198 表信息上报失败，可能服务器状态异常
+2025-05-29 13:55:14 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-29 13:55:14 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 13:55:14 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 13:55:14 WARN  ChildrenListener:65 - 对该服务器Region_1执行恢复策略
+2025-05-29 13:55:14 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 13:55:14 INFO  SocketThread:79 - <region>[4]
+2025-05-29 13:55:14 INFO  RegionProcessor:91 - Region服务器 10.162.251.198 已清空本地数据
+2025-05-29 13:57:53 INFO  SocketThread:64 - Socket连接已关闭: /10.162.18.52:58999
+2025-05-29 13:57:57 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-29 13:57:57 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_0, 地址 10.162.18.52
+2025-05-29 13:57:57 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 13:57:57 WARN  ChildrenListener:85 - 对该服务器Region_0执行失效策略
+2025-05-29 13:57:57 WARN  StrategyExecutor:45 - bestInet:10.162.251.198
+2025-05-29 13:57:57 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 13:57:57 INFO  TableManager:499 - 成功完成 10.162.18.52 到 10.162.251.198 的故障转移，5 个表索引已重置
+2025-05-29 13:57:57 INFO  SocketThread:79 - <region>[3]Complete disaster recovery
+2025-05-29 13:57:57 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 13:57:57 INFO  RegionProcessor:82 - Region服务器 10.162.251.198 已完成故障恢复
+2025-05-29 13:58:12 INFO  SocketThread:64 - Socket连接已关闭: /10.162.251.198:7285
+2025-05-29 13:58:15 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_1
+2025-05-29 13:58:15 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 13:58:15 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 13:58:15 WARN  ChildrenListener:85 - 对该服务器Region_1执行失效策略
+2025-05-29 13:58:15 WARN  StrategyExecutor:45 - bestInet:
+2025-05-29 13:58:15 ERROR TableManager:449 - 无从节点可以转移表数据
+2025-05-29 13:58:15 WARN  StrategyExecutor:36 - Cannot invoke "MasterManagers.SocketManager.SocketThread.sendCommand(String)" because "socketThread" is null
+java.lang.NullPointerException: Cannot invoke "MasterManagers.SocketManager.SocketThread.sendCommand(String)" because "socketThread" is null
+	at MasterManagers.ZookeeperManager.StrategyExecutor.execInvalidStrategy(StrategyExecutor.java:57)
+	at MasterManagers.ZookeeperManager.StrategyExecutor.execStrategy(StrategyExecutor.java:32)
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:86)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-29 13:58:27 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.18.52:60120
+2025-05-29 13:58:27 INFO  SocketThread:79 - <region>[1]test_table30 
+2025-05-29 13:58:27 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 13:58:27 WARN  RegionProcessor:48 - Region服务器 10.162.18.52 表信息上报失败，可能服务器状态异常
+2025-05-29 13:58:28 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-29 13:58:28 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 10.162.18.52
+2025-05-29 13:58:28 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 13:58:28 WARN  ChildrenListener:65 - 对该服务器Region_0执行恢复策略
+2025-05-29 13:58:28 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 13:58:28 INFO  SocketThread:79 - <region>[4]
+2025-05-29 13:58:28 INFO  RegionProcessor:91 - Region服务器 10.162.18.52 已清空本地数据
+2025-05-29 13:58:30 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7460
+2025-05-29 13:58:30 INFO  SocketThread:79 - <region>[1]
+2025-05-29 13:58:31 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-29 13:58:31 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 13:58:31 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 13:58:31 WARN  ChildrenListener:65 - 对该服务器Region_1执行恢复策略
+2025-05-29 13:58:31 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 13:58:31 INFO  SocketThread:79 - <region>[4]
+2025-05-29 13:58:31 INFO  RegionProcessor:91 - Region服务器 10.162.251.198 已清空本地数据
+2025-05-29 13:59:06 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7491
+2025-05-29 13:59:06 INFO  SocketThread:79 - <client>[4]test_table30
+2025-05-29 13:59:06 INFO  ClientProcessor:61 - 返回现活跃子节点: [10.162.18.52, 10.162.251.198]
+2025-05-29 13:59:08 INFO  SocketThread:79 - <region>[2] test_table30 ADD
+2025-05-29 13:59:08 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 13:59:08 INFO  RegionProcessor:62 - Region服务器 10.162.18.52 添加表 test_table30 成功
+2025-05-29 13:59:09 INFO  SocketThread:79 - <region>[2] test_table30 ADD
+2025-05-29 13:59:09 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 13:59:09 INFO  RegionProcessor:62 - Region服务器 10.162.251.198 添加表 test_table30 成功
+2025-05-29 13:59:14 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7511
+2025-05-29 13:59:14 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 13:59:14 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.251.198
+2025-05-29 13:59:23 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7534
+2025-05-29 13:59:23 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 13:59:23 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.18.52
+2025-05-29 13:59:32 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7561
+2025-05-29 13:59:32 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 13:59:32 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.251.198
+2025-05-29 14:00:11 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7606
+2025-05-29 14:00:11 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 14:00:11 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.18.52
+2025-05-29 14:01:07 INFO  SocketThread:64 - Socket连接已关闭: /10.162.251.198:7460
+2025-05-29 14:01:11 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_1
+2025-05-29 14:01:11 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 14:01:11 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:01:11 WARN  ChildrenListener:85 - 对该服务器Region_1执行失效策略
+2025-05-29 14:01:11 WARN  StrategyExecutor:45 - bestInet:10.162.18.52
+2025-05-29 14:01:11 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:01:11 INFO  TableManager:499 - 成功完成 10.162.251.198 到 10.162.18.52 的故障转移，5 个表索引已重置
+2025-05-29 14:01:11 INFO  SocketThread:79 - <region>[3]Complete disaster recovery
+2025-05-29 14:01:11 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:01:11 INFO  RegionProcessor:82 - Region服务器 10.162.18.52 已完成故障恢复
+2025-05-29 14:05:02 INFO  SocketThread:64 - Socket连接已关闭: /10.162.18.52:60120
+2025-05-29 14:05:05 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-29 14:05:05 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_0, 地址 10.162.18.52
+2025-05-29 14:05:05 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:05:05 WARN  ChildrenListener:85 - 对该服务器Region_0执行失效策略
+2025-05-29 14:05:05 WARN  StrategyExecutor:45 - bestInet:
+2025-05-29 14:05:05 ERROR TableManager:449 - 无从节点可以转移表数据
+2025-05-29 14:05:05 WARN  StrategyExecutor:36 - Cannot invoke "MasterManagers.SocketManager.SocketThread.sendCommand(String)" because "socketThread" is null
+java.lang.NullPointerException: Cannot invoke "MasterManagers.SocketManager.SocketThread.sendCommand(String)" because "socketThread" is null
+	at MasterManagers.ZookeeperManager.StrategyExecutor.execInvalidStrategy(StrategyExecutor.java:57)
+	at MasterManagers.ZookeeperManager.StrategyExecutor.execStrategy(StrategyExecutor.java:32)
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:86)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-29 14:05:08 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.18.52:60371
+2025-05-29 14:05:08 INFO  SocketThread:79 - <region>[1]test_table30 
+2025-05-29 14:05:08 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:05:08 INFO  RegionProcessor:46 - Region服务器 10.162.18.52 表信息上报成功
+2025-05-29 14:05:08 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-29 14:05:08 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 10.162.18.52
+2025-05-29 14:05:08 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:05:08 WARN  ChildrenListener:65 - 对该服务器Region_0执行恢复策略
+2025-05-29 14:05:08 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:05:08 INFO  SocketThread:79 - <region>[4]
+2025-05-29 14:05:08 INFO  RegionProcessor:91 - Region服务器 10.162.18.52 已清空本地数据
+2025-05-29 14:05:18 INFO  SocketThread:64 - Socket连接已关闭: /10.162.18.52:60371
+2025-05-29 14:05:21 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-29 14:05:21 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_0, 地址 10.162.18.52
+2025-05-29 14:05:21 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:05:21 WARN  ChildrenListener:85 - 对该服务器Region_0执行失效策略
+2025-05-29 14:05:21 WARN  StrategyExecutor:45 - bestInet:
+2025-05-29 14:05:21 ERROR TableManager:449 - 无从节点可以转移表数据
+2025-05-29 14:05:21 WARN  StrategyExecutor:36 - Cannot invoke "MasterManagers.SocketManager.SocketThread.sendCommand(String)" because "socketThread" is null
+java.lang.NullPointerException: Cannot invoke "MasterManagers.SocketManager.SocketThread.sendCommand(String)" because "socketThread" is null
+	at MasterManagers.ZookeeperManager.StrategyExecutor.execInvalidStrategy(StrategyExecutor.java:57)
+	at MasterManagers.ZookeeperManager.StrategyExecutor.execStrategy(StrategyExecutor.java:32)
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:86)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-29 14:06:52 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 14:06:52 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 14:06:52 DEBUG ConnectionState:107 - Starting
+2025-05-29 14:06:52 DEBUG ConnectionState:255 - reset
+2025-05-29 14:06:52 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 14:06:57 WARN  ClientCnxn:1162 - Session 0x100269dde950007 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:68)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:366)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-29 14:06:57 INFO  ConnectionStateManager:228 - State change: SUSPENDED
+2025-05-29 14:06:57 WARN  ClientCnxn:1162 - Session 0x100269dde950007 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-29 14:06:59 WARN  ClientCnxn:1162 - Session 0x100269dde950007 for server 0:0:0:0:0:0:0:1/[0:0:0:0:0:0:0:1]:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-29 14:07:00 WARN  ClientCnxn:1162 - Session 0x100269dde950007 for server kubernetes.docker.internal/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-29 14:07:00 WARN  ConnectionState:219 - Connection attempt unsuccessful after 3010 (greater than max timeout of 3000). Resetting connection and trying again with a new connection.
+2025-05-29 14:07:00 DEBUG ConnectionState:255 - reset
+2025-05-29 14:07:35 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 14:07:35 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 14:07:35 DEBUG ConnectionState:107 - Starting
+2025-05-29 14:07:35 DEBUG ConnectionState:255 - reset
+2025-05-29 14:07:35 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 14:07:45 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.18.52:60445
+2025-05-29 14:07:45 INFO  SocketThread:79 - <region>[1]
+2025-05-29 14:07:45 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-29 14:07:45 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 10.162.18.52
+2025-05-29 14:07:45 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 14:07:45 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-29 14:07:45 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 14:07:45 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 14:07:49 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:4908
+2025-05-29 14:07:49 INFO  SocketThread:79 - <region>[1]test_table30 
+2025-05-29 14:07:49 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 14:07:49 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 14:07:49 INFO  RegionProcessor:46 - Region服务器 10.162.251.198 表信息上报成功
+2025-05-29 14:07:50 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-29 14:07:50 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 14:07:50 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:07:50 WARN  ChildrenListener:65 - 对该服务器Region_1执行恢复策略
+2025-05-29 14:07:50 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:07:50 INFO  SocketThread:79 - <region>[4]
+2025-05-29 14:07:50 INFO  RegionProcessor:93 - Region服务器 10.162.251.198 已清空本地数据
+2025-05-29 14:07:50 INFO  RegionProcessor:98 - 清空主节点中 10.162.251.198 服务器的 test_table30 表缓存
+2025-05-29 14:07:50 INFO  SocketThread:64 - Socket连接已关闭: /10.162.251.198:4908
+2025-05-29 14:08:03 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:4931
+2025-05-29 14:08:03 INFO  SocketThread:79 - <client>[4]test_table30
+2025-05-29 14:08:03 INFO  ClientProcessor:61 - 返回现活跃子节点: [10.162.18.52, 10.162.251.198]
+2025-05-29 14:08:13 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:4943
+2025-05-29 14:08:13 INFO  SocketThread:79 - <client>[4]test_table30
+2025-05-29 14:08:13 INFO  ClientProcessor:61 - 返回现活跃子节点: [10.162.18.52, 10.162.251.198]
+2025-05-29 14:08:33 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:4964
+2025-05-29 14:08:33 INFO  SocketThread:79 - <client>[4]test_table30
+2025-05-29 14:08:33 INFO  ClientProcessor:61 - 返回现活跃子节点: [10.162.18.52, 10.162.251.198]
+2025-05-29 14:08:51 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:4985
+2025-05-29 14:08:51 INFO  SocketThread:79 - <client>[4]test_table32
+2025-05-29 14:08:51 INFO  ClientProcessor:61 - 返回现活跃子节点: [10.162.18.52, 10.162.251.198]
+2025-05-29 14:08:52 INFO  SocketThread:79 - <region>[2] test_table32 ADD
+2025-05-29 14:08:52 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:08:52 INFO  RegionProcessor:62 - Region服务器 10.162.18.52 添加表 test_table32 成功
+2025-05-29 14:09:16 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:5017
+2025-05-29 14:09:16 INFO  SocketThread:79 - <client>[1]test_table32
+2025-05-29 14:09:16 INFO  ClientProcessor:31 - 客户端查询表 test_table32 所在节点，返回IP列表: 10.162.18.52
+2025-05-29 14:09:28 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:5030
+2025-05-29 14:09:28 INFO  SocketThread:79 - <client>[1]test_table32
+2025-05-29 14:09:28 INFO  ClientProcessor:31 - 客户端查询表 test_table32 所在节点，返回IP列表: 10.162.18.52
+2025-05-29 14:09:46 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:5046
+2025-05-29 14:09:46 INFO  SocketThread:79 - <client>[1]test_table32
+2025-05-29 14:09:46 INFO  ClientProcessor:31 - 客户端查询表 test_table32 所在节点，返回IP列表: 10.162.18.52
+2025-05-29 14:11:21 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_1
+2025-05-29 14:11:21 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 14:11:21 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:11:21 WARN  ChildrenListener:85 - 对该服务器Region_1执行失效策略
+2025-05-29 14:11:21 WARN  StrategyExecutor:47 - bestInet:10.162.18.52
+2025-05-29 14:11:21 INFO  TableManager:456 - 源服务器 10.162.251.198 无表可转移
+2025-05-29 14:11:22 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:5100
+2025-05-29 14:11:22 INFO  SocketThread:79 - <region>[1]test_table32 
+2025-05-29 14:11:22 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:11:22 INFO  RegionProcessor:46 - Region服务器 10.162.251.198 表信息上报成功
+2025-05-29 14:11:23 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-29 14:11:23 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 14:11:23 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:11:23 WARN  ChildrenListener:65 - 对该服务器Region_1执行恢复策略
+2025-05-29 14:11:23 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:11:23 INFO  SocketThread:79 - <region>[4]
+2025-05-29 14:11:23 INFO  RegionProcessor:93 - Region服务器 10.162.251.198 已清空本地数据
+2025-05-29 14:11:23 INFO  RegionProcessor:98 - 清空主节点中 10.162.251.198 服务器的 test_table32 表缓存
+2025-05-29 14:11:23 INFO  SocketThread:64 - Socket连接已关闭: /10.162.251.198:5100
+2025-05-29 14:12:04 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:5144
+2025-05-29 14:12:04 INFO  SocketThread:79 - <client>[1]test_table32
+2025-05-29 14:12:04 INFO  ClientProcessor:31 - 客户端查询表 test_table32 所在节点，返回IP列表: 10.162.18.52
+2025-05-29 14:13:46 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 14:13:46 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 14:13:46 DEBUG ConnectionState:107 - Starting
+2025-05-29 14:13:46 DEBUG ConnectionState:255 - reset
+2025-05-29 14:13:46 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 14:13:46 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-29 14:13:46 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 14:13:46 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 14:13:46 WARN  ChildrenListener:69 - 对该服务器Region_1执行新增策略
+2025-05-29 14:13:46 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 14:13:46 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 14:14:10 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:5238
+2025-05-29 14:14:10 INFO  SocketThread:79 - <region>[1]
+2025-05-29 14:14:11 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_1
+2025-05-29 14:14:11 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 14:14:11 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:14:11 WARN  ChildrenListener:85 - 对该服务器Region_1执行失效策略
+2025-05-29 14:14:11 WARN  StrategyExecutor:47 - bestInet:
+2025-05-29 14:14:11 ERROR TableManager:449 - 无从节点可以转移表数据
+2025-05-29 14:14:11 WARN  StrategyExecutor:38 - Cannot invoke "MasterManagers.SocketManager.SocketThread.sendCommand(String)" because "socketThread" is null
+java.lang.NullPointerException: Cannot invoke "MasterManagers.SocketManager.SocketThread.sendCommand(String)" because "socketThread" is null
+	at MasterManagers.ZookeeperManager.StrategyExecutor.execInvalidStrategy(StrategyExecutor.java:59)
+	at MasterManagers.ZookeeperManager.StrategyExecutor.execStrategy(StrategyExecutor.java:34)
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:86)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-29 14:14:11 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.18.52:60662
+2025-05-29 14:14:11 INFO  SocketThread:79 - <region>[1]
+2025-05-29 14:14:12 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-29 14:14:12 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 10.162.18.52
+2025-05-29 14:14:12 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 14:14:12 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-29 14:14:12 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 14:14:12 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 14:14:12 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-29 14:14:12 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 14:14:12 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:14:12 WARN  ChildrenListener:65 - 对该服务器Region_1执行恢复策略
+2025-05-29 14:14:12 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:14:12 INFO  SocketThread:79 - <region>[4]
+2025-05-29 14:14:12 INFO  RegionProcessor:93 - Region服务器 10.162.251.198 已清空本地数据
+2025-05-29 14:15:19 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:5273
+2025-05-29 14:15:19 INFO  SocketThread:79 - <client>[4]test_table30
+2025-05-29 14:15:19 INFO  ClientProcessor:61 - 返回现活跃子节点: [10.162.18.52, 10.162.251.198]
+2025-05-29 14:15:21 INFO  SocketThread:79 - <region>[2] test_table30 ADD
+2025-05-29 14:15:21 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:15:21 INFO  RegionProcessor:62 - Region服务器 10.162.18.52 添加表 test_table30 成功
+2025-05-29 14:15:22 INFO  SocketThread:79 - <region>[2] test_table30 ADD
+2025-05-29 14:15:22 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:15:22 INFO  RegionProcessor:62 - Region服务器 10.162.251.198 添加表 test_table30 成功
+2025-05-29 14:15:29 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:5296
+2025-05-29 14:15:29 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 14:15:29 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.18.52
+2025-05-29 14:15:37 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:5305
+2025-05-29 14:15:37 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 14:15:37 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.251.198
+2025-05-29 14:15:44 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:5323
+2025-05-29 14:15:44 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 14:15:44 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.18.52
+2025-05-29 14:16:38 INFO  SocketThread:64 - Socket连接已关闭: /10.162.251.198:5238
+2025-05-29 14:16:41 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_1
+2025-05-29 14:16:41 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 14:16:41 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:16:41 WARN  ChildrenListener:85 - 对该服务器Region_1执行失效策略
+2025-05-29 14:16:41 WARN  StrategyExecutor:47 - bestInet:10.162.18.52
+2025-05-29 14:16:41 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:16:41 INFO  TableManager:499 - 成功完成 10.162.251.198 到 10.162.18.52 的故障转移，1 个表索引已重置
+2025-05-29 14:16:50 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:5376
+2025-05-29 14:16:50 INFO  SocketThread:79 - <client>[4]test_table30
+2025-05-29 14:16:50 INFO  ClientProcessor:61 - 返回现活跃子节点: [10.162.18.52]
+2025-05-29 14:17:09 INFO  SocketThread:79 - <region>[3]Complete disaster recovery
+2025-05-29 14:17:09 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:17:09 INFO  RegionProcessor:82 - Region服务器 10.162.18.52 已完成故障恢复
+2025-05-29 14:17:09 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:18:23 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:5434
+2025-05-29 14:18:23 INFO  SocketThread:79 - <region>[1]test_table30 
+2025-05-29 14:18:23 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:18:23 WARN  RegionProcessor:48 - Region服务器 10.162.251.198 表信息上报失败，可能服务器状态异常
+2025-05-29 14:18:24 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-29 14:18:24 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 14:18:24 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:18:24 WARN  ChildrenListener:65 - 对该服务器Region_1执行恢复策略
+2025-05-29 14:18:24 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:18:24 INFO  SocketThread:79 - <region>[4]
+2025-05-29 14:18:24 INFO  RegionProcessor:93 - Region服务器 10.162.251.198 已清空本地数据
+2025-05-29 14:19:29 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:5499
+2025-05-29 14:19:29 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 14:19:29 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.18.52
+2025-05-29 14:19:46 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:5508
+2025-05-29 14:19:46 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 14:19:46 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.18.52
+2025-05-29 14:24:54 INFO  SocketThread:64 - Socket连接已关闭: /10.162.18.52:60662
+2025-05-29 14:24:57 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-29 14:24:57 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_0, 地址 10.162.18.52
+2025-05-29 14:24:57 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:24:57 WARN  ChildrenListener:85 - 对该服务器Region_0执行失效策略
+2025-05-29 14:24:57 WARN  StrategyExecutor:47 - bestInet:10.162.251.198
+2025-05-29 14:24:57 INFO  TableManager:321 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:24:57 INFO  TableManager:499 - 成功完成 10.162.18.52 到 10.162.251.198 的故障转移，1 个表索引已重置
+2025-05-29 14:30:22 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 14:30:22 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 14:30:22 DEBUG ConnectionState:107 - Starting
+2025-05-29 14:30:22 DEBUG ConnectionState:255 - reset
+2025-05-29 14:30:22 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 14:30:34 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:6104
+2025-05-29 14:30:34 INFO  SocketThread:79 - <region>[1]
+2025-05-29 14:30:35 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-29 14:30:35 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 10.162.251.198
+2025-05-29 14:30:35 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 14:30:35 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-29 14:30:35 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 14:30:35 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 14:30:38 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.18.52:65057
+2025-05-29 14:30:38 INFO  SocketThread:79 - <region>[1]test_table30 
+2025-05-29 14:30:38 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 14:30:38 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 14:30:38 INFO  RegionProcessor:46 - Region服务器 10.162.18.52 表信息上报成功
+2025-05-29 14:30:51 INFO  SocketThread:64 - Socket连接已关闭: /10.162.18.52:65057
+2025-05-29 14:32:00 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 14:32:00 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 14:32:00 DEBUG ConnectionState:107 - Starting
+2025-05-29 14:32:00 DEBUG ConnectionState:255 - reset
+2025-05-29 14:32:00 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 14:32:16 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:6164
+2025-05-29 14:32:17 INFO  SocketThread:79 - <region>[1]
+2025-05-29 14:32:17 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.18.52:65112
+2025-05-29 14:32:17 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-29 14:32:17 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 10.162.251.198
+2025-05-29 14:32:17 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 14:32:17 WARN  ChildrenListener:69 - 对该服务器Region_0执行新增策略
+2025-05-29 14:32:17 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 14:32:17 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 14:32:17 INFO  SocketThread:79 - <region>[1]
+2025-05-29 14:32:18 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-29 14:32:18 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 10.162.18.52
+2025-05-29 14:32:18 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 14:32:18 WARN  ChildrenListener:69 - 对该服务器Region_1执行新增策略
+2025-05-29 14:32:18 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 14:32:18 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 14:32:57 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:6202
+2025-05-29 14:32:57 INFO  SocketThread:79 - <client>[4]test_table30
+2025-05-29 14:32:57 INFO  ClientProcessor:61 - 返回现活跃子节点: [10.162.18.52, 10.162.251.198]
+2025-05-29 14:32:59 INFO  SocketThread:79 - <region>[2] test_table30 ADD
+2025-05-29 14:32:59 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:32:59 INFO  RegionProcessor:62 - Region服务器 10.162.18.52 添加表 test_table30 成功
+2025-05-29 14:33:00 INFO  SocketThread:79 - <region>[2] test_table30 ADD
+2025-05-29 14:33:00 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:33:00 INFO  RegionProcessor:62 - Region服务器 10.162.251.198 添加表 test_table30 成功
+2025-05-29 14:33:05 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:6221
+2025-05-29 14:33:05 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 14:33:05 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.18.52
+2025-05-29 14:33:15 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:6226
+2025-05-29 14:33:15 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 14:33:15 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.251.198
+2025-05-29 14:33:26 INFO  SocketThread:64 - Socket连接已关闭: /10.162.251.198:6164
+2025-05-29 14:33:31 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-29 14:33:31 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_0, 地址 10.162.251.198
+2025-05-29 14:33:31 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:33:31 WARN  ChildrenListener:85 - 对该服务器Region_0执行失效策略
+2025-05-29 14:33:31 WARN  StrategyExecutor:47 - bestInet:10.162.18.52
+2025-05-29 14:33:31 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:33:31 INFO  TableManager:501 - 成功完成 10.162.251.198 到 10.162.18.52 的故障转移，1 个表索引已重置
+2025-05-29 14:33:32 INFO  SocketThread:79 - <region>[3]Complete disaster recovery
+2025-05-29 14:33:32 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:33:32 INFO  RegionProcessor:82 - Region服务器 10.162.18.52 已完成故障恢复
+2025-05-29 14:33:51 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:6283
+2025-05-29 14:33:51 INFO  SocketThread:79 - <region>[1]test_table30 
+2025-05-29 14:33:51 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:33:51 WARN  RegionProcessor:48 - Region服务器 10.162.251.198 表信息上报失败，可能服务器状态异常
+2025-05-29 14:33:52 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_2
+2025-05-29 14:33:52 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_2, 地址 10.162.251.198
+2025-05-29 14:33:52 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:33:52 WARN  ChildrenListener:65 - 对该服务器Region_2执行恢复策略
+2025-05-29 14:33:52 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:33:52 INFO  TableManager:311 - 恢复服务器 10.162.251.198
+2025-05-29 14:33:52 INFO  SocketThread:79 - <region>[4]
+2025-05-29 14:33:52 INFO  RegionProcessor:91 - Region服务器 10.162.251.198 已清空本地数据
+2025-05-29 14:42:18 INFO  SocketThread:64 - Socket连接已关闭: /10.162.18.52:65112
+2025-05-29 14:42:23 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_1
+2025-05-29 14:42:23 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_1, 地址 10.162.18.52
+2025-05-29 14:42:23 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:42:23 WARN  ChildrenListener:85 - 对该服务器Region_1执行失效策略
+2025-05-29 14:42:23 WARN  StrategyExecutor:47 - bestInet:10.162.251.198
+2025-05-29 14:42:23 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:42:23 INFO  TableManager:501 - 成功完成 10.162.18.52 到 10.162.251.198 的故障转移，1 个表索引已重置
+2025-05-29 14:42:23 INFO  SocketThread:79 - <region>[3]Complete disaster recovery
+2025-05-29 14:42:23 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:42:23 INFO  RegionProcessor:82 - Region服务器 10.162.251.198 已完成故障恢复
+2025-05-29 14:58:08 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 14:58:08 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 14:58:08 DEBUG ConnectionState:107 - Starting
+2025-05-29 14:58:08 DEBUG ConnectionState:255 - reset
+2025-05-29 14:58:08 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 14:58:13 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7287
+2025-05-29 14:58:14 INFO  SocketThread:79 - <region>[1]
+2025-05-29 14:58:14 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.18.52:56456
+2025-05-29 14:58:14 INFO  SocketThread:79 - <region>[1]test_table30 
+2025-05-29 14:58:14 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 14:58:14 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 14:58:14 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, false
+2025-05-29 14:58:14 INFO  RegionProcessor:47 - Region服务器 10.162.18.52 表信息上报成功
+2025-05-29 14:58:15 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-29 14:58:15 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 10.162.18.52
+2025-05-29 14:58:15 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:58:15 WARN  ChildrenListener:65 - 对该服务器Region_0执行恢复策略
+2025-05-29 14:58:15 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:58:15 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-29 14:58:15 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 14:58:15 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 14:58:15 WARN  ChildrenListener:69 - 对该服务器Region_1执行新增策略
+2025-05-29 14:58:15 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 14:58:15 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, false
+2025-05-29 14:58:15 INFO  SocketThread:79 - <region>[4]
+2025-05-29 14:58:15 INFO  RegionProcessor:96 - Region服务器 10.162.18.52 已清空本地数据
+2025-05-29 14:58:36 INFO  SocketThread:64 - Socket连接已关闭: /10.162.18.52:56456
+2025-05-29 14:58:39 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-29 14:58:39 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_0, 地址 10.162.18.52
+2025-05-29 14:58:39 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:58:39 WARN  ChildrenListener:85 - 对该服务器Region_0执行失效策略
+2025-05-29 14:58:39 WARN  StrategyExecutor:47 - bestInet:10.162.251.198
+2025-05-29 14:58:39 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:58:39 INFO  TableManager:501 - 成功完成 10.162.18.52 到 10.162.251.198 的故障转移，1 个表索引已重置
+2025-05-29 14:58:39 INFO  SocketThread:79 - <region>[3]Complete disaster recovery
+2025-05-29 14:58:39 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:58:39 INFO  RegionProcessor:87 - Region服务器 10.162.251.198 已完成故障恢复
+2025-05-29 14:58:43 INFO  SocketThread:64 - Socket连接已关闭: /10.162.251.198:7287
+2025-05-29 14:58:47 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_1
+2025-05-29 14:58:47 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_1, 地址 10.162.251.198
+2025-05-29 14:58:47 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:58:47 WARN  ChildrenListener:85 - 对该服务器Region_1执行失效策略
+2025-05-29 14:58:47 WARN  StrategyExecutor:47 - bestInet:
+2025-05-29 14:58:47 ERROR TableManager:451 - 无从节点可以转移表数据
+2025-05-29 14:58:47 WARN  StrategyExecutor:38 - Cannot invoke "MasterManagers.SocketManager.SocketThread.sendCommand(String)" because "socketThread" is null
+java.lang.NullPointerException: Cannot invoke "MasterManagers.SocketManager.SocketThread.sendCommand(String)" because "socketThread" is null
+	at MasterManagers.ZookeeperManager.StrategyExecutor.execInvalidStrategy(StrategyExecutor.java:59)
+	at MasterManagers.ZookeeperManager.StrategyExecutor.execStrategy(StrategyExecutor.java:34)
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:86)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-29 14:58:51 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7339
+2025-05-29 14:58:51 INFO  SocketThread:79 - <region>[1]
+2025-05-29 14:58:52 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-29 14:58:52 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 10.162.251.198
+2025-05-29 14:58:52 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:58:52 WARN  ChildrenListener:65 - 对该服务器Region_0执行恢复策略
+2025-05-29 14:58:52 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:58:52 INFO  SocketThread:79 - <region>[4]
+2025-05-29 14:58:52 INFO  RegionProcessor:96 - Region服务器 10.162.251.198 已清空本地数据
+2025-05-29 14:58:53 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.18.52:56488
+2025-05-29 14:58:54 INFO  SocketThread:79 - <region>[1]
+2025-05-29 14:58:54 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_1
+2025-05-29 14:58:54 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_1, 地址 10.162.18.52
+2025-05-29 14:58:54 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:58:54 WARN  ChildrenListener:65 - 对该服务器Region_1执行恢复策略
+2025-05-29 14:58:54 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:58:54 INFO  TableManager:311 - 恢复服务器 10.162.18.52
+2025-05-29 14:58:54 INFO  SocketThread:79 - <region>[4]
+2025-05-29 14:58:54 INFO  RegionProcessor:96 - Region服务器 10.162.18.52 已清空本地数据
+2025-05-29 14:59:08 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7355
+2025-05-29 14:59:08 INFO  SocketThread:79 - <client>[4]test_table30
+2025-05-29 14:59:08 INFO  ClientProcessor:61 - 返回现活跃子节点: [10.162.18.52, 10.162.251.198]
+2025-05-29 14:59:10 INFO  SocketThread:79 - <region>[2] test_table30 ADD
+2025-05-29 14:59:10 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 14:59:10 INFO  RegionProcessor:67 - Region服务器 10.162.18.52 添加表 test_table30 成功
+2025-05-29 14:59:11 INFO  SocketThread:79 - <region>[2] test_table30 ADD
+2025-05-29 14:59:11 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 14:59:11 INFO  RegionProcessor:67 - Region服务器 10.162.251.198 添加表 test_table30 成功
+2025-05-29 14:59:30 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7382
+2025-05-29 14:59:30 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 14:59:30 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.251.198
+2025-05-29 14:59:36 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7398
+2025-05-29 14:59:36 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 14:59:36 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.18.52
+2025-05-29 14:59:40 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7402
+2025-05-29 14:59:40 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 14:59:40 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.251.198
+2025-05-29 14:59:51 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:7422
+2025-05-29 14:59:51 INFO  SocketThread:79 - <client>[1]test_table30
+2025-05-29 14:59:51 INFO  ClientProcessor:31 - 客户端查询表 test_table30 所在节点，返回IP列表: 10.162.18.52
+2025-05-29 15:00:11 INFO  SocketThread:64 - Socket连接已关闭: /10.162.251.198:7339
+2025-05-29 15:00:15 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_0
+2025-05-29 15:00:15 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_0, 地址 10.162.251.198
+2025-05-29 15:00:15 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 15:00:15 WARN  ChildrenListener:85 - 对该服务器Region_0执行失效策略
+2025-05-29 15:00:15 WARN  StrategyExecutor:47 - bestInet:10.162.18.52
+2025-05-29 15:00:15 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 15:00:15 INFO  TableManager:501 - 成功完成 10.162.251.198 到 10.162.18.52 的故障转移，1 个表索引已重置
+2025-05-29 15:00:15 INFO  SocketThread:79 - <region>[3]Complete disaster recovery
+2025-05-29 15:00:15 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 15:00:15 INFO  RegionProcessor:87 - Region服务器 10.162.18.52 已完成故障恢复
+2025-05-29 15:00:43 INFO  SocketThread:64 - Socket连接已关闭: /10.162.18.52:56488
+2025-05-29 15:00:47 WARN  ChildrenListener:40 - 服务器目录删除节点: /db/Region_1
+2025-05-29 15:00:47 WARN  ChildrenListener:80 - 服务器节点失效：主机名 Region_1, 地址 10.162.18.52
+2025-05-29 15:00:47 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 15:00:47 WARN  ChildrenListener:85 - 对该服务器Region_1执行失效策略
+2025-05-29 15:00:47 WARN  StrategyExecutor:47 - bestInet:
+2025-05-29 15:00:47 ERROR TableManager:451 - 无从节点可以转移表数据
+2025-05-29 15:00:47 WARN  StrategyExecutor:38 - Cannot invoke "MasterManagers.SocketManager.SocketThread.sendCommand(String)" because "socketThread" is null
+java.lang.NullPointerException: Cannot invoke "MasterManagers.SocketManager.SocketThread.sendCommand(String)" because "socketThread" is null
+	at MasterManagers.ZookeeperManager.StrategyExecutor.execInvalidStrategy(StrategyExecutor.java:59)
+	at MasterManagers.ZookeeperManager.StrategyExecutor.execStrategy(StrategyExecutor.java:34)
+	at MasterManagers.ZookeeperManager.ChildrenListener.eventServerDisappear(ChildrenListener.java:86)
+	at MasterManagers.ZookeeperManager.ChildrenListener.childEvent(ChildrenListener.java:41)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:522)
+	at org.apache.curator.framework.recipes.cache.PathChildrenCache$5.apply(PathChildrenCache.java:516)
+	at org.apache.curator.framework.listen.ListenerContainer$1.run(ListenerContainer.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-29 15:03:06 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.18.52:56738
+2025-05-29 15:03:06 INFO  SocketThread:79 - <region>[1]test_table30 
+2025-05-29 15:03:06 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 15:03:06 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 15:03:06 INFO  RegionProcessor:47 - Region服务器 10.162.18.52 表信息上报成功
+2025-05-29 15:03:07 INFO  SocketThread:64 - Socket连接已关闭: /10.162.18.52:56738
+2025-05-29 15:03:43 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.18.52:56775
+2025-05-29 15:03:44 INFO  SocketThread:79 - <region>[1]test_table30 
+2025-05-29 15:03:44 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 15:03:44 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 15:03:44 INFO  RegionProcessor:47 - Region服务器 10.162.18.52 表信息上报成功
+2025-05-29 15:03:45 INFO  SocketThread:64 - Socket连接已关闭: /10.162.18.52:56775
+2025-05-29 15:03:47 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.251.198:10267
+2025-05-29 15:03:47 INFO  SocketThread:79 - <region>[1]test_table30 
+2025-05-29 15:03:47 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 15:03:47 INFO  TableManager:311 - 恢复服务器 10.162.251.198
+2025-05-29 15:03:47 INFO  RegionProcessor:52 - Region服务器 10.162.251.198 表信息上报成功
+2025-05-29 15:03:48 WARN  ChildrenListener:34 - 服务器目录新增节点: /db/Region_0
+2025-05-29 15:03:48 WARN  ChildrenListener:62 - 新增服务器节点：主机名 Region_0, 地址 10.162.251.198
+2025-05-29 15:03:48 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 15:03:48 WARN  ChildrenListener:65 - 对该服务器Region_0执行恢复策略
+2025-05-29 15:03:48 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.251.198, true
+2025-05-29 15:03:48 INFO  SocketThread:79 - <region>[4]
+2025-05-29 15:03:48 INFO  RegionProcessor:96 - Region服务器 10.162.251.198 已清空本地数据
+2025-05-29 15:04:25 INFO  SocketThread:33 - 服务端建立了新的客户端子线程: /10.162.18.52:56793
+2025-05-29 15:04:25 INFO  SocketThread:79 - <region>[1]test_table30 
+2025-05-29 15:04:25 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 15:04:25 INFO  TableManager:323 - 查询节点是否已经注册: 10.162.18.52, true
+2025-05-29 15:04:25 INFO  RegionProcessor:47 - Region服务器 10.162.18.52 表信息上报成功
+2025-05-29 15:04:25 INFO  SocketThread:64 - Socket连接已关闭: /10.162.18.52:56793

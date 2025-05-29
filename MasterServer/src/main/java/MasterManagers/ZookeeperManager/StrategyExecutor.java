@@ -1,4 +1,5 @@
 package MasterManagers.ZookeeperManager;
+
 import MasterManagers.SocketManager.SocketThread;
 import MasterManagers.TableManager;
 import lombok.extern.slf4j.Slf4j;
@@ -8,6 +9,7 @@ import java.util.List;
 
 @Slf4j
 public class StrategyExecutor {
+
     private TableManager tableManager;
 
     public StrategyExecutor(TableManager tableManager) {
@@ -37,7 +39,7 @@ public class StrategyExecutor {
         }
     }
 
-    private void execInvalidStrategy (String hostUrl) {
+    private void execInvalidStrategy(String hostUrl) {
         StringBuilder allTable = new StringBuilder();
         List<String> tableList = tableManager.getTableList(hostUrl);
         //<master>[3]ip#name@name@
@@ -49,12 +51,12 @@ public class StrategyExecutor {
         }
         allTable.append(hostUrl).append("#");
         int i = 0;
-        for(String s:tableList){
-            allTable.append(s);
+        for (String s : tableList) {
+            allTable.append(s).append("@");
         }
-        tableManager.transferTables(hostUrl,bestInet);
+        tableManager.transferTables(hostUrl, bestInet);
         SocketThread socketThread = tableManager.getSocketThread(bestInet);
-        socketThread.sendCommand("[3]"+allTable);
+        socketThread.sendCommand("[3]" + allTable);
     }
 
     private void execDiscoverStrategy(String hostUrl) {
@@ -66,7 +68,7 @@ public class StrategyExecutor {
     private void execRecoverStrategy(String hostUrl) {
         // 生成一个新的表，为空
         List<String> tableList = new ArrayList<>();
-        tableManager.recoverServer(hostUrl,tableList);
+        tableManager.recoverServer(hostUrl, tableList);
         SocketThread socketThread = tableManager.getSocketThread(hostUrl);
         socketThread.sendCommand("[4]recover");
     }
