@@ -12,11 +12,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class RegionProcessor {
 
-    private final TableManager tableManger;
+    private final TableManager tableManager;
     private final Socket socket;
 
-    public RegionProcessor(TableManager _tableManger, Socket _socket) {
-        this.tableManger = _tableManger;
+    public RegionProcessor(TableManager _tableManager, Socket _socket) {
+        this.tableManager = _tableManager;
         this.socket = _socket;
     }
 
@@ -34,19 +34,24 @@ public class RegionProcessor {
             // 处理从节点启动时上报本地存储的所有表名
             cmd = cmd.substring(3).trim();
             // 如果不存在表名，则说明只是简单的socket连接，节点注册交给ZookeeperManager，此处不处理
-            if(cmd.isEmpty()) {
-                System.out.println("Region服务器 " +  " (IP: " + IP + ") 准备注册");
+            if (cmd.isEmpty()) {
+                System.out.println("Region服务器 " + " (IP: " + IP + ") 准备注册");
                 return result;
             }
 
             List<String> tableNames = Arrays.asList(cmd.split("\\s+"));
-
-            boolean success = this.tableManger.addTables(tableNames, IP);
-            if (success) {
-                log.info("Region服务器 {} 表信息上报成功", IP);
+            boolean recover = this.tableManager.recoverServer(IP, tableNames);
+            if (!recover) {
+                boolean success = this.tableManager.addTables(tableNames, IP);
+                if (success) {
+                    log.info("Region服务器 {} 表信息上报成功", IP);
+                } else {
+                    log.warn("Region服务器 {} 表信息上报失败，可能服务器状态异常", IP);
+                }
             } else {
-                log.warn("Region服务器 {} 表信息上报失败，可能服务器状态异常", IP);
+                log.info("Region服务器 {} 表信息上报成功", IP);
             }
+
         } else if (cmd.startsWith("[2]")) {
             // <region>[2]tableName ADD/DEL
             // 处理从节点表创建/删除通知
@@ -58,11 +63,11 @@ public class RegionProcessor {
 
                 if ("ADD".equalsIgnoreCase(operation)) {
                     // 添加表
-                    this.tableManger.addTable(tableName, IP);
+                    this.tableManager.addTable(tableName, IP);
                     log.info("Region服务器 {} 添加表 {} 成功", IP, tableName);
                 } else if ("DEL".equalsIgnoreCase(operation)) {
                     // 删除表
-                    boolean success = this.tableManger.deleteTable(tableName, IP);
+                    boolean success = this.tableManager.deleteTable(tableName, IP);
                     if (success) {
                         log.info("Region服务器 {} 删除表 {} 成功", IP, tableName);
                     } else {
@@ -78,7 +83,7 @@ public class RegionProcessor {
             // <region>[3]Complete disaster recovery
             // 处理从节点完成故障恢复通知
             if ("Complete disaster recovery".equalsIgnoreCase(cmd.substring(3).trim())) {
-                this.tableManger.recoverServer(IP, new ArrayList<>());
+                this.tableManager.recoverServer(IP, new ArrayList<>());
                 log.info("Region服务器 {} 已完成故障恢复", IP);
                 // 可以在这里添加其他恢复完成后的处理逻辑
             } else {
