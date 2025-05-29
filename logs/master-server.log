@@ -1041,3 +1041,84 @@ java.lang.NullPointerException: Cannot invoke "MasterManagers.SocketManager.Sock
 2025-05-26 19:20:48 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 2666ms for sessionid 0x100184a4ae20009
 2025-05-26 19:20:48 INFO  ConnectionStateManager:228 - State change: SUSPENDED
 2025-05-26 19:20:50 INFO  ConnectionStateManager:228 - State change: RECONNECTED
+2025-05-29 13:45:05 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 13:45:05 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 13:45:05 DEBUG ConnectionState:107 - Starting
+2025-05-29 13:45:05 DEBUG ConnectionState:255 - reset
+2025-05-29 13:45:05 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 13:54:51 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 13:54:51 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 13:54:51 DEBUG ConnectionState:107 - Starting
+2025-05-29 13:54:51 DEBUG ConnectionState:255 - reset
+2025-05-29 13:54:52 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 13:58:09 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 13:58:09 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 13:58:09 DEBUG ConnectionState:107 - Starting
+2025-05-29 13:58:09 DEBUG ConnectionState:255 - reset
+2025-05-29 13:58:09 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 14:07:28 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 14:07:28 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 14:07:28 DEBUG ConnectionState:107 - Starting
+2025-05-29 14:07:28 DEBUG ConnectionState:255 - reset
+2025-05-29 14:07:28 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 14:11:00 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 14:11:00 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 14:11:00 DEBUG ConnectionState:107 - Starting
+2025-05-29 14:11:01 DEBUG ConnectionState:255 - reset
+2025-05-29 14:11:01 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 14:13:49 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 14:13:49 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 14:13:49 DEBUG ConnectionState:107 - Starting
+2025-05-29 14:13:49 DEBUG ConnectionState:255 - reset
+2025-05-29 14:13:49 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 14:18:01 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 14:18:01 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 14:18:01 DEBUG ConnectionState:107 - Starting
+2025-05-29 14:18:01 DEBUG ConnectionState:255 - reset
+2025-05-29 14:18:02 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 14:30:13 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 14:30:13 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 14:30:13 DEBUG ConnectionState:107 - Starting
+2025-05-29 14:30:13 DEBUG ConnectionState:255 - reset
+2025-05-29 14:30:13 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 14:31:06 WARN  ClientCnxn:1162 - Session 0x10026b3bb060009 for server 10.192.114.34/10.192.114.34:2181, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:68)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:366)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2025-05-29 14:31:06 INFO  ConnectionStateManager:228 - State change: SUSPENDED
+2025-05-29 14:31:55 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 14:31:55 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 14:31:55 DEBUG ConnectionState:107 - Starting
+2025-05-29 14:31:55 DEBUG ConnectionState:255 - reset
+2025-05-29 14:31:55 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 14:33:30 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 14:33:30 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 14:33:30 DEBUG ConnectionState:107 - Starting
+2025-05-29 14:33:30 DEBUG ConnectionState:255 - reset
+2025-05-29 14:33:30 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 14:36:52 WARN  ClientCnxn:1108 - Client session timed out, have not heard from server in 2666ms for sessionid 0x10026ca1e770003
+2025-05-29 14:36:52 INFO  ConnectionStateManager:228 - State change: SUSPENDED
+2025-05-29 14:36:53 INFO  ConnectionStateManager:228 - State change: RECONNECTED
+2025-05-29 14:57:52 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 14:57:52 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 14:57:52 DEBUG ConnectionState:107 - Starting
+2025-05-29 14:57:52 DEBUG ConnectionState:255 - reset
+2025-05-29 14:57:53 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 14:58:30 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 14:58:30 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 14:58:30 DEBUG ConnectionState:107 - Starting
+2025-05-29 14:58:30 DEBUG ConnectionState:255 - reset
+2025-05-29 14:58:30 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 15:03:25 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 15:03:25 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 15:03:25 DEBUG ConnectionState:107 - Starting
+2025-05-29 15:03:25 DEBUG ConnectionState:255 - reset
+2025-05-29 15:03:26 INFO  ConnectionStateManager:228 - State change: CONNECTED
+2025-05-29 15:17:51 INFO  CuratorFrameworkImpl:235 - Starting
+2025-05-29 15:17:51 DEBUG CuratorZookeeperClient:183 - Starting
+2025-05-29 15:17:51 DEBUG ConnectionState:107 - Starting
+2025-05-29 15:17:51 DEBUG ConnectionState:255 - reset
+2025-05-29 15:17:51 INFO  ConnectionStateManager:228 - State change: CONNECTED

@@ -50,7 +50,7 @@ public class StrategyExecutor {
         allTable.append(hostUrl).append("#");
         int i = 0;
         for(String s:tableList){
-            allTable.append(s);
+            allTable.append(s).append("@");
         }
         tableManager.transferTables(hostUrl,bestInet);
         SocketThread socketThread = tableManager.getSocketThread(bestInet);
