@@ -96,6 +96,8 @@ System.out.println("REGION> 响应:"+response);
                     return "error";
                 }
                 sendToFTP(responseParts[2]);
+                ftpUtils.upLoadblankFile(responseParts[2]);
+                ftpUtils.upLoadblankFile(responseParts[2]+ "_index.index");
                 // 更新数据并生成同步信息
                 return "<region>[2] " + responseParts[2] + " ADD";
 
