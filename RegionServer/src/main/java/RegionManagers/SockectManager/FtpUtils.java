@@ -5,6 +5,8 @@ import org.apache.commons.net.ftp.FTPFile;
 import org.apache.commons.net.ftp.FTPReply;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FtpUtils {
     public String hostname = "10.162.251.198";
@@ -172,6 +174,54 @@ public class FtpUtils {
                             File saveFile = new File(savePath + realFileName);
                             os = new FileOutputStream(saveFile, true);
                             ftpClient.retrieveFile(file.getName(), os);
+                            os.close();
+                        }
+                    }
+                }
+                return true;
+            } catch (IOException e) {
+                System.out.println("下载文件失败" + e.getMessage());
+            } finally {
+                if (null != os) {
+                    try {
+                        os.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                closeConnect();
+            }
+        }
+        return false;
+    }
+
+    public boolean downloadtable1File(String ftpPath, String targetIP, String fileName, String savePath) {
+        login();
+        OutputStream os = null;
+        fileName = targetIP + "#" + fileName;
+        if (ftpClient != null) {
+            try {
+                if (!ftpClient.changeWorkingDirectory(ftpPath)) {
+                    System.out.println("/" + ftpPath + "该目录不存在");
+                    return false;
+                }
+                ftpClient.enterLocalPassiveMode();
+                FTPFile[] ftpFiles = ftpClient.listFiles();
+
+                if (ftpFiles == null || ftpFiles.length == 0) {
+                    System.out.println("/" + ftpPath + "该目录下无文件");
+                    return false;
+                }
+                for (FTPFile file : ftpFiles) {
+                    if (fileName.equals("") || fileName.equalsIgnoreCase(file.getName())) {
+                        if (!file.isDirectory()) {
+                            String realFileName = file.getName().substring(file.getName().indexOf("#") + 1);
+                            String realFileNames=realFileName+"a";
+                            File saveFile = new File(savePath + realFileNames);
+                            os = new FileOutputStream(saveFile, true);
+                            ftpClient.retrieveFile(file.getName(), os);
+                            mergeFFMessages(realFileName,realFileNames,realFileName);
+                            add2ToByte21("table_catalog");
                             os.close();
                         }
                     }
@@ -365,5 +415,88 @@ public class FtpUtils {
             }
         }
         return flag;
+    }
+
+
+
+    public static void mergeFFMessages(String file1Path, String file2Path, String outputPath) throws IOException {
+        byte[] file1Bytes = readAllBytes(file1Path);
+        byte[] file2Bytes = readAllBytes(file2Path);
+        if (file1Bytes.length < 4 || !(file1Bytes[0] == (byte) 0xFF && file1Bytes[1] == (byte) 0xFF &&
+                file1Bytes[2] == (byte) 0xFF && file1Bytes[3] == (byte) 0xFF)) {
+            throw new IllegalArgumentException("File 1 does not start with FF FF FF FF header.");
+        }
+
+        // 读取头
+        byte[] header = new byte[4];
+        System.arraycopy(file1Bytes, 0, header, 0, 4);
+
+        // 提取消息：跳过前4字节
+        List<byte[]> messages = new ArrayList<>();
+        messages.addAll(extractFFMessages(file1Bytes, 4));
+        messages.addAll(extractFFMessages(file2Bytes, 4));
+
+        // 准备输出
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        output.write(header);
+
+        for (byte[] msg : messages) {
+            if (output.size() + 15 > 4096) break; // 超出4096则停止
+            output.write(msg);
+        }
+
+        // 补0
+        int padding = 4096 - output.size();
+        if (padding > 0) {
+            output.write(new byte[padding]);
+        }
+
+        // 写入
+        try (FileOutputStream fos = new FileOutputStream(outputPath)) {
+            output.writeTo(fos);
+        }
+
+        System.out.println("合并完成，输出大小：" + new File(outputPath).length() + " 字节");
+    }
+
+    // 提取以0xFF开头、长度15的消息
+    private static List<byte[]> extractFFMessages(byte[] data, int start) {
+        List<byte[]> messages = new ArrayList<>();
+        for (int i = start; i <= data.length - 15; i++) {
+            if ((data[i] & 0xFF) == 0xFF) {
+                byte[] msg = new byte[15];
+                System.arraycopy(data, i, msg, 0, 15);
+                messages.add(msg);
+                i += 14; // 跳过当前消息
+            }
+        }
+        return messages;
+    }
+
+    private static byte[] readAllBytes(String path) throws IOException {
+        File file = new File(path);
+        byte[] buffer = new byte[(int) file.length()];
+        try (FileInputStream fis = new FileInputStream(file)) {
+            fis.read(buffer);
+        }
+        return buffer;
+    }
+
+    public static void add2ToByte21(String filePath) throws IOException {
+        RandomAccessFile raf = new RandomAccessFile(filePath, "rw");
+
+        if (raf.length() < 21) {
+            raf.close();
+            throw new IOException("文件长度不足 21 字节");
+        }
+
+        raf.seek(21);  // 第 21 字节，索引从 0 开始
+        int original = raf.readUnsignedByte();  // 读取原始值
+        int modified = (original + 2) & 0xFF;   // 保持字节范围在 0~255
+        raf.seek(21);
+        raf.write(modified);
+
+        raf.close();
+        System.out.println("第 21 字节已从 " + original + " 修改为 " + modified);
     }
 }
